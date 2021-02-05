@@ -30,6 +30,6 @@ class MainActivity : AppCompatActivity() {
         binding.gridItems.layoutManager = gridLayout
         binding.gridItems.adapter = adapter
 
-
+        binding.navMenu
     }
 }
