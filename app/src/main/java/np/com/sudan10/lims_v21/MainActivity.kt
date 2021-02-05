@@ -1,12 +1,14 @@
 package np.com.sudan10.lims_v21
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.google.android.material.navigation.NavigationView
 import np.com.sudan10.lims_v21.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),  NavigationView.OnNavigationItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,6 +32,13 @@ class MainActivity : AppCompatActivity() {
         binding.gridItems.layoutManager = gridLayout
         binding.gridItems.adapter = adapter
 
-        binding.navMenu
+        binding.navMenu.setNavigationItemSelectedListener(this)
+
+
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        return true
     }
 }
