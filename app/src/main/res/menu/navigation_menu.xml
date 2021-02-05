@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/login_in" />
+    <item android:title="@string/ration_balance" />
+    <item android:title="@string/animal_registration" />
+    <item android:title="@string/animal_health" />
+    <item android:title="@string/animal_breeding" />
+    <item android:title="@string/performance_record" />
+    <item android:title="@string/statistical_analysis" />
+</menu>

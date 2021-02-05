@@ -1,0 +1,179 @@
+<resources>
+    <string name="app_name">LIMS_V2.1</string>
+    <string name="login_in">Login In</string>
+    <string name="ration_balance">Ration Balance</string>
+    <string name="animal_registration">Animal Registration</string>
+    <string name="animal_health">Animal Health</string>
+    <string name="animal_breeding">Animal Breeding</string>
+    <string name="performance_record">Performance Record</string>
+    <string name="statistical_analysis">Statistical Analysis</string>
+    <string name="close">close</string>
+    <string name="open">open</string>
+    <string name="username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">Login In</string>
+    <string name="action_sign_in">Login In</string>
+
+    <string-array name="Farm_farmer">
+        <item>Farm</item>
+        <item>Farmer</item>
+    </string-array>
+    <string-array name="Select_province">
+        <item>Select Province</item>
+        <item>Gandaki</item>
+    </string-array>
+    <string-array name="Select_District">
+        <item>Select District</item>
+        <item>Baglung</item>
+        <item>Gorkha</item>
+        <item>Kaski</item>
+        <item>Lamjung</item>
+        <item>Manang</item>
+        <item>Mustang</item>
+        <item>Myagdi</item>
+        <item>Nawalparasi</item>
+        <item>Parbat</item>
+        <item>Syangja</item>
+        <item>Tanahun</item>
+    </string-array>
+    <string-array name="Select_local_levels">
+        <item>Select local level</item>
+        <item>Binayee Tribeni</item>
+        <item>Bulingtar</item>
+        <item>Baudikali</item>
+        <item>Devchuli</item>
+        <item>Gaidakot</item>
+        <item>Hupsekot</item>
+        <item>Kawasoti</item>
+        <item>Madhyabindu</item>
+    </string-array>
+    <string-array name="Ethinicity">
+        <item>Khas/Chettri</item>
+        <item>Brahmin</item>
+        <item>Magar</item>
+        <item>Tharu</item>
+        <item>Newar</item>
+        <item>Tamang</item>
+        <item>Kami</item>
+    </string-array>
+    <string-array name="education">
+        <item>Literate</item>
+        <item>Class 8</item>
+        <item>SLC</item>
+        <item>+2</item>
+        <item>Bachelor</item>
+        <item>Masters</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="breed">
+        <item>Select Breed</item>
+        <item>HF</item>
+        <item>Jerser</item>
+    </string-array>
+    <string-array name="species">
+        <item>Select species</item>
+        <item>Cow</item>
+        <item>Buffalo</item>
+        <item>Pig</item>
+        <item>Goat</item>
+    </string-array>
+    <string-array name="Gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="animal_name">
+        <item>Animal Species</item>
+        <item>Cow/Cattle</item>
+        <item>Buffalo</item>
+        <item>Goat</item>
+    </string-array>
+    <string-array name="cattle_category">
+        <item> Age Category</item>
+        <item>Heifer</item>
+        <item>Last three months of Gestation</item>
+        <item>Mature Cow</item>
+        <item>Lactating Cow</item>
+        <item>Woring Cattle</item>
+    </string-array>
+    <string-array name="weight_category">
+        <item>Choose Weight</item>
+        <item>100 Kg</item>
+        <item>150 Kg</item>
+        <item>200 Kg</item>
+        <item>250 Kg</item>
+        <item>300 Kg</item>
+        <item>350 Kg</item>
+        <item>400 Kg</item>
+        <item>450 Kg</item>
+        <item>500 Kg</item>
+        <item>550 Kg</item>
+        <item>600 Kg</item>
+    </string-array>
+    <string-array name="pregnancy_month">
+        <item>Select Pregnancy Month</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="lactation_phase">
+        <item>Select Lactation Phase</item>
+        <item>Dry</item>
+        <item>Early Lactation</item>
+        <item>Mid Lactation</item>
+        <item>Late Lactation</item>
+    </string-array>
+    <string-array name="weight_change">
+        <item>Select Weight change</item>
+        <item>0 kg</item>
+        <item>0.25 kg</item>
+        <item>0.50 kg</item>
+        <item>0.75 kg</item>
+        <item>1 kg</item>
+    </string-array>
+    <string-array name="feeds_name">
+        <item>Select the feed Item</item>
+        <item>Corn</item>
+        <item>Oats</item>
+        <item>Rice Paddy</item>
+        <item>Cow Pea</item>
+        <item>Pigeon Pea</item>
+        <item>Sunflower Seed</item>
+        <item>Rice Bran, D1</item>
+        <item>Rice Bran, D2</item>
+        <item>Soy Hulls</item>
+        <item>Lactose Powder</item>
+        <item>Soyabean Oil</item>
+    </string-array>
+    <string-array name="milk_quantity">
+        <item>Milk Quantity</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+</resources>
