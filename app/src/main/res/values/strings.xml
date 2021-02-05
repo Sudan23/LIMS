@@ -11,8 +11,8 @@
     <string name="open">open</string>
     <string name="username">Username</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in_short">Login In</string>
-    <string name="action_sign_in">Login In</string>
+    <string name="action_sign_in_short">Log In</string>
+    <string name="action_sign_in">Log In</string>
 
     <string-array name="Farm_farmer">
         <item>Farm</item>
