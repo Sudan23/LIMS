@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import np.com.sudan10.lims_v21.databinding.ActivityMainBinding
+import np.com.sudan10.lims_v21.databinding.FragmentHomeBinding
 
 class GridItemAdapter(val cardTitles :Array<String>, val cardImages:Array<String>): RecyclerView.Adapter<GridItemAdapter.ViewHolder>() {
 
@@ -16,7 +17,7 @@ class GridItemAdapter(val cardTitles :Array<String>, val cardImages:Array<String
         val cardTitle : TextView = itemView.findViewById(R.id.cardTitle)
     }
 
-    private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_item_view,parent,false)

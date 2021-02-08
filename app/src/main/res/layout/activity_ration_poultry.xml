@@ -32,7 +32,7 @@
                     android:layout_width="204dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="1dp"
-                    android:entries="@array/animal_name"
+                    android:entries="@array/poultry_type"
                     android:gravity="center|center_horizontal|center_vertical"
                     android:textAlignment="center"
                     app:layout_constraintEnd_toStartOf="@+id/poultry_age"
@@ -47,129 +47,12 @@
                     android:layout_width="204dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="1dp"
-                    android:entries="@array/breed"
+                    android:entries="@array/poultry_age"
                     android:gravity="center|center_horizontal|center_vertical"
                     android:textAlignment="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/poultry_type"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="32dp"
-                    tools:layout_conversion_absoluteWidth="182dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout8"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="354dp">
-
-                <Spinner
-                    android:id="@+id/spinner3"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/cattle_category"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/spinner4"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="24dp"
-                    tools:layout_conversion_absoluteWidth="173dp" />
-
-                <Spinner
-                    android:id="@+id/spinner4"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/weight_category"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/spinner3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="32dp"
-                    tools:layout_conversion_absoluteWidth="182dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout9"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="708dp">
-
-                <Spinner
-                    android:id="@+id/spinner5"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/weight_change"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/spinner6"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="24dp"
-                    tools:layout_conversion_absoluteWidth="173dp" />
-
-                <Spinner
-                    android:id="@+id/spinner6"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/pregnancy_month"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/spinner5"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="32dp"
-                    tools:layout_conversion_absoluteWidth="182dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/linearLayout10"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="1062dp">
-
-                <Spinner
-                    android:id="@+id/spinner7"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/lactation_phase"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/spinner8"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_conversion_absoluteHeight="24dp"
-                    tools:layout_conversion_absoluteWidth="173dp" />
-
-                <Spinner
-                    android:id="@+id/spinner8"
-                    android:layout_width="204dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="1dp"
-                    android:entries="@array/milk_quantity"
-                    android:gravity="center|center_horizontal|center_vertical"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/spinner7"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="32dp"
                     tools:layout_conversion_absoluteWidth="182dp" />

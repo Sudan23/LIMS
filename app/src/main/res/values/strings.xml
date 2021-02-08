@@ -176,7 +176,26 @@
         <item>19</item>
         <item>20</item>
     </string-array>
+    <string-array name="poultry_type">
+        <item>Local</item>
+        <item>Broiler Breeder</item>
+        <item>Layer Commercial</item>
+        <item>Broiler Commercial</item>
+        <item>Layer Breeder</item>
+    </string-array>
+    <string-array name="poultry_age">
+        <item>Male</item>
+        <item>Pre Starter</item>
+        <item>Stater</item>
+        <item>Grower</item>
+        <item>Pre-lay</item>
+        <item>Laying Phase-1</item>
+        <item>Laying Phase-2</item>
+        <item>Laying Phase-3</item>
+
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="feedback">Feedback</string>
+    <string name="home">Home</string>
 </resources>
