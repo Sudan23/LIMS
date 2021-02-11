@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lims_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="np.com.sudan10.lims_v21.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/home2rationBalance"
+            app:destination="@id/rationBalance2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rationBalance2"
+        android:name="np.com.sudan10.lims_v21.rationBalance"
+        android:label="fragment_ration_balance"
+        tools:layout="@layout/fragment_ration_balance" >
+        <action
+            android:id="@+id/rationBalance2home"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>

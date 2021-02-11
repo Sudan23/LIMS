@@ -7,6 +7,7 @@
     android:fadingEdge="none">
 
     <LinearLayout
+        android:id="@+id/linearLayout13"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"></LinearLayout>
@@ -15,7 +16,7 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Name in English"
         android:inputType="textPersonName"
@@ -36,18 +37,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <Spinner
-        android:id="@+id/farm_farmer"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:entries="@array/Farm_farmer"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -193,15 +182,15 @@
         app:layout_constraintVertical_bias="0.262" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/farm_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/dark_blue"
+        android:layout_gravity="start"
+        android:enabled="false"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

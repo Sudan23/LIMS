@@ -9,9 +9,19 @@
     <item
         android:id="@+id/rationBalance"
         android:title="@string/ration_balance" />
-    <item
-        android:id="@+id/animalRegistration"
-        android:title="@string/animal_registration" />
+    <group
+        android:id="@+id/Registration"
+        android:title="@string/Registration" >
+        <item
+            android:id="@+id/farmRegistration"
+            android:title="@string/farm_registration" />
+        <item
+            android:id="@+id/farmerRegistration"
+            android:title="@string/farmer_registration" />
+        <item
+            android:id="@+id/animalRegistration"
+            android:title="@string/animal_registration" />
+    </group>
     <item
         android:id="@+id/animalHealth"
         android:title="@string/animal_health" />
@@ -21,9 +31,7 @@
     <item
         android:id="@+id/performanceRecord"
         android:title="@string/performance_record" />
-    <item
-        android:id="@+id/statisticalAnalysis"
-        android:title="@string/statistical_analysis" />
+
     <item
         android:id="@+id/feedback"
         android:title="@string/feedback" />

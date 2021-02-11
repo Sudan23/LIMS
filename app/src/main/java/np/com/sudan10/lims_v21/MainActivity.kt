@@ -2,15 +2,17 @@ package np.com.sudan10.lims_v21
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import np.com.sudan10.lims_v21.databinding.ActivityMainBinding
+import np.com.sudan10.lims_v21.databinding.FragmentHomeBinding
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -18,28 +20,60 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var binding = ActivityMainBinding.inflate(layoutInflater)
+        var bindingfrag = FragmentHomeBinding.inflate(layoutInflater)
         setSupportActionBar(binding.toolbar)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.default_toolbar) //android status bar color change
 
         setContentView(binding.root)
 
-        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout,binding.toolbar,R.string.open,R.string.close)
+        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.open, R.string.close)
         toggle.isDrawerIndicatorEnabled = true
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        binding.navMenu.setNavigationItemSelectedListener (this)
+        //Fragment change
+        val homefrag = Home()
+        val rationfrag = rationBalance()
+        val animalRegistrationfrag = animalRegistration()
+        val animalHealthfrag = animalHealth()
+        val animalBreedingfrag = animalBreeding()
+        val performanceRecordfrag = performanceRecord()
+        val feedbackfrag = feedback()
 
-        setToolbarTitle("Home")
-        changeFragment(Home())
+        binding.navMenu.setNavigationItemSelectedListener(this)
 
-        //recyclerview test
+       /* bindingfrag.rationbalance.setOnClickListener {
+            setToolbarTitle("Ration Balance")
+            changeFragment(rationBalance())
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container,rationfrag).commit()
+            }
+        }
+        bindingfrag.rbtxt.setOnClickListener {
+            setToolbarTitle("Ration Balance")
+            changeFragment(rationBalance())
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container,rationfrag).commit()
+            }
+        }*/
+
+        /*setToolbarTitle("Home")
+        changeFragment(Home())*/
+
+
+        // fragment change using click
+
+
+
+        /*//recyclerview test
         val cardTitles: Array<String> = resources.getStringArray(R.array.cardTitles)
         val cardImages: Array<String> = resources.getStringArray(R.array.cardImages)
         val adapter = GridItemAdapter(cardTitles,cardImages)
 
         val gridLayout = GridLayoutManager(this, 2)
         binding.gridItems.layoutManager =gridLayout
-        binding.gridItems.adapter = adapter
+        binding.gridItems.adapter = adapter*/
 
 
     }
@@ -47,16 +81,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         //var binding = ActivityMainBinding.inflate(layoutInflater)
         // need to implement close drawer without kotlin plugin
-        drawerLayout.closeDrawer(GravityCompat.START,false)
+        drawerLayout.closeDrawer(GravityCompat.START, false)
 
         when(item.itemId){
             R.id.home -> {
                 setToolbarTitle("Home")
                 changeFragment(Home())
-            }  R.id.login -> {
-            setToolbarTitle("Login")
-            changeFragment(login())
-        }
+            }
+            R.id.login -> {
+                setToolbarTitle("Login")
+                changeFragment(login())
+            }
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")
                 changeFragment(rationBalance())
@@ -64,6 +99,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.animalRegistration -> {
                 setToolbarTitle("Animal Registration")
                 changeFragment(animalRegistration())
+            }R.id.farmRegistration -> {
+                setToolbarTitle("Farm Registration")
+                changeFragment(farmRegistration())
+            }R.id.farmerRegistration -> {
+                setToolbarTitle("Farmer Registration")
+                changeFragment(farmRegistration())
             }
             R.id.animalHealth -> {
                 setToolbarTitle("Animal Health")
@@ -77,10 +118,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 setToolbarTitle("Performance Record")
                 changeFragment(performanceRecord())
             }
-            R.id.statisticalAnalysis -> {
+            /*R.id.staticDataEntry -> {
                 setToolbarTitle("Statistical Analysis")
                 changeFragment(statisticalAnalysis())
-            }
+            }*/
             R.id.feedback -> {
                 setToolbarTitle("Feedback")
                 changeFragment(feedback())
@@ -92,8 +133,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportActionBar?.title = title
     }
 
-    fun changeFragment(frag : Fragment) {
+    fun changeFragment(frag: Fragment) {
         val fragment = supportFragmentManager.beginTransaction()
-        fragment.replace(R.id.fragment_container,frag).commit()
+        fragment.replace(R.id.fragment_container, frag).commit()
     }
+
+
 }
