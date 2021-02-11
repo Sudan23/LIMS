@@ -13,6 +13,21 @@
         <action
             android:id="@+id/home2rationBalance"
             app:destination="@id/rationBalance2" />
+        <action
+            android:id="@+id/home2animalbreeding"
+            app:destination="@id/animalBreeding3" />
+        <action
+            android:id="@+id/home2animalhealth"
+            app:destination="@id/animalHealth3" />
+        <action
+            android:id="@+id/home2animalregistration"
+            app:destination="@id/animalRegistration3" />
+        <action
+            android:id="@+id/home2performancerecord"
+            app:destination="@id/performanceRecord3" />
+        <action
+            android:id="@+id/home2feedback"
+            app:destination="@id/feedback3" />
     </fragment>
     <fragment
         android:id="@+id/rationBalance2"
@@ -21,6 +36,51 @@
         tools:layout="@layout/fragment_ration_balance" >
         <action
             android:id="@+id/rationBalance2home"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalBreeding3"
+        android:name="np.com.sudan10.lims_v21.animalBreeding"
+        android:label="fragment_animal_breeding"
+        tools:layout="@layout/fragment_animal_breeding" >
+        <action
+            android:id="@+id/animalbreeding2home"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalHealth3"
+        android:name="np.com.sudan10.lims_v21.animalHealth"
+        android:label="fragment_animal_health"
+        tools:layout="@layout/fragment_animal_health" >
+        <action
+            android:id="@+id/animalhealth2home"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalRegistration3"
+        android:name="np.com.sudan10.lims_v21.animalRegistration"
+        android:label="fragment_animal_registration"
+        tools:layout="@layout/fragment_animal_registration" >
+        <action
+            android:id="@+id/animalregistration2home"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedback3"
+        android:name="np.com.sudan10.lims_v21.feedback"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" >
+        <action
+            android:id="@+id/feedback2home"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/performanceRecord3"
+        android:name="np.com.sudan10.lims_v21.performanceRecord"
+        android:label="fragment_performance_record"
+        tools:layout="@layout/fragment_performance_record" >
+        <action
+            android:id="@+id/performancerecord2home"
             app:destination="@id/home2" />
     </fragment>
 </navigation>

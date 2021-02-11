@@ -2,7 +2,6 @@ package np.com.sudan10.lims_v21
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -10,9 +9,7 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_home.*
 import np.com.sudan10.lims_v21.databinding.ActivityMainBinding
-import np.com.sudan10.lims_v21.databinding.FragmentHomeBinding
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -20,7 +17,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var binding = ActivityMainBinding.inflate(layoutInflater)
-        var bindingfrag = FragmentHomeBinding.inflate(layoutInflater)
         setSupportActionBar(binding.toolbar)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.default_toolbar) //android status bar color change
@@ -32,48 +28,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        //Fragment change
-        val homefrag = Home()
-        val rationfrag = rationBalance()
-        val animalRegistrationfrag = animalRegistration()
-        val animalHealthfrag = animalHealth()
-        val animalBreedingfrag = animalBreeding()
-        val performanceRecordfrag = performanceRecord()
-        val feedbackfrag = feedback()
 
         binding.navMenu.setNavigationItemSelectedListener(this)
-
-       /* bindingfrag.rationbalance.setOnClickListener {
-            setToolbarTitle("Ration Balance")
-            changeFragment(rationBalance())
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container,rationfrag).commit()
-            }
-        }
-        bindingfrag.rbtxt.setOnClickListener {
-            setToolbarTitle("Ration Balance")
-            changeFragment(rationBalance())
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container,rationfrag).commit()
-            }
-        }*/
-
-        /*setToolbarTitle("Home")
-        changeFragment(Home())*/
-
-
-        // fragment change using click
-
-
-
-        /*//recyclerview test
-        val cardTitles: Array<String> = resources.getStringArray(R.array.cardTitles)
-        val cardImages: Array<String> = resources.getStringArray(R.array.cardImages)
-        val adapter = GridItemAdapter(cardTitles,cardImages)
-
-        val gridLayout = GridLayoutManager(this, 2)
-        binding.gridItems.layoutManager =gridLayout
-        binding.gridItems.adapter = adapter*/
 
 
     }
@@ -118,10 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 setToolbarTitle("Performance Record")
                 changeFragment(performanceRecord())
             }
-            /*R.id.staticDataEntry -> {
-                setToolbarTitle("Statistical Analysis")
-                changeFragment(statisticalAnalysis())
-            }*/
+
             R.id.feedback -> {
                 setToolbarTitle("Feedback")
                 changeFragment(feedback())

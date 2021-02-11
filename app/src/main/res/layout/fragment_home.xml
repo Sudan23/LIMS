@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Home">
 
@@ -32,12 +33,13 @@
 
                 <ImageButton
                     android:id="@+id/rationbalance"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:clickable="true"
-                    android:src="@mipmap/food"
 
+                    android:src="@mipmap/food"
                     tools:src="@mipmap/food" />
 
                 <TextView
@@ -58,8 +60,9 @@
 
                 <ImageButton
                     android:id="@+id/animal_registration"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="20dp"
                     android:src="@mipmap/animal"
@@ -79,6 +82,7 @@
             android:id="@+id/linearLayout12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -89,9 +93,9 @@
 
                 <ImageButton
                     android:id="@+id/animal_health"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:src="@mipmap/animal_logo" />
 
                 <TextView
@@ -111,10 +115,10 @@
 
                 <ImageButton
                     android:id="@+id/animal_breeding"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
                     android:src="@mipmap/dog"
                     tools:src="@mipmap/dog" />
 
@@ -132,6 +136,7 @@
             android:id="@+id/linearLayout11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -142,9 +147,9 @@
 
                 <ImageButton
                     android:id="@+id/performance_record"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="44dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:src="@mipmap/performance"
                     tools:src="@mipmap/performance" />
 
@@ -164,25 +169,25 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/static_data_entry"
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
+                    android:id="@+id/feedback_ib"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="10dp"
-                    android:layout_marginTop="44dp"
-                    android:src="@mipmap/staticdata"
 
-                    android:text="Ration Balance"
+                    android:src="@mipmap/staticdata"
                     tools:src="@mipmap/staticdata" />
 
                 <TextView
-                    android:id="@+id/sdetxt"
+                    android:id="@+id/sbtxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="@string/static_data_entry"
+                    android:text="@string/feedback"
                     android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

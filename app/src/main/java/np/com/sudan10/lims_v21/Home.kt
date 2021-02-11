@@ -1,17 +1,11 @@
 package np.com.sudan10.lims_v21
 
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 
@@ -21,22 +15,45 @@ class Home : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-     /*   val cardTitles: Array<String> = resources.getStringArray(R.array.cardTitles)
-        val cardImages: Array<String> = resources.getStringArray(R.array.cardImages)
-        val adapter = GridItemAdapter(cardTitles,cardImages)
-
-        val gridLayout = GridLayoutManager(context, 2)
-        gridItems.layoutManager =gridLayout
-        gridItems.adapter = adapter*/
 
 
-        //Not needed code, just a click listener
         val view: View = inflater!!.inflate(R.layout.fragment_home, container, false)
+
+        //ration balance
         view.rationbalance.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2rationBalance)
         }
         view.rbtxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2rationBalance)
         }
+        //animal registration
+        view.animal_registration.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalregistration)
+        }
+        view.artxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalregistration)
+        }
+
+        //animal breeding
+        view.animal_breeding.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalbreeding)
+        }
+        view.abtxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalbreeding)
+        }
+
+        //animal health
+        view.animal_health.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalhealth)
+        }
+        view.ahtxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2animalhealth)
+        }
+
+        //animal performance record
+        view.performance_record.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2performancerecord)
+        }
+        view.prtxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2performancerecord)
+        }
+
+        //feedback
+        view.feedback_ib.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2feedback)
+        }
+        view.sbtxt.setOnClickListener {Navigation.findNavController(view).navigate(R.id.home2feedback)
+        }
+
 
         return view
 

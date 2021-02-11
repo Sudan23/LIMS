@@ -7,8 +7,12 @@
     tools:context=".farmRegistration">
 
 
-
-    <include layout="@layout/activity_commonregistration" />
+    <include
+        layout="@layout/activity_commonregistration"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
         <!--
         <include layout="@layout/activity_farmerscreen2"/>
 -->
