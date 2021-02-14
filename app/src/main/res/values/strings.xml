@@ -200,4 +200,6 @@
     <string name="Registration">Registration</string>
     <string name="farm_registration">Farm Registration</string>
     <string name="farmer_registration">Farmer Registration</string>
+    <string name="rbRuminant">Ration Balance Ruminant</string>
+    <string name="rbNonRuminant">Ration Balance Non Ruminant</string>
 </resources>

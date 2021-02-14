@@ -51,6 +51,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")
                 changeFragment(rationBalance())
+            }R.id.rationBalanceNonRuminant -> {
+                setToolbarTitle("Ration Balance Non Ruminant")
+                changeFragment(nonRuminant_rb())
+            }R.id.rationBalanceRuminant -> {
+                setToolbarTitle("Ration Balance Ruminant")
+                changeFragment(Ruminant_rb())
             }
             R.id.animalRegistration -> {
                 setToolbarTitle("Animal Registration")

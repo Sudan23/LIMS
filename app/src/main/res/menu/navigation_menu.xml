@@ -6,9 +6,19 @@
     <item
         android:id="@+id/login"
         android:title="@string/log_in" />
-    <item
+    <group
         android:id="@+id/rationBalance"
-        android:title="@string/ration_balance" />
+        android:title = "Ration Balance">
+        <item
+            android:id="@+id/rationBalanceRuminant"
+            android:title="@string/rbRuminant" />
+        <item
+            android:id="@+id/rationBalanceNonRuminant"
+            android:title="@string/rbNonRuminant" />
+
+    </group>
+
+
     <group
         android:id="@+id/Registration"
         android:title="@string/Registration" >
