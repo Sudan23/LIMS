@@ -97,7 +97,6 @@
         <item>Goat</item>
     </string-array>
     <string-array name="cattle_category">
-        <item> Age Category</item>
         <item>Heifer</item>
         <item>Last three months of Gestation</item>
         <item>Mature Cow</item>
@@ -119,7 +118,7 @@
         <item>600 Kg</item>
     </string-array>
     <string-array name="pregnancy_month">
-        <item>Select Pregnancy Month</item>
+        <item>Month</item>
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -133,7 +132,6 @@
         <item>9</item>
     </string-array>
     <string-array name="lactation_phase">
-        <item>Select Lactation Phase</item>
         <item>Dry</item>
         <item>Early Lactation</item>
         <item>Mid Lactation</item>
@@ -148,7 +146,7 @@
         <item>1 kg</item>
     </string-array>
     <string-array name="feeds_name">
-        <item>Select the feed Item</item>
+        <item>Feed Item</item>
         <item>Corn</item>
         <item>Oats</item>
         <item>Rice Paddy</item>
@@ -162,7 +160,7 @@
         <item>Soyabean Oil</item>
     </string-array>
     <string-array name="milk_quantity">
-        <item>Milk Quantity</item>
+        <item>Milk Yield</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

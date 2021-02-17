@@ -19,10 +19,10 @@
 
             </shape>
         </item>
-        <!--<item >
+        <item >
             <bitmap android:gravity="right|center" android:src="@drawable/dropdown" />
 
-        </item>-->
+        </item>
 
 
     </layer-list></item>

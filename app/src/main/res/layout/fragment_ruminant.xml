@@ -17,205 +17,252 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp">
 
-                <TextView
-                    android:id="@+id/animalTypes"
-                    android:layout_width="200dp"
+                <LinearLayout
+                    android:id="@+id/AnimalTypes"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Animal types"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <Spinner
-                    android:id="@+id/animaltype_spinner"
-                    android:layout_width="200dp"
+                    <TextView
+                        android:id="@+id/animalTypes"
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Species"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/animaltype_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/animal_name"
+                        android:textColor="@color/txt_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AnimalCategories"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/animal_name"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/agecategories_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Type"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/agecategories_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/cattle_category"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/txt_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginEnd="5dp">
 
-                <TextView
-                    android:id="@+id/agecategories_tv"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Age Categories"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:id="@+id/Pregnancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <Spinner
-                    android:id="@+id/agecategories_spinner"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/animal_name"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/pregnancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Pregnancy"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/pregnancy_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/pregnancy_month"
+                        android:textColor="@color/txt_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Lactation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/lactation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Lactation "
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/lactation_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/lactation_phase"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/WeightMilk"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginEnd="5dp">
 
-                <TextView
-                    android:id="@+id/weight"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Weight"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                <LinearLayout
+                    android:id="@+id/Weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <Spinner
-                    android:id="@+id/weight_spinner"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/weight_category"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/weight"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Weight (KG)"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    <EditText
+                        android:id="@+id/editTextNumber3"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/table_border_toolbal_color"
+                        android:ems="10"
+                        android:hint="10"
+                        android:inputType="number" />
 
-                <TextView
-                    android:id="@+id/pregnancy"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Pregnancy"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                </LinearLayout>
 
-                <Spinner
-                    android:id="@+id/pregnancy_spinner"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/pregnancy_month"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/MilkYield"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/lactation"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Lactation "
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/milkquantity"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Milk Yield (Liters)"
+                        android:textColor="@color/txttoolbar_color"
+                        android:textSize="20sp" />
 
-                <Spinner
-                    android:id="@+id/lactation_spinner"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/lactation_phase"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    <EditText
+                        android:id="@+id/editTextNumber4"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/table_border_toolbal_color"
+                        android:ems="10"
+                        android:hint="15"
+                        android:inputType="number" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/milkquantity"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="10dp"
-                    android:text="Milk Quantity"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
-
-                <Spinner
-                    android:id="@+id/milkquantity_spinner"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/spinner_boarder"
-                    android:entries="@array/milk_quantity"
-                    android:gravity="center_horizontal"
-                    android:textColor="@color/txt_color"
-                    android:textSize="20sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnlogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:enabled="false"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:enabled="true"
                 android:gravity="center|center_horizontal"
-                android:text="Add" />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:text="@string/button_1"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:iconPadding="1dp" />
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -226,54 +273,72 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvempty"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text=""
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvrumMin1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
                         android:text="DM"
-                        android:textColor="@color/txt_color"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvrumMin2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
                         android:text="Energy"
-                        android:textColor="@color/txt_color"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvrumMin3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
                         android:text="Protein"
-                        android:textColor="@color/txt_color"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvrumMin4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:text="Minerals"
-                        android:textColor="@color/txt_color"
-                        android:textSize="18sp" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Mineral"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvrumMin5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:text="Vitamins"
-                        android:textColor="@color/txt_color"
-                        android:textSize="18sp" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Vitamin"
+                        android:textSize="14sp" />
+
+
                 </TableRow>
 
                 <TableRow
@@ -281,551 +346,467 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvrequired"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:gravity="center_horizontal"
-                        android:hint="10" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Required"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvr21"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:gravity="center_horizontal"
-                        android:hint="120" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="20"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvr22"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:gravity="center_horizontal"
-                        android:hint="60" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="50"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvr23"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:gravity="center_horizontal"
-                        android:hint="30" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="70"
+                        android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:id="@+id/tvr24"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
                         android:background="@drawable/table_border"
-                        android:gravity="center_horizontal"
-                        android:hint="70" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="80"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr25"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="90"
+                        android:textSize="14sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvavail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Available"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr31"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="20"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr32"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="50"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr33"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="70"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr34"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="80"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr35"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="90"
+                        android:textSize="14sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvfeed"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Feedback"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvr41"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="20"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr42"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="50"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr43"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="70"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr44"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="80"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvr45"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="90"
+                        android:textSize="14sp" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="423dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:stretchColumns="1,2,3">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tV141"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Feed Name"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV142"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Intake(Kg)"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV143"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Price (NPR)"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV242"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="50"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV243"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="900"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".001dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname_spinner1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/txttoolbar_color" />
+
+                    <TextView
+                        android:id="@+id/tV342"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="60"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV343"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="500"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".1dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname2_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV442"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="30"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV443"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="1000"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".1dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
                 </TableRow>
 
             </TableLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/table_border"
-                android:orientation="vertical">
+                android:layout_height="match_parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="265dp"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:text="Ingredient Name"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/editTextTextMultiLine"
-                        app:layout_constraintHorizontal_chainStyle="spread"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.6" />
-
-                    <TextView
-                        android:id="@+id/editTextTextMultiLine"
-                        android:layout_width="141dp"
-                        android:layout_height="49dp"
-                        android:ems="10"
-                        android:gravity="center|center_horizontal|center_vertical"
-                        android:inputType="textMultiLine"
-                        android:text="Feed Intake"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView5"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal">
-
-                        <Spinner
-                            android:id="@+id/feedname_spinner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/spinner_boarder"
-                            android:entries="@array/feeds_name" />
-
-                        <EditText
-                            android:id="@+id/editTextTextPersonName6"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="number" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal">
-
-                        <Spinner
-                            android:id="@+id/feeditem_spinner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/spinner_boarder"
-                            android:entries="@array/feeds_name" />
-
-                        <EditText
-                            android:id="@+id/editTextTextPersonName7"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="number" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal">
-
-                        <Spinner
-                            android:id="@+id/spinner9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/spinner_boarder"
-                            android:entries="@array/feeds_name" />
-
-                        <EditText
-                            android:id="@+id/editTextTextPersonName8"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="number" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal">
-
-                        <Spinner
-                            android:id="@+id/spinner10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/spinner_boarder"
-                            android:entries="@array/feeds_name" />
-
-                        <EditText
-                            android:id="@+id/editTextTextPersonName9"
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="number" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
+                <Button
+                    android:id="@+id/updateTable"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="45dp"
+                    android:background="@drawable/button"
+                    android:enabled="true"
+                    android:gravity="center|center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/button_2"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/updateTable2"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/addfeed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:enabled="false"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button"
+                    android:enabled="true"
                     android:gravity="center|center_horizontal"
-                    android:text="Add other feeding item" />
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/button_3"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/updateTable"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="352dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/table_border"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".5"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/table_border"
-                        android:gravity="center|center_horizontal|center_vertical"
-                        android:text="Required Nutrition"
-                        android:textSize="18sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNDM"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="DM Intake"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNdiet"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Diet Density"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNenergy"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Energy"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNprotein"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Protein"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNminerals"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Minerals"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_RNvitamins"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Vitamins"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".5"
-                    android:background="@drawable/table_border"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/availableNutrition_tv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/table_border"
-                        android:gravity="center|center_horizontal|center_vertical"
-                        android:text="Available Nutrition"
-                        android:textSize="18sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_DM"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="DM Intake"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical">
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_diet"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Diet Density"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_energy"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Energy"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_protein"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Protein"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_minerals"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Minerals"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight=".16"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_vitamins"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:gravity="start|top"
-                            android:inputType="textMultiLine"
-                            android:text="Vitamins"
-                            android:textSize="15sp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight=".5"
-                            android:orientation="vertical"></LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </LinearLayout>
 
     </ScrollView>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
