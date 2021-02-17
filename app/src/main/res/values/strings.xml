@@ -14,6 +14,15 @@
     <string name="action_sign_in_short">Log In</string>
     <string name="action_sign_in">Log In</string>
 
+
+    //Button Name
+    //Poultry fragment
+
+    <string name="button_1">Submit</string>
+    <string name="button_2">Formulate</string>
+    <string name="button_3">Add feed</string>
+
+
     <string-array name="Farm_farmer">
         <item>Farm</item>
         <item>Farmer</item>

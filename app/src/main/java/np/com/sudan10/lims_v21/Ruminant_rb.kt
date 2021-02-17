@@ -14,7 +14,7 @@ class Ruminant_rb : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ruminant_rb, container, false)
+        return inflater.inflate(R.layout.fragment_ruminant, container, false)
     }
 
 }
