@@ -209,4 +209,14 @@
     <string name="farmer_registration">Farmer Registration</string>
     <string name="rbRuminant">Ration Balance Ruminant</string>
     <string name="rbNonRuminant">Ration Balance Non Ruminant</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="feedback_category">Feedback Category</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
+
+    //Feedback
+
+
 </resources>
