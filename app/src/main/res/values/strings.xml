@@ -2,7 +2,28 @@
     <string name="app_name">LIMS_V3.0</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
+    //Home Screen
+    <string name="close">close</string>
+    <string name="open">open</string>
+
+    <string name="log_in">Log In</string>
+    <string name="ration_balance">Ration Balance</string>
+    <string name="animal_registration">Animal Registration</string>
+    <string name="animal_health">Animal Health</string>
+    <string name="animal_breeding">Animal Breeding</string>
+    <string name="performance_record">Performance Record</string>
+    <string name="static_data_entry">Static Data Entry</string>
+
+    <string name="feedback">Feedback</string>
+    <string name="home">Home</string>
+    <string name="Registration">Registration</string>
+    <string name="farm_registration">Farm Registration</string>
+    <string name="farmer_registration">Farmer Registration</string>
+    <string name="rbRuminant">Ration Balance Ruminant</string>
+    <string name="rbNonRuminant">Ration Balance Non Ruminant</string>
+
+
     //Login Screen
     <string name="username">Username</string>
     <string name="prompt_password">Password</string>
