@@ -16,16 +16,16 @@
         android:background="@color/white">
 
         <EditText
-            android:text="@={loginviewmodel.email}"
             android:id="@+id/username_input"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/table_border_toolbar_color_corner"
             android:hint="@string/username"
             android:inputType="textEmailAddress"
+            android:text="@={loginviewmodel.email}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
@@ -86,7 +86,7 @@
             android:id="@+id/logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="55dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

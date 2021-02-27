@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.fragment_login.*
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
@@ -33,6 +34,13 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         toggle.syncState()
 
         binding.navMenu.setNavigationItemSelectedListener(this)
+
+        val defaultfragment = Login()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_container,defaultfragment)
+            commit()
+        }
 
 
     }
