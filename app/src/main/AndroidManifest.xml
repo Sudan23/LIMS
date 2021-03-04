@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LIMS_V30"
         tools:targetApi="m">
-        <activity android:name=".ui.home.Home">
+        <activity android:name=".ui.home.Home"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

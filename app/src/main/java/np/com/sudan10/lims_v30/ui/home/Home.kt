@@ -1,15 +1,14 @@
 package np.com.sudan10.lims_v30.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.fragment_login.*
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login

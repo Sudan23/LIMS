@@ -1,6 +1,6 @@
 package np.com.sudan10.lims_v21.repository
 
-import np.com.sudan10.lims_v30.data.repositories.RetrofitInstance
+import np.com.sudan10.lims_v30.data.repository.RetrofitInstance
 import np.com.sudan10.lims_v30.ui.feedback.FeedbackPost
 import retrofit2.Response
 
