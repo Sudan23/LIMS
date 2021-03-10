@@ -1,20 +1,18 @@
 package np.com.sudan10.lims_v30.ui.feedback
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.databinding.FragmentFeedbackBinding
-import np.com.sudan10.lims_v30.databinding.FragmentLoginBinding
-import np.com.sudan10.lims_v30.util.ViewUtils
 
 
-class Feedback : Fragment(), FeedbackListener {
+class Feedback : Fragment() {
     
     private lateinit var feedbackViewModel: FeedbackViewModel
     private lateinit var viewModel: FeedbackViewModel
@@ -44,7 +42,7 @@ class Feedback : Fragment(), FeedbackListener {
         return view
     }
 
-    override fun onClicked() {
+   /* override fun onClicked() {
         ViewUtils.showMessage(requireContext(),"Feedback send clicked")    
     }
 
@@ -55,5 +53,5 @@ class Feedback : Fragment(), FeedbackListener {
     override fun onFailure(message: String) {
         ViewUtils.showMessage(requireContext(),"message")
 
-    }
+    }*/
 }

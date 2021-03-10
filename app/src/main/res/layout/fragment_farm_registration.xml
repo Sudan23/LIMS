@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -69,7 +72,20 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:lines="2"
-                android:text="PAN/Citizenship No"
+                android:text="Citizenship No"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/type_spinner" />
+            <TextView
+                android:id="@+id/pan_textview"
+                android:layout_width="130dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:lines="2"
+                android:visibility="gone"
+                android:text="PAN"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline6"
@@ -127,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:orientation="vertical"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintGuide_begin="25dp"
                 app:layout_constraintStart_toStartOf="parent"

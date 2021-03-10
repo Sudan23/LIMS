@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"लिम्स "</string>
+    <string name="hello_blank_fragment">"खाली फ्रग्मेन्टमा स्वागत् छ । "</string>
+    <string name="close">"बन्द "</string>
+    <string name="open">"खोल्नुहोस् "</string>
+    <string name="log_in">"लग् इन् गर्नुहोस् "</string>
+    <string name="ration_balance">पौष्टिक व्यवस्थापन</string>
+    <string name="animal_registration">पशु पंजीकरण</string>
+    <string name="animal_health">"पशु स्वास्थ्य "</string>
+    <string name="animal_breeding">पशु प्रजनन</string>
+    <string name="performance_record">"प्रदर्शन रेकर्ड "</string>
+    <string name="static_data_entry">स्थिर डाटा प्रविष्टि</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="home">गृह</string>
+    <string name="Registration">पञ्जीकरण</string>
+    <string name="farm_registration">फार्म दर्ता</string>
+    <string name="farmer_registration">"किसान पंजीकरण "</string>
+    <string name="rbRuminant">"पौष्टिक व्यवस्थापन -रुमिन््यन्त "</string>
+    <string name="rbNonRuminant">"पौष्टिक व्यवस्थापन -नन्  रुमिन््यन्त "</string>
+    <string name="username">प्रयोगकर्ता नाम</string>
+    <string name="prompt_password">पासवर्ड</string>
+    <string name="action_sign_in_short">"लग् इन् गर्नुहोस् "</string>
+    <string name="action_sign_in">"लग् इन् गर्नुहोस् "</string>
+    <string name="full_name">पुरा नाम</string>
+    <string name="address">ठेगाना</string>
+    <string name="email">ईमेल</string>
+    <string name="feedback_category">प्रतिक्रिया वर्ग</string>
+    <string name="message">सन्देश</string>
+    <string name="send">पठाउनुहोस्</string>
+</resources>

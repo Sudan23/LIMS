@@ -19,7 +19,7 @@ class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel(
     var feedbackListener: FeedbackListener? = null
     val myResponse: MutableLiveData<Response<FeedbackPost>> = MutableLiveData()
 
-    fun pushPost(post: FeedbackPost) {
+    /*fun pushPost(post: FeedbackPost) {
         viewModelScope.launch {
             val response :Response<FeedbackPost> = repository.pushPost(post)
             myResponse.value = response
@@ -33,7 +33,8 @@ class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel(
             myResponse.value = response
 
         }
-    }
+    }*/
+
     fun onSendClick(view : View){
         feedbackListener?.onClicked()
 

@@ -1,20 +1,632 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.registration.AnimalRegistration">
 
-    <TextView
-        android:id="@+id/category_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animal Registration"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.registration.AnimalRegistration">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="8dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_boarder"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.026">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/province_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".9"
+                        android:paddingVertical="2dp"
+                        android:text="Province"
+                        android:textColor="@color/default_color"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/province_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+
+                    <TextView
+                        android:id="@+id/district_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".7"
+                        android:paddingVertical="2dp"
+                        android:paddingStart="5dp"
+                        android:text="District"
+                        android:textColor="@color/default_color"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/district_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/municipality_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".9"
+                        android:paddingVertical="2dp"
+                        android:text="Municipality"
+                        android:textColor="@color/default_color"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/municipality_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+
+                    <TextView
+                        android:id="@+id/ward_no_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".7"
+                        android:paddingVertical="2dp"
+                        android:paddingStart="5dp"
+                        android:text="Ward No"
+                        android:textColor="@color/default_color"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/ward_no_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.517"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                    app:layout_constraintVertical_bias="0.222">
+
+                    <TextView
+                        android:id="@+id/tole_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".8"
+                        android:paddingVertical="3dp"
+                        android:text="Tole"
+                        android:textColor="@color/default_color"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tole_editText"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder"
+                        android:paddingVertical="3dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
+                android:background="@color/white"
+                android:text="   Address   "
+                android:textColor="@color/default_color"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/pan_ctz_textview2" />
+
+            <Spinner
+                android:id="@+id/farm_selector_for_registration"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/category_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/category_textview"
+                app:layout_constraintTop_toTopOf="@+id/category_textview"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/category_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Select Farm"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+            <Spinner
+                android:id="@+id/animal_species_spinner"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/species_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/species_textview"
+                app:layout_constraintTop_toTopOf="@+id/species_textview" />
+
+            <TextView
+                android:id="@+id/species_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Species"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/category_textview" />
+
+            <Spinner
+                android:id="@+id/breed_type_spinner"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/breed_type_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.795"
+                app:layout_constraintStart_toEndOf="@+id/breed_type_textview"
+                app:layout_constraintTop_toTopOf="@+id/breed_type_textview" />
+
+            <TextView
+                android:id="@+id/breed_type_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Breed Type"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/species_textview" />
+
+            <Spinner
+                android:id="@+id/breed_spinner"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/breed_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.905"
+                app:layout_constraintStart_toEndOf="@+id/breed_textview"
+                app:layout_constraintTop_toTopOf="@+id/breed_textview"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/breed_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Breed"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/breed_type_textview" />
+
+            <TextView
+                android:id="@+id/name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Name"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/breed_textview" />
+
+            <EditText
+                android:id="@+id/name_edittext"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBaseline_toBaselineOf="@+id/name_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.902"
+                app:layout_constraintStart_toEndOf="@+id/name_textview" />
+
+            <TextView
+                android:id="@+id/tag_no_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Tag no."
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/name_textview" />
+
+            <EditText
+                android:id="@+id/tag_no_edittext"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tag_no_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.902"
+                app:layout_constraintStart_toEndOf="@+id/tag_no_textview" />
+
+            <TextView
+                android:id="@+id/dob_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="D.O.B"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/tag_no_textview" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/spinner_boarder"
+                android:ems="10"
+                android:inputType="date"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dob_textview"
+                app:layout_constraintStart_toEndOf="@+id/dob_textview" />
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weight_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="24dp"
+                android:text="Weight"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextDate"
+                app:layout_constraintTop_toBottomOf="@+id/tag_no_textview" />
+
+            <EditText
+                android:id="@+id/weight_edittext"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBaseline_toBaselineOf="@+id/weight_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.757"
+                app:layout_constraintStart_toEndOf="@+id/weight_textview" />
+
+            <TextView
+                android:id="@+id/gender_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Gender"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/dob_textview" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/gender_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gender_textview"
+                app:layout_constraintTop_toTopOf="@+id/gender_textview">
+
+                <RadioButton
+                    android:id="@+id/male_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Male"
+                    android:textColor="@color/default_color" />
+
+                <RadioButton
+                    android:id="@+id/female_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textColor="@color/default_color" />
+
+                <RadioButton
+                    android:id="@+id/castrate_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".9"
+                    android:text="Castrate"
+                    android:textColor="@color/default_color" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/direid_textview"
+                android:layout_width="89dp"
+                android:layout_height="34dp"
+                android:text="Dire I.D"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/sireid_edittext"
+                app:layout_constraintEnd_toStartOf="@+id/direid_edittext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sireid_edittext"
+                app:layout_constraintTop_toTopOf="@+id/sireid_edittext" />
+
+            <TextView
+                android:id="@+id/sireid_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Sire I.D"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/sireid_edittext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_textview" />
+
+            <EditText
+                android:id="@+id/sireid_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                android:text="Sire I.D"
+                android:textColor="@color/default_color"
+                app:layout_constraintBottom_toBottomOf="@+id/sireid_textview"
+                app:layout_constraintEnd_toStartOf="@+id/direid_textview"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sireid_textview"
+                app:layout_constraintTop_toTopOf="@+id/sireid_textview"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/direid_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                android:text="Dire I.D"
+                android:textColor="@color/default_color"
+                app:layout_constraintBottom_toBottomOf="@+id/direid_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/direid_textview"
+                app:layout_constraintTop_toTopOf="@+id/direid_textview" />
+
+            <TextView
+                android:id="@+id/entry_type_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Entry Type"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/sireid_edittext" />
+
+
+            <Spinner
+                android:id="@+id/entry_type_spinner"
+                android:layout_width="228dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/entry_type_textview"
+                app:layout_constraintStart_toEndOf="@+id/entry_type_textview"
+                app:layout_constraintTop_toTopOf="@+id/entry_type_textview" />
+
+            <LinearLayout
+                android:id="@+id/gender_female_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/entry_type_textview">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pregnancy_textview"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Pregnancy"
+                        android:textColor="@color/default_color"
+                        android:textSize="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/pregnancy_radio_btn"
+                            android:layout_width="190dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Pregnant" />
+
+                        <RadioButton
+                            android:id="@+id/non_pregnancy_radio_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Non-Pregnant" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/milking_status_textview"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Milking Status"
+                        android:textColor="@color/default_color"
+                        android:textSize="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/milking_radio_btn"
+                            android:layout_width="190dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Milking" />
+
+                        <RadioButton
+                            android:id="@+id/dry_radio_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Dry" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/parity_textview"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Parity(lactation)"
+                        android:textColor="@color/default_color"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/parity_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/spinner_boarder"
+                        android:textColor="@color/default_color"
+                        android:textSize="24dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
