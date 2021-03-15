@@ -1,19 +1,15 @@
 package np.com.sudan10.lims_v30.data.network
 
-import np.com.sudan10.lims_v30.ui.feedback.FeedbackPost
-import retrofit2.Response
+import np.com.sudan10.lims_v30.responses.FeedbackPost
+import np.com.sudan10.lims_v30.responses.FeedbackResponse
 import retrofit2.http.Body
-import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface FeedbackApi {
 
-    @GET("/odata/Feedback")
-    suspend fun getPost(): Response<FeedbackPost>
-
     @POST("/odata/Feedback")
-    suspend fun pushPost(
+    suspend fun feedbackSubmit(
         @Body post: FeedbackPost
-    ):Response<FeedbackPost>
+    ): FeedbackResponse
 
 }

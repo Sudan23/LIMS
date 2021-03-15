@@ -1,13 +1,19 @@
 package np.com.sudan10.lims_v30.ui.feedback
 
 import android.view.View
+import android.widget.AdapterView
+import androidx.databinding.ObservableField
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
-import retrofit2.Response
+import np.com.sudan10.lims_v30.data.network.Resource
+import np.com.sudan10.lims_v30.responses.FeedbackPost
+import np.com.sudan10.lims_v30.responses.FeedbackResponse
+import np.com.sudan10.lims_v30.responses.LoginResponse
+
 
 class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel() {
     var fullName: String? = null
@@ -16,55 +22,33 @@ class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel(
     var feedbackCategory: String? = null
 
     var feedbackMessage: String? = null
-    var feedbackListener: FeedbackListener? = null
-    val myResponse: MutableLiveData<Response<FeedbackPost>> = MutableLiveData()
 
-    /*fun pushPost(post: FeedbackPost) {
-        viewModelScope.launch {
-            val response :Response<FeedbackPost> = repository.pushPost(post)
-            myResponse.value = response
+    private val _feedbackResponse : MutableLiveData<Resource<FeedbackResponse>> = MutableLiveData()
+    val feedbackResponse : LiveData<Resource<FeedbackResponse>>
+        get() = _feedbackResponse
+
+
+
+    val clicksListener = object : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+
         }
 
+        override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            feedbackCategory = parent?.getItemAtPosition(position) as String
+        }
     }
 
-    fun getPost() {
-        viewModelScope.launch {
-            val response = repository.getPost()
-            myResponse.value = response
 
-        }
-    }*/
+    fun sendFeedback(
+            fullName: String,
+            address: String,
+            feedbackEmail: String,
+            feedbackCategory: String,
+            feedbackMessage: String
 
-    fun onSendClick(view : View){
-        feedbackListener?.onClicked()
-
-        if (fullName.isNullOrEmpty() ||
-                address.isNullOrEmpty() ||
-                feedbackEmail.isNullOrEmpty() ||
-                feedbackCategory.isNullOrEmpty()||
-                feedbackMessage.isNullOrEmpty()) {
-
-            feedbackListener?.onFailure("Please fill all the fields")
-
-            return
-
-        }
-        feedbackListener?.onSuccess()
-        val repository = FeedbackRepository()
-        val viewModelFactory = FeedbackViewModelFactory(repository)
-
-        /*private lateinit var viewModel: FeedbackViewModel
-        viewModel = ViewModelProvider(this, viewModelFactory).get(FeedbackViewModel::class.java)*/
-
-        val myPost = FeedbackPost(address!!,
-                feedbackCategory!!,
-                feedbackEmail!!,
-                fullName!!,feedbackMessage!!)
-
-
-
-
+    ) = viewModelScope.launch {
+        _feedbackResponse.value = repository.feedback(fullName,address,feedbackEmail,feedbackCategory,feedbackMessage)
     }
-
 
 }

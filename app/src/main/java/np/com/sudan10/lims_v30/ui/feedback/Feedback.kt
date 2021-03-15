@@ -1,57 +1,61 @@
 package np.com.sudan10.lims_v30.ui.feedback
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.util.Base64
 import android.view.View
-import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatSpinner
+import androidx.databinding.BindingAdapter
+import androidx.databinding.ObservableField
+import androidx.lifecycle.Observer
+import np.com.sudan10.lims_v21.repository.FeedbackRepository
 import np.com.sudan10.lims_v30.R
+import np.com.sudan10.lims_v30.data.network.FeedbackApi
+import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.databinding.FragmentFeedbackBinding
+import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 
-class Feedback : Fragment() {
-    
-    private lateinit var feedbackViewModel: FeedbackViewModel
-    private lateinit var viewModel: FeedbackViewModel
-    private var _binding: FragmentFeedbackBinding? = null
+class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, FeedbackRepository>() {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.feedbackResponse.observe(viewLifecycleOwner, Observer {
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val binding : FragmentFeedbackBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_feedback,container,false )
-        val view = binding.root
-        binding.lifecycleOwner = this
+            when (it) {
+                is Resource.Success -> {
+                    Toast.makeText(requireContext(), "Thank you for your valuable feedback", Toast.LENGTH_LONG).show()
+                }
+                is Resource.Failure -> {
+                    Toast.makeText(requireContext(), "Feedback sending failed", Toast.LENGTH_SHORT).show()
+                }
+            }
 
-        val spinner: Spinner = binding.feedbackCategoryInput
-        ArrayAdapter.createFromResource(
-                requireContext(),
-                R.array.feedback_category,android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            binding.spinnerAdapter = adapter
+        })
+
+        binding.feedbackSend.setOnClickListener {
+            val fullName = binding.feedbackNameInput.text.toString().trim()
+            val address = binding.feedbackAddress.text.toString().trim()
+            val feedbackEmail = binding.feedbackNameInput.text.toString().trim()
+            val feedbackCategory = binding.feedbackNameInput.text.toString().trim()
+            val feedbackMessage = binding.feedbackNameInput.text.toString().trim()
+
+            //@todo add input validations
+
+            viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)
 
         }
 
-
-        return view
     }
 
-   /* override fun onClicked() {
-        ViewUtils.showMessage(requireContext(),"Feedback send clicked")    
-    }
+    override fun getViewModel() = FeedbackViewModel::class.java
 
-    override fun onSuccess() {
-        ViewUtils.showMessage(requireContext(),"Feedback send Sucessful")
-    }
+    override fun getFragmentBinding() = R.layout.fragment_feedback
 
-    override fun onFailure(message: String) {
-        ViewUtils.showMessage(requireContext(),"message")
-
-    }*/
+    override fun getFragmentRepository() = FeedbackRepository(remoteDataSource.buildApi(FeedbackApi::class.java))
 }

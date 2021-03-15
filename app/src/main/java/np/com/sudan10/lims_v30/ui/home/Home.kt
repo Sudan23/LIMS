@@ -34,7 +34,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        val defaultfragment = Login()
+        val defaultfragment = Feedback()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,defaultfragment)

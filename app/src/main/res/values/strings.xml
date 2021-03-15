@@ -9,7 +9,6 @@
     <string name="open">open</string>
 
     <string name="log_in">Log In</string>
-    <string name="ration_balance">Ration Balance</string>
     <string name="animal_registration">Animal Registration</string>
     <string name="animal_health">Animal Health</string>
     <string name="animal_breeding">Animal Breeding</string>
@@ -39,6 +38,7 @@
     <string name="feedback_category">Feedback Category</string>
     <string name="message">Message</string>
     <string name="send">Send</string>
+    <string name="ration_balance">Ration Balance</string>
     <string-array name="feedback_category">
         <item>Suggestions</item>
         <item>Complains</item>

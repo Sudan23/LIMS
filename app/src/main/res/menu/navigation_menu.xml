@@ -1,48 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
         android:title="@string/home" />
     <item
         android:id="@+id/login"
         android:title="@string/log_in" />
-    <group
+
+    <item
         android:id="@+id/rationBalance"
-        android:title = "Ration Balance">
+        android:menuCategory="system"
+        android:title="@string/ration_balance">
+
+        <menu>
+            <item
+                android:id="@+id/rationBalanceRuminant"
+                android:title="@string/rbRuminant" />
+            <item
+                android:id="@+id/rationBalanceNonRuminant"
+                android:title="@string/rbNonRuminant" />
+
+        </menu>
+    </item>
+
+
+
+    <group>
+
         <item
-            android:id="@+id/rationBalanceRuminant"
-            android:title="@string/rbRuminant" />
-        <item
-            android:id="@+id/rationBalanceNonRuminant"
-            android:title="@string/rbNonRuminant" />
-
-    </group>
-
-
-    <group
         android:id="@+id/Registration"
-        android:title="@string/Registration" >
-        <item
-            android:id="@+id/farmRegistration"
-            android:title="@string/farm_registration" />
-        <item
-            android:id="@+id/farmerRegistration"
-            android:title="@string/farmer_registration" />
-        <item
-            android:id="@+id/animalRegistration"
-            android:title="@string/animal_registration" />
-    </group>
-    <item
-        android:id="@+id/animalHealth"
-        android:title="@string/animal_health" />
-    <item
-        android:id="@+id/animalBreeding"
-        android:title="@string/animal_breeding" />
-    <item
-        android:id="@+id/performanceRecord"
-        android:title="@string/performance_record" />
+        android:title="@string/Registration">
+            <menu>
+                <item
+                    android:id="@+id/farmRegistration"
+                    android:title="@string/farm_registration" />
+                <item
+                    android:id="@+id/farmerRegistration"
+                    android:title="@string/farmer_registration" />
+                <item
+                    android:id="@+id/animalRegistration"
+                    android:title="@string/animal_registration" />
 
-    <item
-        android:id="@+id/feedback"
-        android:title="@string/feedback" />
+            </menu>
+        </item>
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/animalHealth"
+            android:title="@string/animal_health" />
+        <item
+            android:id="@+id/animalBreeding"
+            android:title="@string/animal_breeding" />
+        <item
+            android:id="@+id/performanceRecord"
+            android:title="@string/performance_record" />
+
+        <item
+            android:id="@+id/feedback"
+            android:title="@string/feedback" />
+    </group>
 </menu>

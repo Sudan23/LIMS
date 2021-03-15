@@ -15,7 +15,7 @@
         android:theme="@style/Theme.LIMS_V30"
         tools:targetApi="m">
         <activity android:name=".ui.home.Home"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

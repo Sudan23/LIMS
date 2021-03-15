@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="feedbackViewModel"
             type="np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel" />
-        <variable
-            name="spinnerAdapter"
-            type="android.widget.ArrayAdapter" />
+
+
     </data>
 
 <ScrollView
@@ -134,11 +133,12 @@
 
         <Spinner
             android:id="@+id/feedback_category_input"
-            app:adapter="@{spinnerAdapter}"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="12dp"
+            android:entries="@array/feedback_category"
+            tools:setOnItemSelectedListener="@{feedbackViewModel.clicksListener}"
             android:background="@drawable/spinner_boarder_with_icon"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -174,7 +174,6 @@
 
         <Button
             android:id="@+id/feedback_send"
-            android:onClick="@{feedbackViewModel::onSendClick}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

@@ -1,15 +1,22 @@
 package np.com.sudan10.lims_v21.repository
 
-import np.com.sudan10.lims_v30.ui.feedback.FeedbackPost
-import retrofit2.Response
+import np.com.sudan10.lims_v30.data.network.FeedbackApi
+import np.com.sudan10.lims_v30.data.repository.BaseRepository
+import np.com.sudan10.lims_v30.responses.FeedbackPost
 
-class FeedbackRepository {
+class FeedbackRepository (
+        private val api:FeedbackApi
+        ) :BaseRepository(){
 
-   /* suspend fun getPost(): Response<FeedbackPost> {
-       return RetrofitInstance.feedbackApi.getPost()
-    }
-    suspend fun pushPost(post: FeedbackPost): Response<FeedbackPost> {
-        return RetrofitInstance.feedbackApi.pushPost(post)
-    }*/
+            suspend fun feedback (
+                    fullName: String,
+                    address:String,
+                    feedbackEmail: String,
+                    feedbackCategory: String,
+                    feedbackMessage: String
+
+            ) = safeApiCall {
+                api.feedbackSubmit(FeedbackPost(fullName,feedbackEmail,address,feedbackCategory,feedbackMessage))
+            }
 
 }

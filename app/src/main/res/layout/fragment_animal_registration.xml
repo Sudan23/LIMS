@@ -505,9 +505,21 @@
                 app:layout_constraintStart_toEndOf="@+id/entry_type_textview"
                 app:layout_constraintTop_toTopOf="@+id/entry_type_textview" />
 
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/entry_type_textview">
+
+
             <LinearLayout
                 android:id="@+id/gender_female_layout"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:orientation="vertical"
@@ -623,6 +635,16 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Register"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
