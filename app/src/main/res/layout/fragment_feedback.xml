@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="feedbackViewModel"
@@ -138,7 +137,8 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="12dp"
             android:entries="@array/feedback_category"
-            tools:setOnItemSelectedListener="@{feedbackViewModel.clicksListener}"
+
+
             android:background="@drawable/spinner_boarder_with_icon"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -159,7 +159,7 @@
 
         <EditText
             android:id="@+id/feedback_message_input"
-            android:text="@={feedbackViewModel.feedbackMessage}"
+            android:text="@={feedbackViewModel.feedbackCategory}"
             android:layout_width="0dp"
             android:layout_height="105dp"
             android:layout_marginStart="5dp"

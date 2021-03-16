@@ -12,7 +12,7 @@ class FeedbackRepository (
                     fullName: String,
                     address:String,
                     feedbackEmail: String,
-                    feedbackCategory: String,
+                    feedbackCategory: String?,
                     feedbackMessage: String
 
             ) = safeApiCall {

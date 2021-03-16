@@ -1,16 +1,12 @@
 package np.com.sudan10.lims_v30.ui.feedback
 
 import android.os.Bundle
-import android.util.Base64
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Spinner
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatSpinner
-import androidx.databinding.BindingAdapter
-import androidx.databinding.ObservableField
 import androidx.lifecycle.Observer
+import kotlinx.android.synthetic.main.fragment_feedback.*
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.network.FeedbackApi
@@ -23,6 +19,9 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var feedbackCategory:String? = null
+
 
         viewModel.feedbackResponse.observe(viewLifecycleOwner, Observer {
 
@@ -38,16 +37,54 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
 
         })
 
-        binding.feedbackSend.setOnClickListener {
+
+
+
+        val categoryOption = resources.getStringArray(R.array.feedback_category)
+        val spinner = feedback_category_input
+        if (spinner != null) {
+            val adapter = ArrayAdapter<Any?>(requireContext(),
+                    android.R.layout.simple_spinner_item,
+                    categoryOption)
+
+            spinner.adapter = adapter
+
+            spinner.onItemSelectedListener = object :
+                    AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>,
+                                            view: View, position: Int, id: Long) {
+
+                    feedbackCategory = categoryOption[position]
+
+                    Toast.makeText(requireContext(),
+                            getString(R.string.selected_item) + " " +
+                                    "" + categoryOption[position], Toast.LENGTH_SHORT).show()
+
+
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    // write code to perform some action
+                    Toast.makeText(requireContext(),
+                            "Please select the category", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    binding.feedbackSend.setOnClickListener {
             val fullName = binding.feedbackNameInput.text.toString().trim()
-            val address = binding.feedbackAddress.text.toString().trim()
-            val feedbackEmail = binding.feedbackNameInput.text.toString().trim()
-            val feedbackCategory = binding.feedbackNameInput.text.toString().trim()
-            val feedbackMessage = binding.feedbackNameInput.text.toString().trim()
+            val address = binding.feedbackAddressInput.text.toString().trim()
+            val feedbackEmail = binding.feedbackEmailInput.text.toString().trim()
+            val feedbackMessage = binding.feedbackMessageInput.text.toString().trim()
 
-            //@todo add input validations
 
-            viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)
+            //Feedback category spinner
+
+
+        viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)
+
+
+
 
         }
 
