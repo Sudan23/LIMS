@@ -30,8 +30,7 @@ data class FarmRegistrationPost(
     val houseNear100M: String,
     @SerializedName("houseNear50M")
     val houseNear50M: String,
-    @SerializedName("id")
-    val id: String,
+
     @SerializedName("latitude")
     val latitude: String,
     @SerializedName("localLevel")
@@ -52,7 +51,7 @@ data class FarmRegistrationPost(
     val phone: String,
     @SerializedName("pprs")
     val pprs: Boolean,
-    @SerializedName("provience")
+    @SerializedName("province")
     val provience: String,
     @SerializedName("regNo")
     val regNo: String,
