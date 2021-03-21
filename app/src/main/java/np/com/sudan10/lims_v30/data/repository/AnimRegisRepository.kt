@@ -1,7 +1,7 @@
 package np.com.sudan10.lims_v30.data.repository
 
 import np.com.sudan10.lims_v30.data.network.AnimalRegistrationApi
-import np.com.sudan10.lims_v30.responses.AnimalRegistrationPost
+import np.com.sudan10.lims_v30.data.responses.AnimalRegistrationPost
 
 class AnimRegisRepository(
         private val api: AnimalRegistrationApi

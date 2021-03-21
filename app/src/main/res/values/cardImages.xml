@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cardImages">
+        <item>https://picsum.photos/id/1080/367/267</item>
+        <item>https://picsum.photos/id/152/367/267</item>
+        <item>https://picsum.photos/id/159/367/267</item>
+        <item>https://picsum.photos/id/200/367/267</item>
+        <item>https://picsum.photos/id/219/367/267</item>
+        <item>https://picsum.photos/id/1074/367/267</item>
+    </string-array>
+</resources>

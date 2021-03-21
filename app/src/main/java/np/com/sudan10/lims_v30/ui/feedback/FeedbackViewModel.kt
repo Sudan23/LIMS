@@ -10,7 +10,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
 import np.com.sudan10.lims_v30.data.network.Resource
-import np.com.sudan10.lims_v30.responses.FeedbackResponse
+import np.com.sudan10.lims_v30.data.responses.FeedbackResponse
 
 
 class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel() {

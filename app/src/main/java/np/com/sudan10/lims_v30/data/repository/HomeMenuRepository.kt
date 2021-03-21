@@ -1,15 +1,15 @@
 package np.com.sudan10.lims_v30.data.repository
 
-import np.com.sudan10.lims_v30.data.network.AuthApi
+import np.com.sudan10.lims_v30.data.network.MenuApi
 import np.com.sudan10.lims_v30.data.responses.User
 
-class AuthRepository(
-        private val api:AuthApi
+class HomeMenuRepository(
+    private val api: MenuApi
 ) : BaseRepository() {
 
     suspend fun login (
-            email: String,
-            password: String
+        email: String,
+        password: String
     ) = safeApiCall {
         api.login(User(email, password))
     }

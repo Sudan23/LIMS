@@ -91,5 +91,12 @@ dependencies {
     //http interceptor
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
 
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+
 
 }

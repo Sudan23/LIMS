@@ -1,6 +1,6 @@
 package np.com.sudan10.lims_v30.data.network
 
-import np.com.sudan10.lims_v30.responses.*
+import np.com.sudan10.lims_v30.data.responses.*
 import retrofit2.http.Body
 import retrofit2.http.POST
 

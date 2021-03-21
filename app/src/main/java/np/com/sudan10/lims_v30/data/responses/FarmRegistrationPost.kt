@@ -1,4 +1,4 @@
-package np.com.sudan10.lims_v30.responses
+package np.com.sudan10.lims_v30.data.responses
 
 
 import com.google.gson.annotations.SerializedName
@@ -52,7 +52,7 @@ data class FarmRegistrationPost(
     @SerializedName("pprs")
     val pprs: Boolean,
     @SerializedName("province")
-    val provience: String,
+    val province: String,
     @SerializedName("regNo")
     val regNo: String,
     @SerializedName("registeredDate")

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cardTitles">
+        <item>Ration Balance</item>
+        <item>Animal Registration</item>
+        <item>Animal Health</item>
+        <item>Animal Breeding</item>
+        <item>Performance Record</item>
+        <item>Feedback</item>
+    </string-array>
+</resources>

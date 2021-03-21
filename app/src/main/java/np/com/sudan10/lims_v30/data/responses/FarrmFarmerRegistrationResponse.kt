@@ -1,8 +1,8 @@
-package np.com.sudan10.lims_v30.responses
+package np.com.sudan10.lims_v30.data.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class VaccineResponse (
+data class FarrmFarmerRegistrationResponse (
         @SerializedName("SucessEntry")
         val successEntry: String,
 

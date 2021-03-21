@@ -1,8 +1,7 @@
 package np.com.sudan10.lims_v30.data.repository
 
 import np.com.sudan10.lims_v30.data.network.VaccineApi
-import np.com.sudan10.lims_v30.responses.FeedbackPost
-import np.com.sudan10.lims_v30.responses.VaccinePost
+import np.com.sudan10.lims_v30.data.responses.VaccinePost
 
 class VaccinationRepository(
     private val api:VaccineApi

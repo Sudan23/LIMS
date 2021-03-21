@@ -35,7 +35,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        val defaultfragment = HomeMenu()
+        val defaultfragment = HomeMenuLoggedIn()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,defaultfragment)

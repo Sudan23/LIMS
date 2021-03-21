@@ -1,9 +1,7 @@
 package np.com.sudan10.lims_v30.data.repository
 
-import np.com.sudan10.lims_v30.data.network.AnimalRegistrationApi
 import np.com.sudan10.lims_v30.data.network.FarmFarmerRegistrationApi
-import np.com.sudan10.lims_v30.responses.AnimalRegistrationPost
-import np.com.sudan10.lims_v30.responses.FarmRegistrationPost
+import np.com.sudan10.lims_v30.data.responses.FarmRegistrationPost
 
 class FarmFarmerRegisRepository(
         private val api: FarmFarmerRegistrationApi
