@@ -30,6 +30,64 @@
     <string name="action_sign_in_short">Log In</string>
     <string name="action_sign_in">Log In</string>
 
+    //Ration Balance
+    <string name="button_1">Submit</string>
+    <string name="button_2">Formulate</string>
+    <string name="button_3">Add feed</string>
+
+    <string-array name="animal_name">
+        <item>Cow/Cattle</item>
+        <item>Buffalo</item>
+        <item>Goat</item>
+    </string-array>
+
+    <string-array name="cattle_category">
+        <item>Calf</item>
+        <item>Heifer</item>
+        <item>Mature Cow</item>
+        <item>Milking Cow</item>
+    </string-array>
+
+    <string-array name="lactation_phase">
+        <item>Dry</item>
+        <item>Early Lactation</item>
+        <item>Mid Lactation</item>
+        <item>Late Lactation</item>
+    </string-array>
+
+    <string-array name="feeds_name">
+        <item>Feed Item</item>
+        <item>Corn</item>
+        <item>Oats</item>
+        <item>Rice Paddy</item>
+        <item>Cow Pea</item>
+        <item>Pigeon Pea</item>
+        <item>Sunflower Seed</item>
+        <item>Rice Bran, D1</item>
+        <item>Rice Bran, D2</item>
+        <item>Soy Hulls</item>
+        <item>Lactose Powder</item>
+        <item>Soyabean Oil</item>
+    </string-array>
+
+    <string-array name="poultry_type">
+        <item>Local</item>
+        <item>Broiler Breeder</item>
+        <item>Layer Commercial</item>
+        <item>Broiler Commercial</item>
+        <item>Layer Breeder</item>
+    </string-array>
+    <string-array name="poultry_age">
+        <item>Male</item>
+        <item>Pre Starter</item>
+        <item>Stater</item>
+        <item>Grower</item>
+        <item>Pre-lay</item>
+        <item>Laying Phase-1</item>
+        <item>Laying Phase-2</item>
+        <item>Laying Phase-3</item>
+
+    </string-array>
 
     //Feedback
     <string name="full_name">Full Name</string>

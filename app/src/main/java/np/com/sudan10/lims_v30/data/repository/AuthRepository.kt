@@ -1,4 +1,4 @@
-package np.com.sudan10.lims_v21.repository
+package np.com.sudan10.lims_v30.data.repository
 
 import np.com.sudan10.lims_v30.data.network.AuthApi
 import np.com.sudan10.lims_v30.data.repository.BaseRepository

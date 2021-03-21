@@ -56,11 +56,6 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
 
                     feedbackCategory = categoryOption[position]
 
-                    Toast.makeText(requireContext(),
-                            getString(R.string.selected_item) + " " +
-                                    "" + categoryOption[position], Toast.LENGTH_SHORT).show()
-
-
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -78,7 +73,6 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
             val feedbackMessage = binding.feedbackMessageInput.text.toString().trim()
 
 
-            //Feedback category spinner
 
 
         viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)

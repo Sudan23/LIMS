@@ -15,6 +15,7 @@ import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth
+import np.com.sudan10.lims_v30.ui.health.Vaccination
 import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
 import np.com.sudan10.lims_v30.ui.ration_balance.RationBalance
 import np.com.sudan10.lims_v30.ui.ration_balance.RbNonRuminant
@@ -34,7 +35,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        val defaultfragment = Feedback()
+        val defaultfragment = HomeMenu()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,defaultfragment)

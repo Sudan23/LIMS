@@ -61,16 +61,21 @@ dependencies {
 
     //ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
+
+
 
     //New Material Design
     implementation 'com.google.android.material:material:1.3.0'
 
     //Android Navigation Architecture
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.4"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.4"
 
-    //Android Preferences
-    implementation "androidx.preference:preference-ktx:1.1.1"
+    //Android Jetpack Datastore
+    implementation "androidx.datastore:datastore:1.0.0-alpha08"
+
 
     //Kodein Dependencies Injection
     implementation 'org.kodein.di:kodein-di-generic-jvm:5.0.1'

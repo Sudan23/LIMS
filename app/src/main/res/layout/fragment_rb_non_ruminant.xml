@@ -1,19 +1,705 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ration_balance.RbNonRuminant">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ration Balance -Non Ruminant"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/ParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:id="@+id/SpinnerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/PoultryType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/animalTypes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Poultry type"
+                        android:textColor="@color/default_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/animal_species_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/poultry_type"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/default_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/AgeAndPhase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/agecategories_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Age and phase"
+                        android:textColor="@color/default_color"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/animal_type_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/spinner_boarder_with_icon"
+                        android:entries="@array/poultry_age"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/default_color"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:enabled="true"
+                android:gravity="center|center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:text="@string/button_1"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:iconPadding="1dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:stretchColumns="1,2,3,4,5,6">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color">
+
+                    <TextView
+                        android:id="@+id/tvempty"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text=""
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Required"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Available"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Surplus/Deficit"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvmin1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="ME"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval13"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color">
+
+                    <TextView
+                        android:id="@+id/tvmin2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="CP"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval21"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval22"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval23"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvmin3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Lysine"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval31"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval32"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval33"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color">
+
+                    <TextView
+                        android:id="@+id/tvmin4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Methionine"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval41"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval42"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval43"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvmin5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Vitamin A"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval51"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval52"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval53"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color">
+
+                    <TextView
+                        android:id="@+id/tvmin6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:stretchColumns="1"
+                        android:text="Thrionine"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval61"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval62"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="120"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvval63"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:hint="60"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:textColorHint="@color/black" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="423dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:stretchColumns="1,2,3">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tV141"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Feed Name"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV142"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Intake(Kg)"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV143"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="Price (NPR)"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname_spinner"
+                        android:layout_width="180dp"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV242"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="50"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV243"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="900"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".001dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname_spinner1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/default_color" />
+
+                    <TextView
+                        android:id="@+id/tV342"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="60"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV343"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="500"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".1dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Spinner
+                        android:id="@+id/feedname2_spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_boarder_dropdown"
+                        android:entries="@array/feeds_name"
+                        android:stretchColumns="1"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV442"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="30"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tV443"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/table_border"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:stretchColumns="1"
+                        android:text="1000"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:backgroundTint="#FFFFFF"
+                        app:borderWidth=".1dp"
+                        app:fabSize="mini"
+                        app:srcCompat="@drawable/sharp_remove_circle_black_18" />
+                </TableRow>
+
+            </TableLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/updateTable"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button"
+                    android:enabled="true"
+                    android:gravity="center|center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/button_2"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/updateTable2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/updateTable2"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button"
+                    android:enabled="true"
+                    android:gravity="center|center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/button_3"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/updateTable"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

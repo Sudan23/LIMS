@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import np.com.sudan10.lims_v21.repository.AuthRepository
+import np.com.sudan10.lims_v30.data.repository.AuthRepository
 import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.responses.LoginResponse
 
@@ -15,7 +15,6 @@ class AuthViewModel(
 
     var email: String? = null
     var password: String? = null
-    var authListener : AuthListener? = null
 
     private val _loginResponse : MutableLiveData<Resource<LoginResponse>> = MutableLiveData()
     val loginResponse : LiveData<Resource<LoginResponse>>
