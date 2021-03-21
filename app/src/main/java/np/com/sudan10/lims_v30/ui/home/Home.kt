@@ -12,10 +12,15 @@ import kotlinx.android.synthetic.main.activity_home.*
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
-import np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding
+import np.com.sudan10.lims_v30.ui.breeding.*
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth
+import np.com.sudan10.lims_v30.ui.health.Sample
+import np.com.sudan10.lims_v30.ui.health.Treatment
 import np.com.sudan10.lims_v30.ui.health.Vaccination
+import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecording
+import np.com.sudan10.lims_v30.ui.performance_record.MeatRecording
+import np.com.sudan10.lims_v30.ui.performance_record.MilkRecording
 import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
 import np.com.sudan10.lims_v30.ui.ration_balance.RationBalance
 import np.com.sudan10.lims_v30.ui.ration_balance.RbNonRuminant
@@ -88,15 +93,55 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 setToolbarTitle("Animal Health")
                 changeFragment(AnimalHealth())
             }
+            R.id.animalVaccine -> {
+                setToolbarTitle("Vaccination")
+                changeFragment(Vaccination())
+            }
+            R.id.animalTreatment -> {
+                setToolbarTitle("Treatment")
+                changeFragment(Treatment())
+            }
+            R.id.animalSample -> {
+                setToolbarTitle("Sample")
+                changeFragment(Sample())
+            }
 
             R.id.animalBreeding -> {
                 setToolbarTitle("Animal Breeding")
                 changeFragment(AnimalBreeding())
             }
+            R.id.heatRecording -> {
+                setToolbarTitle("Heat Recording")
+                changeFragment(HeatRecording())
+            }
+            R.id.artificialInsemination -> {
+                setToolbarTitle("AI")
+                changeFragment(AI())
+            }
+            R.id.pregnancyDiagnosis -> {
+                setToolbarTitle("Pregnancy Diagnosis")
+                changeFragment(PregnancyDiagnosis())
+            }
+            R.id.abortion -> {
+                setToolbarTitle("Abortion")
+                changeFragment(Abortion())
+            }
 
             R.id.performanceRecord -> {
                 setToolbarTitle("Performance Record")
                 changeFragment(PerformanceRecord())
+            }
+            R.id.milkRecording -> {
+                setToolbarTitle("Milk Recording")
+                changeFragment(MilkRecording())
+            }
+            R.id.growthRecording -> {
+                setToolbarTitle("Growth Recording")
+                changeFragment(GrowthRecording())
+            }
+            R.id.meatRecording -> {
+                setToolbarTitle("Meat Recording")
+                changeFragment(MeatRecording())
             }
 
             R.id.feedback -> {

@@ -25,6 +25,8 @@ class ViewModelFactory (
 
             modelClass.isAssignableFrom(HomeMenuLoggedViewModel::class.java) -> HomeMenuLoggedViewModel(repository as HomeMenuRepository) as T
 
+            modelClass.isAssignableFrom(VaccinationViewModel::class.java) -> VaccinationViewModel(repository as VaccinationRepository) as T
+
             else -> throw IllegalArgumentException("ViewModelClass Not Found")
         }
     }

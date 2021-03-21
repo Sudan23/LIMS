@@ -10,10 +10,23 @@
 
     <string name="log_in">Log In</string>
     <string name="animal_registration">Animal Registration</string>
+    <string name="animal_vaccine">Vaccination</string>
+    <string name="animal_treatment">Treatment</string>
+    <string name="animal_sample">Sample</string>
     <string name="animal_health">Animal Health</string>
     <string name="animal_breeding">Animal Breeding</string>
     <string name="performance_record">Performance Record</string>
     <string name="static_data_entry">Static Data Entry</string>
+
+    <string name="heat_recording">Heat Recording</string>
+    <string name="artificial_insemination">AI</string>
+    <string name="pregnancy_diagnosis">Pregnancy Diagnosis</string>
+    <string name="abortion">Abortion</string>
+
+    <string name="milk_recording">Milk Recording</string>
+    <string name="growth_recording">Growth Recording</string>
+    <string name="meat_recording">Meat Recording</string>
+
 
     <string name="feedback">Feedback</string>
     <string name="home">Home</string>
