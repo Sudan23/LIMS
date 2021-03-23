@@ -1,14 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.performance_record.MilkRecording">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/frameLayout5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Milk Recording" />
+        tools:context=".ui.performance_record.MilkRecording">
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="28dp"
+            android:text="Date"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintBaseline_toBaselineOf="@+id/date_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.765"
+            app:layout_constraintStart_toEndOf="@+id/date_tv" />
+
+        <TextView
+            android:id="@+id/recording_period_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Recording Period"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+        <Spinner
+            android:id="@+id/recording_period_spinner"
+            android:layout_width="140dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/spinner_boarder_with_icon"
+            app:layout_constraintEnd_toEndOf="@+id/date_input"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/date_input"
+            app:layout_constraintTop_toBottomOf="@+id/date_input" />
+
+        <TextView
+            android:id="@+id/milk_vol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:text="Milk Volume"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recording_period_tv" />
+
+        <EditText
+            android:id="@+id/milk_vol_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/milk_vol_tv"
+            app:layout_constraintEnd_toEndOf="@+id/recording_period_spinner"
+            app:layout_constraintStart_toStartOf="@+id/recording_period_spinner" />
+
+        <TextView
+            android:id="@+id/sample_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="24dp"
+            android:text="Sample Code"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/milk_vol_tv" />
+
+        <EditText
+            android:id="@+id/sample_code_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sample_code_tv"
+            app:layout_constraintEnd_toEndOf="@+id/milk_vol_input"
+            app:layout_constraintStart_toStartOf="@+id/milk_vol_input" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/sample_code_input"
+            app:layout_constraintStart_toStartOf="@+id/sample_code_tv"
+            app:layout_constraintTop_toBottomOf="@+id/sample_code_tv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

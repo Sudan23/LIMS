@@ -9,12 +9,15 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.data.network.RemoteDataSource
 import np.com.sudan10.lims_v30.data.repository.BaseRepository
 
 abstract class BaseFragment<VM: ViewModel,B: ViewDataBinding, R: BaseRepository> : Fragment(){
 
-   protected lateinit var binding: B
+
+    protected lateinit var userPreferences: UserPreferences
+    protected lateinit var binding: B
    protected lateinit var viewModel: VM
 
    protected val remoteDataSource = RemoteDataSource()
@@ -24,6 +27,8 @@ abstract class BaseFragment<VM: ViewModel,B: ViewDataBinding, R: BaseRepository>
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+
+        userPreferences = UserPreferences(requireContext())
         binding = DataBindingUtil.inflate(
                 inflater,
                 getFragmentBinding(),

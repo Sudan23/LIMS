@@ -1,14 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.performance_record.GrowthRecording">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/frameLayout6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Growth Recording" />
+        tools:context=".ui.performance_record.GrowthRecording">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/length_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="24dp"
+            android:text="Length"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/length_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/length_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.772"
+            app:layout_constraintStart_toEndOf="@+id/length_tv" />
+
+        <TextView
+            android:id="@+id/hearth_girth_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Heart Girth"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/length_tv" />
+
+        <EditText
+            android:id="@+id/hearth_girth_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/hearth_girth_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.673"
+            app:layout_constraintStart_toEndOf="@+id/hearth_girth_tv" />
+
+        <TextView
+            android:id="@+id/weight_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Weight"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hearth_girth_tv" />
+
+        <EditText
+            android:id="@+id/weight_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/weight_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.772"
+            app:layout_constraintStart_toEndOf="@+id/weight_tv" />
+
+        <TextView
+            android:id="@+id/height_wither_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Height Wither"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight_tv" />
+
+        <EditText
+            android:id="@+id/height_wither_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/height_wither_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintStart_toEndOf="@+id/height_wither_tv" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Recording Date"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_wither_tv" />
+
+        <EditText
+            android:id="@+id/date_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/date_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toEndOf="@+id/date_tv" />
+
+        <TextView
+            android:id="@+id/note_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="16dp"
+            android:text="Note"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+        <EditText
+            android:id="@+id/note_input"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintBaseline_toBaselineOf="@+id/note_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.803"
+            app:layout_constraintStart_toEndOf="@+id/note_tv" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/note_input"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/note_tv"
+            app:layout_constraintTop_toBottomOf="@+id/note_input" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

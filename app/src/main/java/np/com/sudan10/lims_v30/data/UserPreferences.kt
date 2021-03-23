@@ -2,20 +2,37 @@ package np.com.sudan10.lims_v30.data
 
 import android.content.Context
 import androidx.datastore.core.DataStore
-import androidx.datastore.dataStore
 import androidx.datastore.preferences.core.Preferences
-import androidx.datastore.preferences.core.intPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.preferencesKey
+import androidx.datastore.preferences.createDataStore
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import java.util.concurrent.Flow
 
 
-class UserPreferences {
-    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "my_data_store")
+class UserPreferences(
+    context: Context
+) {
 
-        suspend fun saveToken(authToken:String) {
+    private val applicationContext = context.applicationContext
+    private val dataStore: DataStore<Preferences> = applicationContext.createDataStore(
+        name = "my_data_store"
+    )
+
+    val authToken: Flow<String?>
+    get() = dataStore.data.map { preferences ->
+        preferences[KEY_AUTH]
+    }
+
+    suspend fun saveAuthToken(authToken:String){
+        dataStore.edit { preferences ->
+            preferences[KEY_AUTH] = authToken
 
         }
+    }
+    companion object{
+        private val KEY_AUTH = preferencesKey<String>("key_auth")
 
+    }
 
 }

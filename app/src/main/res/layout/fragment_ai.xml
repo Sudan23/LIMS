@@ -1,14 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.breeding.AI">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    </data>
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AI Fragment" />
+        tools:context=".ui.breeding.AI">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/farm_farmer_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Farm/Farmer name"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/farm_farmer_input"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/farm_farmer_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/farm_farmer_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/eartag_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Ear Tag No:"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/eartag_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/farm_farmer_tv" />
+
+            <EditText
+                android:id="@+id/eartag_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/farm_farmer_input"
+                app:layout_constraintStart_toStartOf="@+id/farm_farmer_input"
+                app:layout_constraintTop_toBottomOf="@+id/farm_farmer_input" />
+
+            <TextView
+                android:id="@+id/animal_name_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Animal Name"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/animal_name_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eartag_tv" />
+
+            <EditText
+                android:id="@+id/animal_name_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/eartag_input"
+                app:layout_constraintStart_toStartOf="@+id/eartag_input"
+                app:layout_constraintTop_toBottomOf="@+id/eartag_input" />
+            <TextView
+                android:id="@+id/mobile_no_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Mobile Number"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/mobile_no_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animal_name_tv" />
+
+            <EditText
+                android:id="@+id/mobile_no_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/animal_name_input"
+                app:layout_constraintStart_toStartOf="@+id/animal_name_input"
+                app:layout_constraintTop_toBottomOf="@+id/animal_name_input" />
+
+            <TextView
+                android:id="@+id/animal_species_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Species"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/animal_species_spinner_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_no_tv" />
+
+            <Spinner
+                android:id="@+id/animal_species_spinner_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintEnd_toEndOf="@+id/mobile_no_input"
+                app:layout_constraintStart_toStartOf="@+id/mobile_no_input"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_no_input" />
+
+            <TextView
+                android:id="@+id/animal_breed_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Breed"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/animal_breed_spinner_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animal_species_tv" />
+
+            <Spinner
+                android:id="@+id/animal_breed_spinner_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintEnd_toEndOf="@+id/animal_species_spinner_input"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/animal_species_spinner_input"
+                app:layout_constraintTop_toBottomOf="@+id/animal_species_spinner_input" />
+
+            <TextView
+                android:id="@+id/method_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Semen Bull ID"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/vaccine_name_input"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animal_breed_tv" />
+
+            <EditText
+                android:id="@+id/vaccine_name_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/animal_breed_spinner_input"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/animal_breed_spinner_input"
+                app:layout_constraintTop_toBottomOf="@+id/animal_breed_spinner_input" />
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="AI Date"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/datePicker"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/method_tv" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:datePickerMode="spinner"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/vaccine_name_input"
+                app:layout_constraintStart_toStartOf="@+id/vaccine_name_input"
+                app:layout_constraintTop_toBottomOf="@+id/vaccine_name_input" />
+
+            <TextView
+                android:id="@+id/result_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Repeat AI"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/repeat_ai_spinner"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+            <Spinner
+                android:id="@+id/repeat_ai_spinner"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintEnd_toEndOf="@+id/datePicker"
+                app:layout_constraintStart_toStartOf="@+id/datePicker"
+                app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+            <TextView
+                android:id="@+id/fiscal_year_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Fiscal year"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/fiscal_year_spinner_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/result_tv" />
+
+            <Spinner
+                android:id="@+id/fiscal_year_spinner_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintEnd_toEndOf="@+id/repeat_ai_spinner"
+                app:layout_constraintStart_toStartOf="@+id/repeat_ai_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/repeat_ai_spinner" />
+
+            <TextView
+                android:id="@+id/semen_no_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Semen Number"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fiscal_year_tv" />
+
+            <EditText
+                android:id="@+id/semen_no_input"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/fiscal_year_spinner_input"
+                app:layout_constraintStart_toStartOf="@+id/fiscal_year_spinner_input"
+                app:layout_constraintTop_toBottomOf="@+id/fiscal_year_spinner_input" />
+
+            <TextView
+                android:id="@+id/technician_name_tv"
+                android:layout_width="140dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Technician Name"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/semen_no_tv" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintEnd_toEndOf="@+id/fiscal_year_spinner_input"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/fiscal_year_spinner_input"
+                app:layout_constraintTop_toBottomOf="@+id/semen_no_input" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Submit"
+                app:layout_constraintEnd_toEndOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="@+id/technician_name_tv"
+                app:layout_constraintTop_toBottomOf="@+id/technician_name_tv"
+                android:textAllCaps="false"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

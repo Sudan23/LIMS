@@ -74,25 +74,27 @@
 
         <item
             android:id="@+id/animalBreeding"
-            android:title="@string/animal_breeding" />
+            android:title="@string/animal_breeding" >
 
-        <menu>
+            <menu>
 
-            <item
-                android:id="@+id/heatRecording"
-                android:title="@string/heat_recording" />
+                <item
+                    android:id="@+id/heatRecording"
+                    android:title="@string/heat_recording" />
 
-            <item
-                android:id="@+id/artificialInsemination"
-                android:title="@string/artificial_insemination" />
+                <item
+                    android:id="@+id/artificialInsemination"
+                    android:title="@string/artificial_insemination" />
 
-            <item
-                android:id="@+id/pregnancyDiagnosis"
-                android:title="@string/pregnancy_diagnosis" />
-            <item
-                android:id="@+id/abortion"
-                android:title="@string/abortion" />
-        </menu>
+                <item
+                    android:id="@+id/pregnancyDiagnosis"
+                    android:title="@string/pregnancy_diagnosis" />
+                <item
+                    android:id="@+id/abortion"
+                    android:title="@string/abortion" />
+            </menu>
+
+        </item>
 
 
     </group>

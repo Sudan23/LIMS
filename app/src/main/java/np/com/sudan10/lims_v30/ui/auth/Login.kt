@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Base64
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v30.data.repository.AuthRepository
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.network.AuthApi
@@ -23,7 +25,10 @@ class Login : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepository>(
 
             when (it) {
                 is Resource.Success -> {
-                    Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
+                    lifecycleScope.launch {
+
+                        userPreferences.saveAuthToken(it.value.token)
+                    }
                 }
                 is Resource.Failure -> {
                     Toast.makeText(requireContext(), "Login Failure", Toast.LENGTH_SHORT).show()

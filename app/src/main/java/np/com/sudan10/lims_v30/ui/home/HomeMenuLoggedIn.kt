@@ -1,10 +1,5 @@
 package np.com.sudan10.lims_v30.ui.home
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_home_menu_logged_in.view.*
 import np.com.sudan10.lims_v30.R
@@ -15,11 +10,11 @@ import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 class HomeMenuLoggedIn : BaseFragment<HomeMenuLoggedViewModel, FragmentHomeMenuLoggedInBinding, HomeMenuRepository>() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onResume() {
+        super.onResume()
 
-        val cardTitles : Array<String> = resources.getStringArray(R.array.cardTitles)
-        val cardImages : Array<String> =  resources.getStringArray(R.array.cardImages)
+        val cardTitles : Array<String> = resources.getStringArray(R.array.cardTitlesLoggedIn)
+        val cardImages : Array<String> =  resources.getStringArray(R.array.cardImagesLoggedIn)
 
 
         val adapter = LoggedInGridItemAdapter(cardTitles,cardImages)
@@ -29,6 +24,7 @@ class HomeMenuLoggedIn : BaseFragment<HomeMenuLoggedViewModel, FragmentHomeMenuL
         binding.root.gridItems.layoutManager = gridLayout
         binding.root.gridItems.adapter = adapter
     }
+
 
 
 

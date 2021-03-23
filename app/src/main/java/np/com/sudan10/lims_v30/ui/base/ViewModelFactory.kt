@@ -11,6 +11,7 @@ import np.com.sudan10.lims_v30.ui.auth.AuthViewModel
 import np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel
 import np.com.sudan10.lims_v30.ui.health.VaccinationViewModel
 import np.com.sudan10.lims_v30.ui.home.HomeMenuLoggedViewModel
+import np.com.sudan10.lims_v30.ui.home.HomeMenuViewModel
 
 class ViewModelFactory (
     private val repository: BaseRepository
@@ -24,6 +25,8 @@ class ViewModelFactory (
             modelClass.isAssignableFrom(FeedbackViewModel::class.java) -> FeedbackViewModel(repository as FeedbackRepository) as T
 
             modelClass.isAssignableFrom(HomeMenuLoggedViewModel::class.java) -> HomeMenuLoggedViewModel(repository as HomeMenuRepository) as T
+
+            modelClass.isAssignableFrom(HomeMenuViewModel::class.java) -> HomeMenuViewModel(repository as HomeMenuRepository) as T
 
             modelClass.isAssignableFrom(VaccinationViewModel::class.java) -> VaccinationViewModel(repository as VaccinationRepository) as T
 

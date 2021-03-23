@@ -86,6 +86,28 @@
             app:layout_constraintEnd_toEndOf="@+id/eartag_input"
             app:layout_constraintStart_toStartOf="@+id/eartag_input"
             app:layout_constraintTop_toBottomOf="@+id/eartag_input" />
+        <TextView
+            android:id="@+id/mobile_no_tv"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Mobile Number"
+            android:textColor="@color/default_color"
+            app:layout_constraintEnd_toStartOf="@+id/mobile_no_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animal_name_tv" />
+
+        <EditText
+            android:id="@+id/mobile_no_input"
+            android:layout_width="140dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_boarder"
+            app:layout_constraintEnd_toEndOf="@+id/animal_name_input"
+            app:layout_constraintStart_toStartOf="@+id/animal_name_input"
+            app:layout_constraintTop_toBottomOf="@+id/animal_name_input" />
 
         <TextView
             android:id="@+id/animal_species_tv"
@@ -98,7 +120,7 @@
             android:textColor="@color/default_color"
             app:layout_constraintEnd_toStartOf="@+id/animal_species_spinner_input"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/animal_name_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/mobile_no_tv" />
 
         <Spinner
             android:id="@+id/animal_species_spinner_input"
@@ -106,9 +128,9 @@
             android:layout_height="38dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/spinner_boarder_with_icon"
-            app:layout_constraintEnd_toEndOf="@+id/animal_name_input"
-            app:layout_constraintStart_toStartOf="@+id/animal_name_input"
-            app:layout_constraintTop_toBottomOf="@+id/animal_name_input" />
+            app:layout_constraintEnd_toEndOf="@+id/mobile_no_input"
+            app:layout_constraintStart_toStartOf="@+id/mobile_no_input"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_no_input" />
 
         <TextView
             android:id="@+id/animal_breed_tv"
@@ -135,7 +157,7 @@
             app:layout_constraintTop_toBottomOf="@+id/animal_species_spinner_input" />
 
         <TextView
-            android:id="@+id/vaccine_name_tv"
+            android:id="@+id/method_tv"
             android:layout_width="140dp"
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
@@ -160,7 +182,7 @@
             app:layout_constraintTop_toBottomOf="@+id/animal_breed_spinner_input" />
 
         <TextView
-            android:id="@+id/vaccine_date_tv"
+            android:id="@+id/date_tv"
             android:layout_width="140dp"
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
@@ -170,7 +192,7 @@
             android:textColor="@color/default_color"
             app:layout_constraintEnd_toStartOf="@+id/datePicker"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vaccine_name_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/method_tv" />
 
         <DatePicker
             android:id="@+id/datePicker"
@@ -184,7 +206,7 @@
             app:layout_constraintTop_toBottomOf="@+id/vaccine_name_input" />
 
         <TextView
-            android:id="@+id/vaccination_for_diseases_tv"
+            android:id="@+id/result_tv"
             android:layout_width="140dp"
             android:layout_height="36dp"
             android:layout_marginStart="16dp"
@@ -192,13 +214,13 @@
             android:gravity="center_horizontal|center_vertical"
             android:text="Vaccination for Disease"
             android:textColor="@color/default_color"
-            app:layout_constraintEnd_toStartOf="@+id/vaccination_for_disease_spinner_input"
+            app:layout_constraintEnd_toStartOf="@+id/repeat_ai_spinner"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vaccine_date_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/date_tv" />
 
         <Spinner
-            android:id="@+id/vaccination_for_disease_spinner_input"
+            android:id="@+id/repeat_ai_spinner"
             android:layout_width="140dp"
             android:layout_height="38dp"
             android:layout_marginTop="16dp"
@@ -216,10 +238,10 @@
             android:gravity="center_horizontal|center_vertical"
             android:text="Fiscal year"
             android:textColor="@color/default_color"
-            app:layout_constraintEnd_toStartOf="@+id/vaccination_for_disease_spinner_input"
+            app:layout_constraintEnd_toStartOf="@+id/repeat_ai_spinner"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vaccination_for_diseases_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/result_tv" />
 
         <Spinner
             android:id="@+id/fiscal_year_spinner_input"
@@ -227,9 +249,9 @@
             android:layout_height="38dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/spinner_boarder_with_icon"
-            app:layout_constraintEnd_toEndOf="@+id/vaccination_for_disease_spinner_input"
-            app:layout_constraintStart_toStartOf="@+id/vaccination_for_disease_spinner_input"
-            app:layout_constraintTop_toBottomOf="@+id/vaccination_for_disease_spinner_input" />
+            app:layout_constraintEnd_toEndOf="@+id/repeat_ai_spinner"
+            app:layout_constraintStart_toStartOf="@+id/repeat_ai_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/repeat_ai_spinner" />
 
         <TextView
             android:id="@+id/technician_name_tv"
@@ -238,7 +260,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Fiscal year"
+            android:text="Technician Name"
             android:textColor="@color/default_color"
             app:layout_constraintEnd_toStartOf="@+id/editText"
             app:layout_constraintStart_toStartOf="parent"

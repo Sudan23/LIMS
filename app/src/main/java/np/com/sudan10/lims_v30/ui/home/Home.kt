@@ -2,14 +2,18 @@ package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.asLiveData
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 import np.com.sudan10.lims_v30.R
+import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.breeding.*
@@ -40,7 +44,20 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        val defaultfragment = HomeMenuLoggedIn()
+        val defaultfragment = HomeMenu()
+
+
+        val userPreferences = UserPreferences(this)
+
+        userPreferences.authToken.asLiveData().observe(this, Observer {
+
+            Toast.makeText(this, it?:"Token is Null", Toast.LENGTH_SHORT).show()
+
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container,HomeMenuLoggedIn())
+                commit()
+            }
+        })
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,defaultfragment)
