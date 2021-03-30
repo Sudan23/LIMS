@@ -8,7 +8,7 @@ import retrofit2.http.POST
 interface AnimalRegistrationApi {
 
     @POST("/odata/AnimalRegistration")
-    suspend fun register(
+    suspend fun animalRegister(
             @Body post: AnimalRegistrationPost
     ): AnimalRegistrationResponse
 }

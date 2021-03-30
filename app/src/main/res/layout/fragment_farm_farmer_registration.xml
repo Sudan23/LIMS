@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.registration.FarmRegistration">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="8dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_boarder"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.026">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/province_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".9"
+                        android:paddingVertical="2dp"
+                        android:text="Province"
+                        android:textColor="@color/default_color"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/province_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+
+                    <TextView
+                        android:id="@+id/district_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".7"
+                        android:paddingVertical="2dp"
+                        android:paddingStart="5dp"
+                        android:text="District"
+                        android:textColor="@color/default_color"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/district_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/municipality_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".9"
+                        android:paddingVertical="2dp"
+                        android:text="Municipality"
+                        android:textColor="@color/default_color"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/municipality_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+
+                    <TextView
+                        android:id="@+id/ward_no_textview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".7"
+                        android:paddingVertical="2dp"
+                        android:paddingStart="5dp"
+                        android:text="Ward No"
+                        android:textColor="@color/default_color"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/ward_no_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_boarder_with_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.517"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                    app:layout_constraintVertical_bias="0.222">
+
+                    <TextView
+                        android:id="@+id/tole_textview"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingVertical="3dp"
+                        android:text="Tole"
+                        android:textColor="@color/default_color"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/tole_editText"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:background="@drawable/spinner_boarder"
+                        android:paddingVertical="3dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="13dp"
+                android:background="@color/white"
+                android:text="   Address   "
+                android:textColor="@color/default_color"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/pan_ctz_textview2" />
+
+            <Spinner
+                android:id="@+id/fr_farm_selector_for_registration"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/fr_category_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fr_category_textview"
+                app:layout_constraintTop_toTopOf="@+id/fr_category_textview" />
+
+            <TextView
+                android:id="@+id/fr_category_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Category"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+            <EditText
+                android:id="@+id/fr_name_nepali_et"
+                android:layout_width="251dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBottom_toBottomOf="@+id/fr_name_nepali_tv"
+                app:layout_constraintEnd_toEndOf="@+id/fr_farm_selector_for_registration"
+                app:layout_constraintStart_toStartOf="@+id/fr_farm_selector_for_registration"
+                app:layout_constraintTop_toTopOf="@+id/fr_name_nepali_tv" />
+
+            <TextView
+                android:id="@+id/fr_name_nepali_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Name(np)"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/fr_category_textview" />
+
+            <EditText
+                android:id="@+id/fr_name_english_et"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBottom_toBottomOf="@+id/fr_name_english_tv"
+                app:layout_constraintEnd_toEndOf="@+id/fr_name_nepali_et"
+                app:layout_constraintStart_toStartOf="@+id/fr_name_nepali_et"
+                app:layout_constraintTop_toTopOf="@+id/fr_name_english_tv" />
+
+            <TextView
+                android:id="@+id/fr_name_english_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Name(en)"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/fr_name_nepali_tv" />
+
+            <TextView
+                android:id="@+id/fr_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Type"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/fr_name_english_tv" />
+
+            <Spinner
+                android:id="@+id/fr_type_spinner"
+                android:layout_width="251dp"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:background="@drawable/spinner_boarder_with_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/fr_type_tv"
+                app:layout_constraintEnd_toEndOf="@+id/fr_name_english_et"
+                app:layout_constraintStart_toStartOf="@+id/fr_name_english_et"
+                app:layout_constraintTop_toTopOf="@+id/fr_type_tv" />
+
+            <LinearLayout
+                android:id="@+id/citizenship_pan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fr_type_tv">
+
+                <TextView
+                    android:id="@+id/fr_citizenship_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Citizenship No"
+                    android:textColor="@color/default_color"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/fr_citizenship_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/spinner_boarder" />
+
+                <TextView
+                    android:id="@+id/pan_no_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="68dp"
+                    android:text="Pan No"
+                    android:textColor="@color/default_color"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/panNo_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/spinner_boarder"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fr_mobile_no_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Mobile No"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/citizenship_pan" />
+
+            <EditText
+                android:id="@+id/fr_mobile_no_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBottom_toBottomOf="@+id/fr_mobile_no_tv"
+                app:layout_constraintEnd_toEndOf="@+id/fr_name_english_et"
+                app:layout_constraintStart_toStartOf="@+id/fr_name_english_et"
+                app:layout_constraintTop_toTopOf="@+id/fr_mobile_no_tv" />
+
+            <TextView
+                android:id="@+id/gender_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:text="Selected for PPRS?"
+                android:textColor="@color/default_color"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/fr_mobile_no_tv" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/gender_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/gender_textview"
+                app:layout_constraintTop_toTopOf="@+id/gender_textview">
+
+                <RadioButton
+                    android:id="@+id/pprs_yes_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:textColor="@color/default_color" />
+
+                <RadioButton
+                    android:id="@+id/pprs_no_radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textColor="@color/default_color" />
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/farm_regis_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Register"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_textview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

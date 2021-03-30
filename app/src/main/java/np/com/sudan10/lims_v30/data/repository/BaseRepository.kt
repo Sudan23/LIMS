@@ -3,6 +3,7 @@ package np.com.sudan10.lims_v30.data.repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import np.com.sudan10.lims_v30.data.network.Resource
+import np.com.sudan10.lims_v30.data.responses.AnimalRegistrationResponse
 import retrofit2.HttpException
 
 abstract class BaseRepository {

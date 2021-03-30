@@ -2,16 +2,15 @@ package np.com.sudan10.lims_v30.ui.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import np.com.sudan10.lims_v30.data.repository.AuthRepository
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
-import np.com.sudan10.lims_v30.data.repository.BaseRepository
-import np.com.sudan10.lims_v30.data.repository.HomeMenuRepository
-import np.com.sudan10.lims_v30.data.repository.VaccinationRepository
+import np.com.sudan10.lims_v30.data.repository.*
 import np.com.sudan10.lims_v30.ui.auth.AuthViewModel
 import np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel
 import np.com.sudan10.lims_v30.ui.health.VaccinationViewModel
 import np.com.sudan10.lims_v30.ui.home.HomeMenuLoggedViewModel
 import np.com.sudan10.lims_v30.ui.home.HomeMenuViewModel
+import np.com.sudan10.lims_v30.ui.registration.AnimalRegistrationViewModel
+import np.com.sudan10.lims_v30.ui.registration.FarmRegisViewModel
 
 class ViewModelFactory (
     private val repository: BaseRepository
@@ -29,6 +28,10 @@ class ViewModelFactory (
             modelClass.isAssignableFrom(HomeMenuViewModel::class.java) -> HomeMenuViewModel(repository as HomeMenuRepository) as T
 
             modelClass.isAssignableFrom(VaccinationViewModel::class.java) -> VaccinationViewModel(repository as VaccinationRepository) as T
+
+            modelClass.isAssignableFrom(FarmRegisViewModel::class.java) -> FarmRegisViewModel(repository as FarmFarmerRegisRepository) as T
+
+            modelClass.isAssignableFrom(AnimalRegistrationViewModel::class.java) -> AnimalRegistrationViewModel(repository as AnimRegisRepository) as T
 
             else -> throw IllegalArgumentException("ViewModelClass Not Found")
         }

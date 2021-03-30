@@ -116,4 +116,71 @@
         <item>Complains</item>
         <item>Others</item>
     </string-array>
+
+    //Animal Registration
+
+    <string-array name="farm_name">
+        <item>Rupak</item>
+        <item>Vintage</item>
+        <item>Brindaban</item>
+        <item>Golakh</item>
+    </string-array>
+
+    <string-array name="species_name">
+        <item>Cow</item>
+        <item>Goat</item>
+        <item>Buffalo</item>
+        <item>Fish</item>
+    </string-array>
+
+    <string-array name="breed_type">
+        <item>Native</item>
+        <item>Crossbred</item>
+        <item>Pure Exotic Breed</item>
+    </string-array>
+
+    <string-array name="cow_crossbreed">
+        <item>Jersey + Native</item>
+    </string-array>
+
+    <string-array name="cow_pure_exotic">
+        <item>Jersey</item>
+    </string-array>
+
+    <string-array name="goat_crossbreed">
+        <item>Jamunapari + Khari</item>
+        <item>Boyar + Khari</item>
+    </string-array>
+
+    <string-array name="goat_pure_exotic">
+        <item>Boyar</item>
+        <item>Jamunapari</item>
+    </string-array>
+
+    <string-array name="fish_native">
+            <item>Carp</item>
+    </string-array>
+
+
+    <string-array name="entry_type">
+            <item>Start of Program</item>
+            <item>From Outside</item>
+            <item>Other</item>
+    </string-array>
+    
+    //Farm Registration
+    <string-array name="farm_registration_category">
+        <item>Farmer</item>
+        <item>Farm</item>
+        <item>Groups</item>
+        <item>Co-operative</item>
+    </string-array>
+    
+    <string-array name="farm_type">
+        <item>Public</item>
+        <item>Private</item>
+        <item>Semi-Public</item>
+    </string-array>
+
+
 </resources>

@@ -10,6 +10,16 @@ import np.com.sudan10.lims_v30.ui.base.BaseFragment
 class Vaccination : BaseFragment<VaccinationViewModel, FragmentVaccinationBinding, VaccinationRepository>() {
 
 
+    override fun onResume() {
+        super.onResume()
+
+
+
+
+
+    }
+
+
 
 
     override fun getViewModel() = VaccinationViewModel::class.java

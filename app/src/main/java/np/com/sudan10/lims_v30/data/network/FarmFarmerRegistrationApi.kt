@@ -8,7 +8,7 @@ import retrofit2.http.POST
 interface FarmFarmerRegistrationApi {
 
     @POST("/odata/Farm")
-    suspend fun register(
+    suspend fun farmRegister(
             @Body post: FarmRegistrationPost
     ): FarmFarmerRegistrationResponse
 }

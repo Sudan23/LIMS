@@ -19,3 +19,9 @@ fun ProgressBar.show(){
 fun ProgressBar.hide(){
     visibility = View.GONE
 }
+
+fun View.enable(enabled: Boolean){
+    isEnabled = enabled
+    alpha = if(enabled) 1f else 0.4f
+}
+

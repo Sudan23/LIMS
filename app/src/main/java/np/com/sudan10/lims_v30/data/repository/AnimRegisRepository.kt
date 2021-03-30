@@ -7,30 +7,15 @@ class AnimRegisRepository(
         private val api: AnimalRegistrationApi
 ) : BaseRepository(){
 
-    suspend fun registerAnimal(
-            age:Int,
-            animalColor:String,
-            breedID: String,
-            damId:String,
-            dob:String,
-            earTagNo:String,
-            entryType:String,
-            farmId:String,
-            gender:String,
-            milkStatus:String,
-            name:String,
-            noOfCalving:String,
-            physicalDefect:String,
-            pregnancyStatus:String,
-            sireId:String,
-            speciesId:String,
-            weight:Int
+    suspend fun register(
+            speciesId:String?,breedID:String?,breedType:String?,name:String?,farmId:String?,
+            earTagNo:String?,gender:String?,age:Int?,sireId:String?,damId:String?,weight:Int?,noOfCalving:String?,pregnancyStatus:String?,
+            milkStatus:String?,physicalDefect:String?,animalColor:String?,dob:String?,entryType:String?
 
     )= safeApiCall {
-        api.register(AnimalRegistrationPost(age,animalColor,breedID,damId,dob,earTagNo,
-                                            entryType,farmId,gender,milkStatus,name,
-                                            noOfCalving,physicalDefect,
-                                            pregnancyStatus,sireId,speciesId,weight))
+        api.animalRegister(AnimalRegistrationPost(speciesId,breedID,breedType,name,farmId,
+        earTagNo,gender,age,sireId,damId,weight,noOfCalving,pregnancyStatus,
+                milkStatus,physicalDefect,animalColor,dob,entryType))
     }
 
 }

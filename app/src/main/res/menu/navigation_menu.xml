@@ -32,9 +32,6 @@
         android:title="@string/Registration">
             <menu>
                 <item
-                    android:id="@+id/farmRegistration"
-                    android:title="@string/farm_registration" />
-                <item
                     android:id="@+id/farmerRegistration"
                     android:title="@string/farmer_registration" />
                 <item

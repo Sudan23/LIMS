@@ -17,7 +17,6 @@ class FeedbackViewModel(private val repository: FeedbackRepository) : ViewModel(
     var fullName: String? = null
     var address:String? = null
     var feedbackEmail: String? = null
-
     var feedbackMessage: String? = null
 
     private val _feedbackResponse : MutableLiveData<Resource<FeedbackResponse>> = MutableLiveData()

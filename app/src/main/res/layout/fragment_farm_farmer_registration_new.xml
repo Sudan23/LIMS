@@ -4,13 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable
-            name="viewmodel"
-            type="np.com.sudan10.lims_v30.ui.registration.AnimalRegistrationViewModel" />
-
-        <variable
-            name="viewmodel_test"
-            type="np.com.sudan10.lims_v30.ui.registration.AnimalRegistration" />
 
 
     </data>
@@ -24,7 +17,7 @@
             android:id="@+id/frameLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".ui.registration.AnimalRegistration">
+            tools:context=".ui.registration.FarmRegistration">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
@@ -40,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/spinner_boarder"
                 android:orientation="vertical"
@@ -158,14 +151,14 @@
 
                     <TextView
                         android:id="@+id/tole_textview"
-                        android:layout_width="73dp"
+                        android:layout_width="65dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:paddingVertical="3dp"
                         android:text="Tole"
                         android:textColor="@color/default_color"
-                        android:textSize="18sp" />
+                        android:textSize="16dp" />
 
                     <EditText
                         android:id="@+id/tole_editText"
@@ -198,8 +191,8 @@
                 android:id="@+id/farm_selector_for_registration"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="38dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/spinner_boarder_with_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/category_textview"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -214,20 +207,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="16dp"
-                android:text="Select Farm"
+                android:text="Category"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
-            <Spinner
+            <EditText
                 android:id="@+id/animal_species_spinner"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/spinner_boarder_with_icon"
+                android:background="@drawable/spinner_boarder"
                 app:layout_constraintBottom_toBottomOf="@+id/species_textview"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/farm_selector_for_registration"
                 app:layout_constraintStart_toStartOf="@+id/farm_selector_for_registration"
                 app:layout_constraintTop_toTopOf="@+id/species_textview" />
 
@@ -237,20 +229,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Species"
+                android:text="Name(np)"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/category_textview" />
 
-            <Spinner
+            <EditText
                 android:id="@+id/breed_type_spinner"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/spinner_boarder_with_icon"
+                android:background="@drawable/spinner_boarder"
                 app:layout_constraintBottom_toBottomOf="@+id/breed_type_textview"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/animal_species_spinner"
                 app:layout_constraintStart_toStartOf="@+id/animal_species_spinner"
                 app:layout_constraintTop_toTopOf="@+id/breed_type_textview" />
 
@@ -260,7 +251,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Breed Type"
+                android:text="Name(en)"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -270,21 +261,20 @@
                 android:id="@+id/breed_spinner"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="10dp"
                 android:background="@drawable/spinner_boarder_with_icon"
                 app:layout_constraintBottom_toBottomOf="@+id/breed_textview"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/breed_type_spinner"
                 app:layout_constraintStart_toStartOf="@+id/breed_type_spinner"
                 app:layout_constraintTop_toTopOf="@+id/breed_textview"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/breed_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="83dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Breed"
+                android:text="Type"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -296,9 +286,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Name"
+                android:text="Citizenship No"
                 android:textColor="@color/default_color"
-                android:textSize="24dp"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toBottomOf="@+id/breed_textview" />
 
@@ -306,10 +296,9 @@
                 android:id="@+id/name_edittext"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="10dp"
                 android:background="@drawable/spinner_boarder"
                 app:layout_constraintBaseline_toBaselineOf="@+id/name_textview"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/breed_spinner"
                 app:layout_constraintStart_toStartOf="@+id/breed_spinner" />
 
             <TextView
@@ -318,7 +307,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Tag no."
+                android:text="Mobile No"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -328,89 +317,34 @@
                 android:id="@+id/tag_no_edittext"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
-                android:layout_marginEnd="10dp"
                 android:background="@drawable/spinner_boarder"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tag_no_textview"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/name_edittext"
                 app:layout_constraintStart_toStartOf="@+id/name_edittext" />
-
-            <TextView
-                android:id="@+id/dob_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="D.O.B"
-                android:textColor="@color/default_color"
-                android:textSize="24dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/tag_no_textview" />
-
-            <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="110dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/spinner_boarder"
-                android:ems="10"
-                android:gravity="center_horizontal"
-                android:hint="Enter Date"
-                android:textSize="12dp"
-                android:inputType="date"
-                app:layout_constraintBaseline_toBaselineOf="@+id/dob_textview"
-                app:layout_constraintStart_toEndOf="@+id/dob_textview" />
-
-            <DatePicker
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/weight_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Weight"
-                android:textColor="@color/default_color"
-                android:textSize="24dp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/editTextDate"
-                app:layout_constraintStart_toEndOf="@+id/editTextDate" />
-
-            <EditText
-                android:id="@+id/weight_edittext"
-                android:layout_width="0dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/spinner_boarder"
-                android:hint="Enter Weight"
-                android:textSize="12dp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/weight_textview"
-                app:layout_constraintEnd_toEndOf="@+id/tag_no_edittext"
-                app:layout_constraintStart_toEndOf="@+id/weight_textview" />
 
             <TextView
                 android:id="@+id/gender_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
-                android:text="Gender"
+                android:layout_marginEnd="32dp"
+                android:text="Selected for PPRS?"
                 android:textColor="@color/default_color"
                 android:textSize="24dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/dob_textview" />
+                app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tag_no_textview"
+                app:layout_constraintTop_toBottomOf="@+id/tag_no_textview" />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
-                android:layout_width="270dp"
-                android:layout_height="39dp"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="@+id/gender_textview"
-                app:layout_constraintEnd_toEndOf="@+id/tag_no_edittext"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tag_no_edittext"
                 app:layout_constraintTop_toTopOf="@+id/gender_textview">
 
@@ -419,8 +353,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Male"
-                    android:onClick="Clicked"
+                    android:text="Yes"
                     android:textColor="@color/default_color" />
 
                 <RadioButton
@@ -428,246 +361,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Female"
-                    android:onClick="onRadioButtonClicked"
+                    android:text="No"
                     android:textColor="@color/default_color" />
 
-                <RadioButton
-                    android:id="@+id/castrate_radiobutton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".9"
-                    android:text="Castrate"
-                    android:onClick="onRadioButtonClicked"
-                    android:textColor="@color/default_color" />
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/direid_textview"
-                android:layout_width="0dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="8dp"
-                android:text="Dam I.D"
-                android:textColor="@color/default_color"
-                android:textSize="24dp"
-                app:layout_constraintBottom_toBottomOf="@+id/sireid_edittext"
-                app:layout_constraintEnd_toStartOf="@+id/direid_edittext"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/sireid_edittext" />
 
-            <TextView
-                android:id="@+id/sireid_textview"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="Sire I.D"
-                android:textColor="@color/default_color"
-                android:textSize="24dp"
-                app:layout_constraintEnd_toStartOf="@+id/sireid_edittext"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/gender_textview" />
-
-            <EditText
-                android:id="@+id/sireid_edittext"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/spinner_boarder"
-                android:gravity="center_vertical"
-                android:hint="Sire I.D"
-                android:textColor="@color/default_color"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/sireid_textview"
-                app:layout_constraintEnd_toStartOf="@+id/direid_textview"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/sireid_textview"
-                app:layout_constraintTop_toTopOf="@+id/sireid_textview" />
-
-            <EditText
-                android:id="@+id/direid_edittext"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/spinner_boarder"
-                android:hint="Dam I.D"
-                android:textColor="@color/default_color"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="@+id/direid_textview"
-                app:layout_constraintEnd_toEndOf="@+id/weight_edittext"
-                app:layout_constraintStart_toEndOf="@+id/direid_textview"
-                app:layout_constraintTop_toTopOf="@+id/direid_textview" />
-
-            <TextView
-                android:id="@+id/entry_type_textview"
+            <Button
+                android:id="@+id/farm_regis_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="Entry Type"
-                android:textColor="@color/default_color"
-                android:textSize="24dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/sireid_edittext" />
-
-
-            <Spinner
-                android:id="@+id/entry_type_spinner"
-                android:layout_width="0dp"
-                android:layout_height="42dp"
-                android:background="@drawable/spinner_boarder_with_icon"
-                app:layout_constraintBottom_toBottomOf="@+id/entry_type_textview"
-                app:layout_constraintEnd_toEndOf="@+id/tag_no_edittext"
-                app:layout_constraintStart_toStartOf="@+id/tag_no_edittext"
-                app:layout_constraintTop_toTopOf="@+id/entry_type_textview" />
-
-
-            <LinearLayout
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="8dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Register"
+                android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/entry_type_textview">
-
-
-                <LinearLayout
-                    android:id="@+id/gender_female_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:background="@drawable/spinner_boarder"
-                    android:orientation="vertical"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/guideline4"
-                    app:layout_constraintTop_toBottomOf="@+id/entry_type_textview">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/pregnancy_textview"
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Pregnancy"
-                            android:textColor="@color/default_color"
-                            android:textSize="18sp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/pregnancy_radio_btn"
-                                android:layout_width="190dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="Pregnant" />
-
-                            <RadioButton
-                                android:id="@+id/non_pregnancy_radio_btn"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="Non-Pregnant" />
-
-
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:id="@+id/milking_status_textview"
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Milking Status"
-                            android:textColor="@color/default_color"
-                            android:textSize="18sp" />
-
-                        <RadioGroup
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/milking_radio_btn"
-                                android:layout_width="190dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="Milking" />
-
-                            <RadioButton
-                                android:id="@+id/dry_radio_btn"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="Dry off" />
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/parity_textview"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:text="Parity(lactation)"
-                            android:textColor="@color/default_color"
-                            android:textSize="18sp" />
-
-                        <EditText
-                            android:id="@+id/parity_edittext"
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="16dp"
-                            android:layout_weight="1.5"
-                            android:background="@drawable/spinner_boarder"
-                            android:textColor="@color/default_color" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Register"
-                    android:textAllCaps="false" />
-
-            </LinearLayout>
-
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_textview" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

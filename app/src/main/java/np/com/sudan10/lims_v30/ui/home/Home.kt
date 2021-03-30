@@ -51,14 +51,13 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         userPreferences.authToken.asLiveData().observe(this, Observer {
 
-            Toast.makeText(this, it?:"Token is Null", Toast.LENGTH_SHORT).show()
+            val fragment = if (it == null) HomeMenu() else HomeMenuLoggedIn()
 
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container,HomeMenuLoggedIn())
+                replace(R.id.fragment_container,fragment)
                 commit()
             }
         })
-
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container,defaultfragment)
             commit()
@@ -101,7 +100,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 changeFragment(AnimalRegistration())
             }
 
-            R.id.farmRegistration -> {
+            R.id.farmerRegistration -> {
             setToolbarTitle("Farm Registration")
             changeFragment(FarmRegistration())
             }

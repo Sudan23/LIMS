@@ -17,8 +17,9 @@ import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, FeedbackRepository>() {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+
+    override fun onResume() {
+        super.onResume()
 
         var feedbackCategory:String? = null
 
@@ -66,23 +67,20 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
             }
         }
 
-    binding.feedbackSend.setOnClickListener {
+        binding.feedbackSend.setOnClickListener {
             val fullName = binding.feedbackNameInput.text.toString().trim()
             val address = binding.feedbackAddressInput.text.toString().trim()
             val feedbackEmail = binding.feedbackEmailInput.text.toString().trim()
             val feedbackMessage = binding.feedbackMessageInput.text.toString().trim()
 
-
-
-
-        viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)
+            viewModel.sendFeedback(fullName, address, feedbackEmail, feedbackCategory, feedbackMessage)
 
 
 
 
         }
-
     }
+
 
     override fun getViewModel() = FeedbackViewModel::class.java
 
