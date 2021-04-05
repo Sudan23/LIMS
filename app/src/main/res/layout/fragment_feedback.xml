@@ -50,7 +50,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            android:background="@drawable/table_border_toolbar_color"
+            android:background="@drawable/table_border_toolbar_color_corner"
             android:text="@={feedbackViewModel.fullName}"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            android:background="@drawable/table_border_toolbar_color"
+            android:background="@drawable/table_border_toolbar_color_corner"
             android:text="@={feedbackViewModel.address}"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +106,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="24dp"
-            android:background="@drawable/table_border_toolbar_color"
+            android:background="@drawable/table_border_toolbar_color_corner"
             android:text="@={feedbackViewModel.feedbackEmail}"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -142,35 +142,35 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/feedback_category" />
 
-        <TextView
-            android:id="@+id/feedback_message"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="24dp"
-            android:text="@string/message"
-            android:textColor="@color/default_color"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/feedback_category_input" />
-
         <EditText
             android:id="@+id/feedback_message_input"
             android:layout_width="0dp"
             android:layout_height="105dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:background="@drawable/table_border_toolbar_color"
+            android:background="@drawable/table_border_toolbar_color_corner"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:text="@={feedbackViewModel.feedbackCategory}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/feedback_message" />
+            app:layout_constraintTop_toBottomOf="@+id/feedback_category_input" />
+
+        <TextView
+            android:id="@+id/feedback_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="88dp"
+            android:text="@string/message"
+            android:textColor="@color/default_color"
+            android:textSize="22sp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/feedback_message_input"
+            app:layout_constraintEnd_toEndOf="@+id/feedback_message_input"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="@+id/feedback_message_input" />
 
         <Button
             android:id="@+id/feedback_send"
