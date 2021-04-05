@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.health.Vaccination">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/framNameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/earTagLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/farm_farmer_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:text="Farm/Farmer name"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/farm_farmer_input"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/earTagLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/framNameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/framNameLayout"
+                app:layout_constraintTop_toTopOf="@+id/framNameLayout">
+
+                <TextView
+                    android:id="@+id/eartag_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Ear Tag No:"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/eartag_input"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/animalnameLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/mobilenoLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/framNameLayout">
+
+                <TextView
+                    android:id="@+id/animal_name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Animal Name"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/animal_name_input"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mobilenoLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/animalnameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/animalnameLayout"
+                app:layout_constraintTop_toTopOf="@+id/animalnameLayout">
+
+                <TextView
+                    android:id="@+id/mobile_no_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Mobile Number"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/mobile_no_input"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vac_speciesLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/vac_breedLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animalnameLayout">
+
+                <TextView
+                    android:id="@+id/animal_species_tv"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Species"
+                    android:textColor="@color/default_color" />
+
+                <Spinner
+                    android:id="@+id/animal_species_spinner_input"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder_with_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vac_breedLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/vac_speciesLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/vac_speciesLayout"
+                app:layout_constraintTop_toTopOf="@+id/vac_speciesLayout">
+
+                <TextView
+                    android:id="@+id/animal_breed_tv"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Breed"
+                    android:textColor="@color/default_color" />
+
+                <Spinner
+                    android:id="@+id/animal_breed_spinner_input"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder_with_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vac_vaccineNameLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/vac_vaccineDatelayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vac_speciesLayout">
+
+                <TextView
+                    android:id="@+id/vac_vaccine_name_tv"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Vaccine Name"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/vaccine_name_input"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vac_vaccineDatelayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/vac_vaccineNameLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/vac_vaccineNameLayout"
+                app:layout_constraintTop_toTopOf="@+id/vac_vaccineNameLayout">
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Vaccine Date"
+                    android:textColor="@color/default_color" />
+
+                <EditText
+                    android:id="@+id/datePicker"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder"
+                    android:datePickerMode="spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vaccineForDiseaseLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/vac_fiscalYearLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vac_vaccineNameLayout">
+
+                <TextView
+                    android:id="@+id/vaccination_for_disease_tv"
+                    android:layout_width="140dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Vaccination for Disease"
+                    android:textColor="@color/default_color" />
+
+                <Spinner
+                    android:id="@+id/vaccination_for_disease_spinner"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder_with_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vac_fiscalYearLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/vaccineForDiseaseLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/vaccineForDiseaseLayout"
+                app:layout_constraintTop_toTopOf="@+id/vaccineForDiseaseLayout">
+
+                <TextView
+                    android:id="@+id/fiscal_year_tv"
+                    android:layout_width="143dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:text="Fiscal year"
+                    android:textColor="@color/default_color" />
+
+                <Spinner
+                    android:id="@+id/fiscal_year_spinner_input"
+                    android:layout_width="140dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spinner_boarder_with_icon" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/technician_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:text="Technician Name"
+                android:textColor="@color/default_color"
+                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vaccineForDiseaseLayout" />
+
+            <EditText
+                android:id="@+id/vac_technicianName_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/spinner_boarder"
+                app:layout_constraintBottom_toBottomOf="@+id/technician_name_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/technician_name_tv"
+                app:layout_constraintTop_toTopOf="@+id/technician_name_tv"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/vac_save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/technician_name_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

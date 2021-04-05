@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/methodLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/dateLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/pd_method_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Method"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/pd_method_et"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/methodLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/pd_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Date"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/pd_date_et"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/spinner_boarder"
+                android:gravity="center_vertical"
+                android:textColor="@color/default_color" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pregnancy_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/fiscal_yearLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/methodLayout">
+
+            <TextView
+                android:id="@+id/result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Is Pregnant?"
+                android:textColor="@color/default_color" />
+
+            <RadioGroup
+                android:id="@+id/repeat_ai_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fiscal_yearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pregnancy_layout"
+            app:layout_constraintTop_toBottomOf="@+id/dateLayout">
+
+            <TextView
+                android:id="@+id/fiscal_year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:text="Fiscal year"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/fiscal_year_spinner_input"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pd_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pregnancy_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
