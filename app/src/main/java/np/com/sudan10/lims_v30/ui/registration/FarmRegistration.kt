@@ -9,10 +9,8 @@ import kotlinx.android.synthetic.main.fragment_farm_farmer_registration.*
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import np.com.sudan10.lims_v30.R
-import np.com.sudan10.lims_v30.data.network.AnimalRegistrationApi
 import np.com.sudan10.lims_v30.data.network.FarmFarmerRegistrationApi
 import np.com.sudan10.lims_v30.data.network.Resource
-import np.com.sudan10.lims_v30.data.repository.AnimRegisRepository
 import np.com.sudan10.lims_v30.data.repository.FarmFarmerRegisRepository
 import np.com.sudan10.lims_v30.databinding.FragmentFarmFarmerRegistrationBinding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
@@ -153,7 +151,7 @@ class FarmRegistration : BaseFragment<FarmRegisViewModel, FragmentFarmFarmerRegi
 
     override fun getViewModel() = FarmRegisViewModel::class.java
 
-    override fun getFragmentBinding() = R.layout.fragment_farm_farmer_registration
+    override fun getFragmentBinding() = R.layout.fragment_farm_farmer_registration_v2
 
     override fun getFragmentRepository(): FarmFarmerRegisRepository {
         val token = runBlocking { userPreferences.authToken.first() }
