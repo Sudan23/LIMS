@@ -1,14 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.health.Treatment">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Treatment" />
+        tools:context=".ui.health.Treatment">
 
-</FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/temperatureLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/pulseLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/treatment_temp_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Temperature"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/treatment_temp_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pulseLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/temperatureLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/temperatureLayout"
+            app:layout_constraintTop_toTopOf="@+id/temperatureLayout">
+
+            <TextView
+                android:id="@+id/treatment_pulse_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Pulse"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/treatment_pulse_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/respirationLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/diseaseNameLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureLayout">
+
+            <TextView
+                android:id="@+id/treatment_respiration_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Respiration"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/treatment_respiration_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/diseaseNameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/respirationLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/respirationLayout"
+            app:layout_constraintTop_toTopOf="@+id/respirationLayout">
+
+            <TextView
+                android:id="@+id/treatment_disease_name_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Disease Name"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/treatment_disease_name_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:textColor="@color/default_color" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/treatment_symptoms_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:lines="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/respirationLayout" />
+
+        <TextView
+            android:id="@+id/treatment_symptoms_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Symptoms"
+            android:textColor="@color/default_color"
+            app:layout_constraintBottom_toBottomOf="@+id/treatment_symptoms_et"
+            app:layout_constraintEnd_toEndOf="@+id/treatment_symptoms_et"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="@+id/treatment_symptoms_et" />
+
+        <LinearLayout
+            android:id="@+id/medicineLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/treatmentdateLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/treatment_symptoms_et">
+
+            <TextView
+                android:id="@+id/treatment_medicine_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Medicine"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/treatment_medicine_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/treatmentdateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/medicineLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/medicineLayout"
+            app:layout_constraintTop_toTopOf="@+id/medicineLayout">
+
+            <TextView
+                android:id="@+id/treatment_treatmentdate_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Treatment Date"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/treatment_treatmentdate_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/treatment_description_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:lines="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medicineLayout" />
+
+        <TextView
+            android:id="@+id/treatment_description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Description"
+            android:textColor="@color/default_color"
+            app:layout_constraintBottom_toBottomOf="@+id/treatment_description_et"
+            app:layout_constraintEnd_toEndOf="@+id/treatment_description_et"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="@+id/treatment_description_et" />
+
+        <Button
+            android:id="@+id/treatment_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/treatment_description_et" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
