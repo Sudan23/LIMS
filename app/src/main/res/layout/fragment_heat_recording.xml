@@ -104,5 +104,17 @@
             app:layout_constraintEnd_toEndOf="@+id/heat_description_et"
             app:layout_constraintHorizontal_bias="0.083"
             app:layout_constraintStart_toStartOf="@+id/heat_description_et" />
+
+        <Button
+            android:id="@+id/heat_recording_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heat_description_et" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
