@@ -1,14 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.health.Sample">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Sample" />
+        tools:context=".ui.health.Sample">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/samp_labName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Lab Name"
+            android:textColor="@color/default_color"
+            app:layout_constraintEnd_toStartOf="@+id/samp_labName_et"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/samp_labName_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:textColor="@color/default_color"
+            app:layout_constraintBottom_toBottomOf="@+id/samp_labName_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/samp_labName_tv"
+            app:layout_constraintTop_toTopOf="@+id/samp_labName_tv" />
+
+        <LinearLayout
+            android:id="@+id/sampleboxLayout"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/samp_labName_tv">
+
+            <TextView
+                android:id="@+id/sam_sampleboxno_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Sample Box No:"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/sam_sampleboxno_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sampletypeLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/sampleboxLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sampleboxLayout"
+            app:layout_constraintTop_toTopOf="@+id/sampleboxLayout">
+
+            <TextView
+                android:id="@+id/sam_sampletype_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Sample Type"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/sam_sampletype_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:textColor="@color/default_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/testingChargeLayout"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/receiptNoLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sampleboxLayout">
+
+            <TextView
+                android:id="@+id/sam_testing_charge_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Testing Charge"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/sam_testing_charge_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_border_toolbar_color_corner"
+                android:textColor="@color/default_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receiptNoLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/testingChargeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/testingChargeLayout"
+            app:layout_constraintTop_toTopOf="@+id/testingChargeLayout">
+
+            <TextView
+                android:id="@+id/sam_receipt_no_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Receipt No"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/sam_receipt_no_et"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:textColor="@color/default_color" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/sam_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:lines="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testingChargeLayout" />
+
+        <TextView
+            android:id="@+id/sam_result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="95dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Result"
+            android:textColor="@color/default_color"
+            app:layout_constraintBottom_toBottomOf="@+id/sam_result"
+            app:layout_constraintEnd_toEndOf="@+id/sam_result"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="@+id/sam_result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

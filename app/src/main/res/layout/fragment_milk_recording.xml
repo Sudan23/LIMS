@@ -19,17 +19,20 @@
             android:id="@+id/date_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:text="Date"
+            android:textColor="@color/default_color"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/date_input"
-            android:layout_width="140dp"
+            android:layout_width="0dp"
             android:layout_height="36dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/spinner_boarder"
             android:ems="10"
             android:inputType="date"
@@ -45,13 +48,14 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Recording Period"
+            android:textColor="@color/default_color"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date_tv" />
 
         <Spinner
             android:id="@+id/recording_period_spinner"
-            android:layout_width="140dp"
+            android:layout_width="0dp"
             android:layout_height="38dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/spinner_boarder_with_icon"
@@ -64,16 +68,17 @@
             android:id="@+id/milk_vol_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Milk Volume"
+            android:textColor="@color/default_color"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recording_period_tv" />
 
         <EditText
             android:id="@+id/milk_vol_input"
-            android:layout_width="140dp"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             android:background="@drawable/spinner_boarder"
             app:layout_constraintBaseline_toBaselineOf="@+id/milk_vol_tv"
@@ -84,16 +89,18 @@
             android:id="@+id/sample_code_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="Sample Code"
+            android:textColor="@color/default_color"
+            android:textColorHint="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/milk_vol_tv" />
 
         <EditText
             android:id="@+id/sample_code_input"
-            android:layout_width="140dp"
+            android:layout_width="0dp"
             android:layout_height="36dp"
             android:background="@drawable/spinner_boarder"
             app:layout_constraintBaseline_toBaselineOf="@+id/sample_code_tv"

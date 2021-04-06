@@ -5,18 +5,18 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import kotlinx.android.synthetic.main.fragment_farm_farmer_registration.*
+import kotlinx.android.synthetic.main.fragment_farm_farmer_registration_v2.*
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.network.FarmFarmerRegistrationApi
 import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.data.repository.FarmFarmerRegisRepository
-import np.com.sudan10.lims_v30.databinding.FragmentFarmFarmerRegistrationBinding
+import np.com.sudan10.lims_v30.databinding.FragmentFarmFarmerRegistrationV2Binding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 
-class FarmRegistration : BaseFragment<FarmRegisViewModel, FragmentFarmFarmerRegistrationBinding, FarmFarmerRegisRepository>() {
+class FarmRegistration : BaseFragment<FarmRegisViewModel, FragmentFarmFarmerRegistrationV2Binding, FarmFarmerRegisRepository>() {
 
     override fun onResume() {
         super.onResume()
