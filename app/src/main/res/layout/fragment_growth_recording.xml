@@ -15,144 +15,195 @@
         android:layout_height="match_parent"
         tools:context=".ui.performance_record.GrowthRecording">
 
-        <TextView
-            android:id="@+id/length_tv"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/lengthLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="24dp"
-            android:text="Length"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/length_input"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/length_tv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.772"
-            app:layout_constraintStart_toEndOf="@+id/length_tv" />
-
-        <TextView
-            android:id="@+id/hearth_girth_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text="Heart Girth"
-            android:textSize="24sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/heartgirthLayout"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/length_tv" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/hearth_girth_input"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/hearth_girth_tv"
+            <TextView
+                android:id="@+id/length_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Length"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/length_input"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heartgirthLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/lengthLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.673"
-            app:layout_constraintStart_toEndOf="@+id/hearth_girth_tv" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lengthLayout"
+            app:layout_constraintTop_toTopOf="@+id/lengthLayout">
 
-        <TextView
-            android:id="@+id/weight_tv"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/hearth_girth_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Heart Girth"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/hearth_girth_input"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text="Weight"
-            android:textSize="24sp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/heightwitherLayout"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hearth_girth_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/lengthLayout">
 
-        <EditText
-            android:id="@+id/weight_input"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/weight_tv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.772"
-            app:layout_constraintStart_toEndOf="@+id/weight_tv" />
+            <TextView
+                android:id="@+id/weight_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Weight"
+                android:textColor="@color/default_color" />
 
-        <TextView
-            android:id="@+id/height_wither_tv"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heightwitherLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="16dp"
-            android:text="Height Wither"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weight_tv" />
-
-        <EditText
-            android:id="@+id/height_wither_input"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/height_wither_tv"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/weightLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.554"
-            app:layout_constraintStart_toEndOf="@+id/height_wither_tv" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/weightLayout"
+            app:layout_constraintTop_toTopOf="@+id/weightLayout">
+
+            <TextView
+                android:id="@+id/height_wither_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Height Wither"
+                android:textColor="@color/default_color" />
+
+            <EditText
+                android:id="@+id/height_wither_input"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/date_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="Recording Date"
-            android:textSize="24sp"
+            android:textColor="@color/default_color"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/height_wither_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/weightLayout" />
 
         <EditText
             android:id="@+id/date_input"
-            android:layout_width="140dp"
+            android:layout_width="0dp"
             android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/date_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/date_tv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.41"
-            app:layout_constraintStart_toEndOf="@+id/date_tv" />
+            app:layout_constraintStart_toEndOf="@+id/date_tv"
+            app:layout_constraintTop_toTopOf="@+id/date_tv" />
 
-        <TextView
-            android:id="@+id/note_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="16dp"
-            android:text="Note"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date_tv" />
 
         <EditText
-            android:id="@+id/note_input"
-            android:layout_width="140dp"
-            android:layout_height="36dp"
-            android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/note_tv"
+            android:id="@+id/note_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:lines="4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.803"
-            app:layout_constraintStart_toEndOf="@+id/note_tv" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_input" />
 
-        <Button
-            android:id="@+id/button6"
+        <TextView
+            android:id="@+id/note_input_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginBottom="95dp"
+            android:background="@color/white"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Note"
+            android:textColor="@color/default_color"
+            app:layout_constraintBottom_toBottomOf="@+id/note_input_et"
+            app:layout_constraintEnd_toEndOf="@+id/note_input_et"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="@+id/note_input_et" />
+
+        <Button
+            android:id="@+id/growthrecording_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Save"
             android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="@+id/note_input"
-            app:layout_constraintHorizontal_bias="0.506"
-            app:layout_constraintStart_toStartOf="@+id/note_tv"
-            app:layout_constraintTop_toBottomOf="@+id/note_input" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/note_input_et" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
