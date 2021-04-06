@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.registration.Calving">
+
+
+        <LinearLayout
+            android:id="@+id/calvingtype_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/birthTypeLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/calving_calving_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Calving Type"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_calving_type_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/birthTypeLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/calvingtype_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calvingtype_layout"
+            app:layout_constraintTop_toTopOf="@+id/calvingtype_layout">
+
+            <TextView
+                android:id="@+id/calving_birth_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Birth Type"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_birth_type_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/easeOfBorthLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/fateofCalfLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calvingtype_layout">
+
+            <TextView
+                android:id="@+id/calving_ease_of_birth_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Ease of Birth"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_ease_of_birth_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fateofCalfLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/easeOfBorthLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/easeOfBorthLayout"
+            app:layout_constraintTop_toTopOf="@+id/easeOfBorthLayout">
+
+            <TextView
+                android:id="@+id/calving_fate_of_calf_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Fate of Calf"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_fate_of_calf_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/calvingDateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/fiscalYearLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/easeOfBorthLayout">
+
+            <TextView
+                android:id="@+id/calving_calvingDate_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Calving Date"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_calvingDate_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fiscalYearLayout"
+            android:layout_width="225dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/calvingDateLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/calvingDateLayout"
+            app:layout_constraintTop_toTopOf="@+id/calvingDateLayout">
+
+            <TextView
+                android:id="@+id/calving_fiscal_year_tv"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Fiscal Year"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/calving_fiscal_year_spinner"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calving_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calvingDateLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
