@@ -242,7 +242,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/treatment_description_et"
+            android:id="@+id/culling_comment_et"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -256,7 +256,7 @@
             app:layout_constraintTop_toBottomOf="@+id/medicineLayout" />
 
         <TextView
-            android:id="@+id/treatment_description_tv"
+            android:id="@+id/culling_comment_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="120dp"
@@ -267,10 +267,10 @@
             android:paddingEnd="5dp"
             android:text="Description"
             android:textColor="@color/default_color"
-            app:layout_constraintBottom_toBottomOf="@+id/treatment_description_et"
-            app:layout_constraintEnd_toEndOf="@+id/treatment_description_et"
+            app:layout_constraintBottom_toBottomOf="@+id/culling_comment_et"
+            app:layout_constraintEnd_toEndOf="@+id/culling_comment_et"
             app:layout_constraintHorizontal_bias="0.065"
-            app:layout_constraintStart_toStartOf="@+id/treatment_description_et" />
+            app:layout_constraintStart_toStartOf="@+id/culling_comment_et" />
 
         <Button
             android:id="@+id/treatment_save_btn"
@@ -281,7 +281,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/treatment_description_et" />
+            app:layout_constraintTop_toBottomOf="@+id/culling_comment_et" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

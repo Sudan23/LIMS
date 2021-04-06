@@ -158,16 +158,16 @@
     </string-array>
 
     <string-array name="fish_native">
-            <item>Carp</item>
+        <item>Carp</item>
     </string-array>
 
 
     <string-array name="entry_type">
-            <item>Start of Program</item>
-            <item>From Outside</item>
-            <item>Other</item>
+        <item>Start of Program</item>
+        <item>From Outside</item>
+        <item>Other</item>
     </string-array>
-    
+
     //Farm Registration
     <string-array name="farm_registration_category">
         <item>Farmer</item>
@@ -175,7 +175,7 @@
         <item>Groups</item>
         <item>Co-operative</item>
     </string-array>
-    
+
     <string-array name="farm_type">
         <item>Public</item>
         <item>Private</item>
