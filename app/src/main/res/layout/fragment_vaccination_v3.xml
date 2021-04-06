@@ -18,7 +18,7 @@
 
             <LinearLayout
                 android:id="@+id/vac_vaccineNameLayout"
-                android:layout_width="194dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
@@ -50,7 +50,7 @@
 
             <LinearLayout
                 android:id="@+id/vac_vaccineDatelayout"
-                android:layout_width="194dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
@@ -83,7 +83,7 @@
 
             <LinearLayout
                 android:id="@+id/vaccineForDiseaseLayout"
-                android:layout_width="198dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
@@ -113,7 +113,7 @@
 
             <LinearLayout
                 android:id="@+id/vac_fiscalYearLayout"
-                android:layout_width="198dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"

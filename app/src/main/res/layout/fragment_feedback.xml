@@ -7,7 +7,6 @@
             name="feedbackViewModel"
             type="np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel" />
 
-
     </data>
 
 <ScrollView
