@@ -18,12 +18,13 @@ import np.com.sudan10.lims_v30.data.network.AnimalRegistrationApi
 import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.data.repository.AnimRegisRepository
 import np.com.sudan10.lims_v30.databinding.FragmentAnimalRegistrationBinding
+import np.com.sudan10.lims_v30.databinding.FragmentAnimalRegistrationV2Binding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
 import java.time.LocalDate
 import java.util.*
 
 
-class AnimalRegistration : BaseFragment<AnimalRegistrationViewModel,FragmentAnimalRegistrationBinding,AnimRegisRepository>(){
+class AnimalRegistration : BaseFragment<AnimalRegistrationViewModel, FragmentAnimalRegistrationV2Binding,AnimRegisRepository>(){
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onResume() {
@@ -209,7 +210,7 @@ class AnimalRegistration : BaseFragment<AnimalRegistrationViewModel,FragmentAnim
 
     override fun getViewModel() = AnimalRegistrationViewModel::class.java
 
-    override fun getFragmentBinding() =  R.layout.fragment_animal_registration
+    override fun getFragmentBinding() =  R.layout.fragment_animal_registration_v2
 
     override fun getFragmentRepository(): AnimRegisRepository{
         val token = runBlocking { userPreferences.authToken.first() }

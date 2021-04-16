@@ -131,13 +131,13 @@
                 android:stretchColumns="1,2,3,4,5,6">
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/default_color">
 
                     <TextView
                         android:id="@+id/tvempty"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -148,7 +148,7 @@
 
                     <TextView
                         android:id="@+id/textView6"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -159,7 +159,7 @@
 
                     <TextView
                         android:id="@+id/textView7"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -170,7 +170,7 @@
 
                     <TextView
                         android:id="@+id/textView11"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -187,7 +187,7 @@
 
                     <TextView
                         android:id="@+id/tvmin1"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -234,7 +234,7 @@
 
                     <TextView
                         android:id="@+id/tvmin2"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -280,7 +280,7 @@
 
                     <TextView
                         android:id="@+id/tvmin3"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -327,7 +327,7 @@
 
                     <TextView
                         android:id="@+id/tvmin4"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -373,7 +373,7 @@
 
                     <TextView
                         android:id="@+id/tvmin5"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -420,7 +420,7 @@
 
                     <TextView
                         android:id="@+id/tvmin6"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="10dp"
@@ -463,20 +463,21 @@
             </TableLayout>
 
             <TableLayout
-                android:layout_width="423dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="25dp"
                 android:stretchColumns="1,2,3">
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:background="@color/default_color">
 
                     <TextView
                         android:id="@+id/tV141"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:padding="1dp"
@@ -486,7 +487,7 @@
 
                     <TextView
                         android:id="@+id/tV142"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -496,7 +497,7 @@
 
                     <TextView
                         android:id="@+id/tV143"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -506,12 +507,12 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
                     <Spinner
                         android:id="@+id/feedname_spinner"
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
@@ -519,7 +520,7 @@
 
                     <TextView
                         android:id="@+id/tV242"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -529,7 +530,7 @@
 
                     <TextView
                         android:id="@+id/tV243"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -550,13 +551,13 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@color/table_shading">
 
                     <Spinner
                         android:id="@+id/feedname_spinner1"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
@@ -564,7 +565,7 @@
 
                     <TextView
                         android:id="@+id/tV342"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -574,7 +575,7 @@
 
                     <TextView
                         android:id="@+id/tV343"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -594,12 +595,12 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent">
 
                     <Spinner
                         android:id="@+id/feedname2_spinner"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
@@ -607,7 +608,7 @@
 
                     <TextView
                         android:id="@+id/tV442"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
@@ -617,7 +618,7 @@
 
                     <TextView
                         android:id="@+id/tV443"
-                        android:layout_width="fill_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:padding="1dp"
