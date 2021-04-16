@@ -163,7 +163,7 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/spinner_boarder_with_icon"
+                android:background="@drawable/spinner_boarder"
                 android:textColor="@color/default_color" />
         </LinearLayout>
 

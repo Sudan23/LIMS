@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:text="Recording Period"
             android:textColor="@color/default_color"
             android:textSize="24sp"
@@ -57,40 +57,63 @@
             android:id="@+id/recording_period_spinner"
             android:layout_width="0dp"
             android:layout_height="38dp"
-            android:layout_marginTop="24dp"
             android:background="@drawable/spinner_boarder_with_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/recording_period_tv"
             app:layout_constraintEnd_toEndOf="@+id/date_input"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/date_input"
-            app:layout_constraintTop_toBottomOf="@+id/date_input" />
+            app:layout_constraintTop_toTopOf="@+id/recording_period_tv" />
+
+        <TextView
+            android:id="@+id/lactation_phase_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Lactation Phase"
+            android:textColor="@color/default_color"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recording_period_tv" />
+
+        <Spinner
+            android:id="@+id/lactation_phase_spinner"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:background="@drawable/spinner_boarder_with_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/lactation_phase_tv"
+            app:layout_constraintEnd_toEndOf="@+id/recording_period_spinner"
+            app:layout_constraintStart_toStartOf="@+id/recording_period_spinner"
+            app:layout_constraintTop_toTopOf="@+id/lactation_phase_tv" />
 
         <TextView
             android:id="@+id/milk_vol_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:text="Milk Volume"
+            android:layout_marginTop="16dp"
+            android:text="Milk Volume(Ltr)"
             android:textColor="@color/default_color"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recording_period_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/lactation_phase_tv" />
 
         <EditText
             android:id="@+id/milk_vol_input"
             android:layout_width="0dp"
             android:layout_height="36dp"
             android:background="@drawable/spinner_boarder"
-            app:layout_constraintBaseline_toBaselineOf="@+id/milk_vol_tv"
-            app:layout_constraintEnd_toEndOf="@+id/recording_period_spinner"
-            app:layout_constraintStart_toStartOf="@+id/recording_period_spinner" />
+            app:layout_constraintBottom_toBottomOf="@+id/milk_vol_tv"
+            app:layout_constraintEnd_toEndOf="@+id/lactation_phase_spinner"
+            app:layout_constraintStart_toStartOf="@+id/lactation_phase_spinner"
+            app:layout_constraintTop_toTopOf="@+id/milk_vol_tv" />
 
         <TextView
             android:id="@+id/sample_code_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:text="Sample Code"
             android:textColor="@color/default_color"
             android:textColorHint="#FFFFFF"

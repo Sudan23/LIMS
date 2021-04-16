@@ -9,6 +9,10 @@
         android:title="@string/log_in" />
 
     <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard" />
+
+    <item
         android:id="@+id/rationBalance"
         android:title="@string/ration_balance">
 
@@ -37,6 +41,12 @@
                 <item
                     android:id="@+id/animalRegistration"
                     android:title="@string/animal_registration" />
+                <item
+                    android:id="@+id/Calving"
+                    android:title="Calving" />
+                <item
+                    android:id="@+id/Culling"
+                    android:title="Culling" />
 
             </menu>
         </item>

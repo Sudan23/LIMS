@@ -158,10 +158,11 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/mobileLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/mobileLayout"
-            tools:layout_editor_absoluteY="122dp">
+            app:layout_constraintTop_toTopOf="@+id/mobileLayout">
 
             <TextView
                 android:id="@+id/ai_fiscal_year_tv"

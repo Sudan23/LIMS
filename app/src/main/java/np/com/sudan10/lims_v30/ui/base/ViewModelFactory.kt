@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
 import np.com.sudan10.lims_v30.data.repository.*
 import np.com.sudan10.lims_v30.ui.auth.AuthViewModel
+import np.com.sudan10.lims_v30.ui.breeding.AiViewModel
 import np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel
 import np.com.sudan10.lims_v30.ui.health.VaccinationViewModel
 import np.com.sudan10.lims_v30.ui.home.HomeMenuLoggedViewModel
@@ -30,6 +31,8 @@ class ViewModelFactory (
             modelClass.isAssignableFrom(VaccinationViewModel::class.java) -> VaccinationViewModel(repository as VaccinationRepository) as T
 
             modelClass.isAssignableFrom(FarmRegisViewModel::class.java) -> FarmRegisViewModel(repository as FarmFarmerRegisRepository) as T
+
+            modelClass.isAssignableFrom(AiViewModel::class.java) -> AiViewModel(repository as AiRepository) as T
 
             modelClass.isAssignableFrom(AnimalRegistrationViewModel::class.java) -> AnimalRegistrationViewModel(repository as AnimRegisRepository) as T
 

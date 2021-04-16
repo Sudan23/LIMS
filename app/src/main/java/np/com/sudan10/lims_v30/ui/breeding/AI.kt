@@ -9,15 +9,16 @@ import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.network.AiApi
 import np.com.sudan10.lims_v30.data.repository.AiRepository
 import np.com.sudan10.lims_v30.databinding.FragmentAiNewV2Binding
+import np.com.sudan10.lims_v30.databinding.FragmentAiNewV3Binding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
-class AI : BaseFragment<AiViewModel,FragmentAiNewV2Binding, AiRepository>() {
+class AI : BaseFragment<AiViewModel, FragmentAiNewV3Binding, AiRepository>() {
 
 
 
     override fun getViewModel() = AiViewModel::class.java
 
-    override fun getFragmentBinding() = R.layout.fragment_ai_new_v2
+    override fun getFragmentBinding() = R.layout.fragment_ai_new_v3
 
     override fun getFragmentRepository() = AiRepository(remoteDataSource.buildApi(AiApi::class.java))
 

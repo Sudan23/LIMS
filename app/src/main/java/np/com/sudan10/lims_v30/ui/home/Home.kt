@@ -30,6 +30,8 @@ import np.com.sudan10.lims_v30.ui.ration_balance.RationBalance
 import np.com.sudan10.lims_v30.ui.ration_balance.RbNonRuminant
 import np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant
 import np.com.sudan10.lims_v30.ui.registration.AnimalRegistration
+import np.com.sudan10.lims_v30.ui.registration.Calving
+import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
 
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -70,6 +72,8 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         drawerLayout.closeDrawer(GravityCompat.START, false)
 
         when(item.itemId){
+
+
             R.id.home -> {
                 setToolbarTitle("Home")
                 changeFragment(HomeMenu())
@@ -78,6 +82,11 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.login -> {
                 setToolbarTitle("Login")
                 changeFragment(Login())
+            }
+
+            R.id.dashboard -> {
+                setToolbarTitle("Dashboard")
+                changeFragment(Dashboard())
             }
 
             R.id.rationBalance -> {
@@ -163,6 +172,14 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.feedback -> {
                 setToolbarTitle("Feedback")
                 changeFragment(Feedback())
+            }
+            R.id.Calving -> {
+                setToolbarTitle("Calving")
+                changeFragment(Calving())
+            }
+            R.id.Culling -> {
+                setToolbarTitle("Culling")
+                changeFragment(Culling())
             }
         }
         return true

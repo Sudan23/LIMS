@@ -102,7 +102,7 @@
 
                 <Button
                     android:id="@+id/dashboard_add_farm_btn"
-                    android:layout_width="80dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Add Farm"
@@ -117,7 +117,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView3"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -193,7 +193,7 @@
 
                 <Button
                     android:id="@+id/dashboard_vaccine_add_vaccine_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Do Vaccine"
@@ -207,7 +207,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView4"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -280,7 +280,7 @@
 
                 <Button
                     android:id="@+id/dashboard_ai_add_vaccine_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Do AI"
@@ -293,7 +293,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
@@ -366,7 +366,7 @@
 
                 <Button
                     android:id="@+id/dashboard_health_add_vaccine_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Check Health"

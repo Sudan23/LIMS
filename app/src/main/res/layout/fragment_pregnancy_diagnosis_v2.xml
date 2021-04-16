@@ -77,6 +77,36 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/fiscal_yearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pregnancy_layout"
+            app:layout_constraintTop_toBottomOf="@+id/dateLayout">
+
+            <TextView
+                android:id="@+id/fiscal_year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:text="Fiscal year"
+                android:textColor="@color/default_color" />
+
+            <Spinner
+                android:id="@+id/fiscal_year_spinner_input"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/spinner_boarder_with_icon" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/pregnancy_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -117,36 +147,6 @@
                     android:layout_weight="1"
                     android:text="No" />
             </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fiscal_yearLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/pregnancy_layout"
-            app:layout_constraintTop_toBottomOf="@+id/dateLayout">
-
-            <TextView
-                android:id="@+id/fiscal_year_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:gravity="center_vertical"
-                android:text="Fiscal year"
-                android:textColor="@color/default_color" />
-
-            <Spinner
-                android:id="@+id/fiscal_year_spinner_input"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_marginStart="5dp"
-                android:background="@drawable/spinner_boarder_with_icon" />
         </LinearLayout>
 
         <Button

@@ -24,7 +24,7 @@ class Vaccination : BaseFragment<VaccinationViewModel, FragmentVaccinationBindin
 
     override fun getViewModel() = VaccinationViewModel::class.java
 
-    override fun getFragmentBinding() = R.layout.fragment_vaccination
+    override fun getFragmentBinding() = R.layout.fragment_vaccination_v3
 
     override fun getFragmentRepository() = VaccinationRepository(remoteDataSource.buildApi(VaccineApi::class.java))
 

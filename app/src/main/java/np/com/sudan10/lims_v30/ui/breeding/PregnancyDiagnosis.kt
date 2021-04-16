@@ -15,7 +15,7 @@ class PregnancyDiagnosis : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pregnancy_diagnosis, container, false)
+        return inflater.inflate(R.layout.fragment_pregnancy_diagnosis_v2, container, false)
     }
 
 }

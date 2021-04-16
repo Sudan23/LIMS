@@ -109,7 +109,7 @@
             app:layout_constraintStart_toStartOf="@+id/culling_comment_et" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/culling_save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
