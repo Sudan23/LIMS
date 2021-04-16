@@ -49,7 +49,7 @@
                         android:id="@+id/animalTypes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="Poultry type"
                         android:textColor="@color/default_color"
@@ -82,10 +82,8 @@
 
                     <TextView
                         android:id="@+id/agecategories_tv"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="15dp"
                         android:layout_marginBottom="10dp"
                         android:text="Age and phase"
                         android:textColor="@color/default_color"
@@ -144,7 +142,8 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:stretchColumns="1"
-                        android:text=""
+                        android:text="Nutrients"
+                        android:textColor="@color/black"
                         android:textSize="14sp" />
 
                     <TextView
@@ -231,7 +230,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/default_color">
+                    android:background="@color/table_shading">
 
                     <TextView
                         android:id="@+id/tvmin2"
@@ -324,7 +323,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/default_color">
+                    android:background="@color/table_shading">
 
                     <TextView
                         android:id="@+id/tvmin4"
@@ -417,7 +416,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/default_color">
+                    android:background="@color/table_shading">
 
                     <TextView
                         android:id="@+id/tvmin6"
@@ -466,19 +465,19 @@
             <TableLayout
                 android:layout_width="423dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="10dp"
                 android:stretchColumns="1,2,3">
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/default_color">
 
                     <TextView
                         android:id="@+id/tV141"
                         android:layout_width="fill_parent"
                         android:layout_height="40dp"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -489,7 +488,6 @@
                         android:id="@+id/tV142"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -500,7 +498,6 @@
                         android:id="@+id/tV143"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -516,7 +513,6 @@
                         android:id="@+id/feedname_spinner"
                         android:layout_width="180dp"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_boarder_dropdown"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
                         android:textColor="@color/black" />
@@ -525,7 +521,6 @@
                         android:id="@+id/tV242"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -536,7 +531,6 @@
                         android:id="@+id/tV243"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -557,13 +551,13 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/table_shading">
 
                     <Spinner
                         android:id="@+id/feedname_spinner1"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_boarder_dropdown"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
                         android:textColor="@color/default_color" />
@@ -572,7 +566,6 @@
                         android:id="@+id/tV342"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -583,7 +576,6 @@
                         android:id="@+id/tV343"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -609,7 +601,6 @@
                         android:id="@+id/feedname2_spinner"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_boarder_dropdown"
                         android:entries="@array/feeds_name"
                         android:stretchColumns="1"
                         android:textColor="@color/black" />
@@ -618,7 +609,6 @@
                         android:id="@+id/tV442"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
@@ -629,7 +619,6 @@
                         android:id="@+id/tV443"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:background="@drawable/table_border"
                         android:gravity="center"
                         android:padding="1dp"
                         android:stretchColumns="1"
