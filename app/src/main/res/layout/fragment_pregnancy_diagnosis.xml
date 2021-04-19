@@ -234,14 +234,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/vaccine_date">
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/pregnancy_yes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Yes" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/pregnancy_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

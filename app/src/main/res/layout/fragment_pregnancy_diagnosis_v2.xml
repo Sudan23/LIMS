@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/methodLayout"
@@ -39,7 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginStart="8dp"
-                android:background="@drawable/spinner_boarder_with_icon" />
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:entries="@array/pregnancy_method" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,8 +71,7 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/spinner_boarder"
-                android:gravity="center_vertical"
-                android:textColor="@color/default_color" />
+                android:gravity="center_vertical"/>
 
 
         </LinearLayout>
@@ -103,7 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/spinner_boarder_with_icon" />
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:entries="@array/fiscal_year" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,14 +135,14 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/pregnancy_yes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Yes" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/pregnancy_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -159,7 +160,41 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pd_reason_et" />
+
+        <EditText
+            android:id="@+id/pd_reason_et"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/table_border_toolbar_color_corner"
+            android:textColor="@color/default_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pregnancy_layout" />
+
+        <TextView
+            android:id="@+id/pd_reason_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="48dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Reason"
+            android:textColor="@color/default_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/pd_reason_et"
+            app:layout_constraintEnd_toEndOf="@+id/pd_reason_et"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="@+id/pd_reason_et" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
