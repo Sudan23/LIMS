@@ -14,6 +14,7 @@ import np.com.sudan10.lims_v30.ui.registration.AnimalRegistrationViewModel
 import np.com.sudan10.lims_v30.data.repository.CullingRepository
 import np.com.sudan10.lims_v30.ui.health.TreatmentViewModel
 import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecordingViewModel
+import np.com.sudan10.lims_v30.ui.performance_record.MilkRecordingViewModel
 import np.com.sudan10.lims_v30.ui.registration.CullingViewModel
 import np.com.sudan10.lims_v30.ui.registration.FarmRegisViewModel
 
@@ -41,6 +42,8 @@ class ViewModelFactory (
             modelClass.isAssignableFrom(CullingViewModel::class.java) -> CullingViewModel(repository as CullingRepository) as T
 
             modelClass.isAssignableFrom(GrowthRecordingViewModel::class.java) -> GrowthRecordingViewModel(repository as GrowthRepository) as T
+
+            modelClass.isAssignableFrom(MilkRecordingViewModel::class.java) -> MilkRecordingViewModel(repository as MilkRecordingRepository) as T
 
             modelClass.isAssignableFrom(AiViewModel::class.java) -> AiViewModel(repository as AiRepository) as T
 

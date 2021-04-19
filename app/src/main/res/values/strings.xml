@@ -194,5 +194,14 @@
         <item>Others</item>
     </string-array>
 
+    //Milk Recording
+    <string-array name="recording_period">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+    </string-array>
+
+
+
 
 </resources>
