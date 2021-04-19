@@ -36,6 +36,12 @@
     <string name="rbRuminant">Ration Balance Ruminant</string>
     <string name="rbNonRuminant">Ration Balance Non Ruminant</string>
 
+    <string-array name="fiscal_year">
+        <item>2077/78</item>
+        <item>2076/77</item>
+        <item>2075/76</item>
+    </string-array>
+
 
     //Login Screen
     <string name="username">Username</string>
@@ -201,7 +207,13 @@
         <item>Evening</item>
     </string-array>
 
-
+    //Abortion
+    <string-array name="termination_type">
+        <item>False Diagnosis</item>
+        <item>Missed Calving</item>
+        <item>Others</item>
+    </string-array>
+    
 
 
 </resources>
