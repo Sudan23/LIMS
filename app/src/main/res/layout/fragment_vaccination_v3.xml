@@ -73,9 +73,9 @@
                     android:textColor="@color/default_color" />
 
                 <EditText
-                    android:id="@+id/datePicker"
+                    android:id="@+id/vaccine_date"
                     android:layout_width="0dp"
-                    android:layout_height="38dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/spinner_boarder"
                     android:datePickerMode="spinner" />
@@ -86,13 +86,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@+id/vac_fiscalYearLayout"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vac_vaccineNameLayout">
+                app:layout_constraintTop_toBottomOf="@+id/vac_vaccineDatelayout">
 
                 <TextView
                     android:id="@+id/vaccination_for_disease_tv"

@@ -257,7 +257,7 @@
                     android:textColor="@color/default_color" />
 
                 <EditText
-                    android:id="@+id/datePicker"
+                    android:id="@+id/vaccine_date"
                     android:layout_width="140dp"
                     android:layout_height="38dp"
                     android:layout_weight="1"

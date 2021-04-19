@@ -193,12 +193,12 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:text="Date"
                 android:textColor="@color/default_color"
-                app:layout_constraintEnd_toStartOf="@+id/datePicker"
+                app:layout_constraintEnd_toStartOf="@+id/vaccine_date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/method_tv" />
 
             <DatePicker
-                android:id="@+id/datePicker"
+                android:id="@+id/vaccine_date"
                 android:layout_width="140dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="24dp"
@@ -229,9 +229,9 @@
                 android:layout_height="38dp"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/datePicker"
-                app:layout_constraintStart_toStartOf="@+id/datePicker"
-                app:layout_constraintTop_toBottomOf="@+id/datePicker">
+                app:layout_constraintEnd_toEndOf="@+id/vaccine_date"
+                app:layout_constraintStart_toStartOf="@+id/vaccine_date"
+                app:layout_constraintTop_toBottomOf="@+id/vaccine_date">
 
                 <RadioButton
                     android:id="@+id/radioButton3"
