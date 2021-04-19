@@ -184,7 +184,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             app:layout_constraintEnd_toStartOf="@+id/treatmentdateLayout"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias=".1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/treatment_symptoms_et">
 
@@ -192,7 +192,7 @@
                 android:id="@+id/treatment_medicine_tv"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".8"
                 android:gravity="center_vertical"
                 android:text="Medicine"
                 android:textColor="@color/default_color" />
@@ -233,9 +233,9 @@
             <EditText
                 android:id="@+id/treatment_treatmentdate_et"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_weight="1"
+                android:layout_weight="1.7"
                 android:background="@drawable/table_border_toolbar_color_corner"
                 android:textColor="@color/default_color" />
 

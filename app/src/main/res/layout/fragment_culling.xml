@@ -20,7 +20,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             app:layout_constraintEnd_toStartOf="@+id/reasonforexit_layout"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:gravity="center_vertical"
                 android:text="Date of Culling"
                 android:textColor="@color/default_color" />
@@ -54,7 +54,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="@+id/date_of_cullingLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/date_of_cullingLayout"
             app:layout_constraintTop_toTopOf="@+id/date_of_cullingLayout">>
 
@@ -73,8 +73,9 @@
                 android:id="@+id/culling_reson_for_exit_spinner"
                 android:layout_width="0dp"
                 android:layout_height="38dp"
-                android:layout_weight="1"
-                android:background="@drawable/spinner_boarder_with_icon" />
+                android:layout_weight="1.5"
+                android:background="@drawable/spinner_boarder_with_icon"
+                android:entries="@array/culling_reason" />
         </LinearLayout>
 
         <EditText

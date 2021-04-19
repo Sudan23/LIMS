@@ -183,4 +183,16 @@
     </string-array>
 
 
+    //CULLING
+    <string-array name="culling_reason">
+        <item>Culled</item>
+        <item>Old Age</item>
+        <item>Sick</item>
+        <item>Died</item>
+        <item>Sold for Use</item>
+        <item>Sold for Slaughter</item>
+        <item>Others</item>
+    </string-array>
+
+
 </resources>
