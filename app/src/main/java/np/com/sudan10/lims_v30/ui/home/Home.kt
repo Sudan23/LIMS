@@ -2,9 +2,9 @@ package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -36,6 +36,9 @@ import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
 
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    var defaultFragment = HomeMenu()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
@@ -45,24 +48,26 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        val defaultfragment = HomeMenu()
+        //val defaultFragment = HomeMenu()
 
 
         val userPreferences = UserPreferences(this)
 
         userPreferences.authToken.asLiveData().observe(this, Observer {
 
-            val fragment = if (it == null) HomeMenu() else HomeMenuLoggedIn()
+            val defaultFragment = if (it == null) HomeMenu() else HomeMenuLoggedIn()
 
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container,fragment)
+                replace(R.id.fragment_container,defaultFragment)
                 commit()
             }
         })
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container,defaultfragment)
+            replace(R.id.fragment_container,defaultFragment)
             commit()
         }
 
@@ -77,7 +82,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
             R.id.home -> {
                 setToolbarTitle("Home")
-                changeFragment(HomeMenu())
+                changeFragment(defaultFragment)
             }
 
             R.id.login -> {

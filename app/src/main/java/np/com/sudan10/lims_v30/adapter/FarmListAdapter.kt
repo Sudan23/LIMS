@@ -11,16 +11,16 @@ import np.com.sudan10.lims_v30.R
 
 class FarmListAdapter(private var farmName:List<String>, private var farmAddress:List<String>, private var animalCount:List<String>):
         RecyclerView.Adapter<FarmListAdapter.MyViewHolder>() {
-            class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
                 val farmTitle: TextView = itemView.findViewById(R.id.farmlist_title_tv)
                 val farmAddress: TextView = itemView.findViewById(R.id.farmlist_address_tv)
                 val animalCount: TextView = itemView.findViewById(R.id.count_tv)
 
                 init {
-                    itemView.setOnClickListener { v: View ->
+                    itemView.setOnClickListener {
                         val position:Int = adapterPosition
-                        Toast.makeText(itemView.context, "You Clicked on item = $(position+1)", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(itemView.context, "You Clicked on item = ${position+1}", Toast.LENGTH_SHORT).show()
                     }
                 }
 

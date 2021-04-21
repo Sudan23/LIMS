@@ -213,24 +213,23 @@
         <item>Missed Calving</item>
         <item>Others</item>
     </string-array>
-    
+
     //Pregnancy Diagnosis
     <string-array name="pregnancy_method">
         <item>USG</item>
         <item>Rector Palpation</item>
     </string-array>
-    
+
     //Vaccination
-     <string-array name="vaccine_disease">
-         <item>Rabies</item>
-     </string-array>
+    <string-array name="vaccine_disease">
+        <item>Rabies</item>
+    </string-array>
 
     //Sample
     <string-array name="sample_type">
         <item>Urine</item>
         <item>Milk</item>
     </string-array>
-    
 
 
 </resources>
