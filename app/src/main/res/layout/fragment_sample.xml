@@ -98,6 +98,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/spinner_boarder_with_icon"
+                android:entries="@array/sample_type"
                 android:textColor="@color/default_color" />
 
         </LinearLayout>
@@ -176,6 +177,7 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/table_border_toolbar_color_corner"
             android:lines="4"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/testingChargeLayout" />
@@ -190,10 +192,23 @@
             android:paddingEnd="10dp"
             android:text="Result"
             android:textColor="@color/default_color"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/sam_result"
             app:layout_constraintEnd_toEndOf="@+id/sam_result"
             app:layout_constraintHorizontal_bias="0.062"
             app:layout_constraintStart_toStartOf="@+id/sam_result" />
+
+        <Button
+            android:id="@+id/sample_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sam_result" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

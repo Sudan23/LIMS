@@ -22,6 +22,7 @@ import np.com.sudan10.lims_v30.ui.health.AnimalHealth
 import np.com.sudan10.lims_v30.ui.health.Sample
 import np.com.sudan10.lims_v30.ui.health.Treatment
 import np.com.sudan10.lims_v30.ui.health.Vaccination
+import np.com.sudan10.lims_v30.ui.list.FarmList
 import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecording
 import np.com.sudan10.lims_v30.ui.performance_record.MeatRecording
 import np.com.sudan10.lims_v30.ui.performance_record.MilkRecording
@@ -87,6 +88,11 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.dashboard -> {
                 setToolbarTitle("Dashboard")
                 changeFragment(Dashboard())
+            }
+
+            R.id.farmlist -> {
+                setToolbarTitle("Farm List")
+                changeFragment(FarmList())
             }
 
             R.id.rationBalance -> {

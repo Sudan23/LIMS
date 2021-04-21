@@ -108,7 +108,8 @@
                     android:layout_width="0dp"
                     android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:background="@drawable/spinner_boarder_with_icon" />
+                    android:background="@drawable/spinner_boarder_with_icon"
+                    android:entries="@array/vaccine_disease" />
             </LinearLayout>
 
             <LinearLayout
@@ -140,7 +141,8 @@
                     android:layout_width="0dp"
                     android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:background="@drawable/spinner_boarder_with_icon" />
+                    android:background="@drawable/spinner_boarder_with_icon"
+                    android:entries="@array/fiscal_year" />
             </LinearLayout>
 
             <Button

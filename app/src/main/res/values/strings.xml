@@ -220,6 +220,17 @@
         <item>Rector Palpation</item>
     </string-array>
     
+    //Vaccination
+     <string-array name="vaccine_disease">
+         <item>Rabies</item>
+     </string-array>
+
+    //Sample
+    <string-array name="sample_type">
+        <item>Urine</item>
+        <item>Milk</item>
+    </string-array>
+    
 
 
 </resources>

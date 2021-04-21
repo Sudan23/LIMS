@@ -142,6 +142,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/spinner_boarder_with_icon"
+                android:entries="@array/vaccine_disease"
                 android:textColor="@color/default_color" />
         </LinearLayout>
 
