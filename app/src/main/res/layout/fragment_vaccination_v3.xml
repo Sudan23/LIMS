@@ -70,6 +70,7 @@
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Vaccine Date"
+                    android:focusableInTouchMode="false"
                     android:textColor="@color/default_color" />
 
                 <EditText
@@ -98,9 +99,10 @@
                     android:id="@+id/vaccination_for_disease_tv"
                     android:layout_width="0dp"
                     android:layout_height="36dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="Vaccination for Disease"
+                    android:gravity="center"
+                    android:text="Vaccination for"
                     android:textColor="@color/default_color" />
 
                 <Spinner
@@ -130,6 +132,7 @@
                     android:id="@+id/fiscal_year_tv"
                     android:layout_width="0dp"
                     android:layout_height="36dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:baselineAligned="false"
                     android:gravity="center_vertical"

@@ -162,6 +162,7 @@
                 android:hint="Enter Date"
                 android:inputType="date"
                 android:textSize="12dp"
+                android:focusableInTouchMode="false"
                 app:layout_constraintBottom_toBottomOf="@+id/dob_textview"
                 app:layout_constraintEnd_toStartOf="@+id/weight_textview"
                 app:layout_constraintStart_toEndOf="@+id/dob_textview"

@@ -155,10 +155,10 @@
         <EditText
             android:id="@+id/date_input"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="38dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="160dp"
+            android:focusableInTouchMode="false"
             android:background="@drawable/spinner_boarder"
             app:layout_constraintBottom_toBottomOf="@+id/date_tv"
             app:layout_constraintEnd_toEndOf="parent"
@@ -174,7 +174,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/table_border_toolbar_color_corner"
-            android:lines="4"
+            android:lines="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date_input" />
@@ -183,7 +183,7 @@
             android:id="@+id/note_input_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="95dp"
+            android:layout_marginBottom="54dp"
             android:background="@color/white"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
@@ -191,7 +191,7 @@
             android:textColor="@color/default_color"
             app:layout_constraintBottom_toBottomOf="@+id/note_input_et"
             app:layout_constraintEnd_toEndOf="@+id/note_input_et"
-            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintHorizontal_bias="0.06"
             app:layout_constraintStart_toStartOf="@+id/note_input_et" />
 
         <Button

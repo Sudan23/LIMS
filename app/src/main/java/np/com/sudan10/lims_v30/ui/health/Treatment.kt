@@ -30,7 +30,7 @@ class Treatment : BaseFragment<TreatmentViewModel,FragmentTreatmentBinding, Trea
             val yr = c.get(Calendar.YEAR)
             val month = c.get(Calendar.MONTH)
             val day = c.get(Calendar.DAY_OF_MONTH)
-            val display = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener {
+            val display = DatePickerDialog(requireContext(), {
                 view, year, monthOfYear, dayOfMonth ->
                 var monthInput = (monthOfYear + 1).toString()
                 if (monthInput.toInt() == 1) {

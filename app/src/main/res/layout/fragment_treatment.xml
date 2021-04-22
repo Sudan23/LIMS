@@ -154,7 +154,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/table_border_toolbar_color_corner"
-            android:lines="5"
+            android:lines="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/respirationLayout" />
@@ -163,7 +163,7 @@
             android:id="@+id/treatment_symptoms_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="120dp"
+            android:layout_marginBottom="56dp"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center_vertical"
@@ -173,7 +173,7 @@
             android:textColor="@color/default_color"
             app:layout_constraintBottom_toBottomOf="@+id/treatment_symptoms_et"
             app:layout_constraintEnd_toEndOf="@+id/treatment_symptoms_et"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.066"
             app:layout_constraintStart_toStartOf="@+id/treatment_symptoms_et" />
 
         <LinearLayout
@@ -237,6 +237,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_weight="1.7"
+                android:focusableInTouchMode="false"
                 android:background="@drawable/table_border_toolbar_color_corner"
                 android:textColor="@color/default_color" />
 
@@ -250,7 +251,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/table_border_toolbar_color_corner"
-            android:lines="5"
+            android:lines="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -260,7 +261,7 @@
             android:id="@+id/culling_comment_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="120dp"
+            android:layout_marginBottom="54dp"
             android:layout_weight="1"
             android:background="@color/white"
             android:gravity="center_vertical"
@@ -270,7 +271,7 @@
             android:textColor="@color/default_color"
             app:layout_constraintBottom_toBottomOf="@+id/culling_comment_et"
             app:layout_constraintEnd_toEndOf="@+id/culling_comment_et"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.066"
             app:layout_constraintStart_toStartOf="@+id/culling_comment_et" />
 
         <Button

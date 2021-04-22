@@ -71,24 +71,22 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/spinner_boarder"
-                android:gravity="center_vertical"/>
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical" />
 
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/fiscal_yearLayout"
-            android:layout_width="0dp"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/pregnancy_layout"
-            app:layout_constraintTop_toBottomOf="@+id/dateLayout">
+            app:layout_constraintEnd_toStartOf="@+id/pregnancy_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/methodLayout">
 
             <TextView
                 android:id="@+id/fiscal_year_tv"
@@ -109,16 +107,14 @@
 
         <LinearLayout
             android:id="@+id/pregnancy_layout"
-            android:layout_width="0dp"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toStartOf="@+id/fiscal_yearLayout"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/methodLayout">
+            app:layout_constraintBottom_toBottomOf="@+id/fiscal_yearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fiscal_yearLayout">
 
             <TextView
                 android:id="@+id/result_tv"
