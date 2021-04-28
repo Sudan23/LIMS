@@ -2,9 +2,10 @@ package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -35,6 +36,7 @@ import np.com.sudan10.lims_v30.ui.registration.Calving
 import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
 
+
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     var defaultFragment = HomeMenu()
@@ -43,7 +45,12 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         super.onCreate(savedInstanceState)
         val binding: ActivityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
+        setSupportActionBar(binding.mainToolbar)
+
         val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.mainToolbar, R.string.open, R.string.close)
+        //setSupportActionBar(binding.mainToolbar)
+
+
         toggle.isDrawerIndicatorEnabled = true
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -62,12 +69,12 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             val defaultFragment = if (it == null) HomeMenu() else HomeMenuLoggedIn()
 
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container,defaultFragment)
+                replace(R.id.fragment_container, defaultFragment)
                 commit()
             }
         })
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container,defaultFragment)
+            replace(R.id.fragment_container, defaultFragment)
             commit()
         }
 
@@ -106,13 +113,13 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             }
 
             R.id.rationBalanceNonRuminant -> {
-            setToolbarTitle("Ration Balance Non Ruminant")
-            changeFragment(RbNonRuminant())
+                setToolbarTitle("Ration Balance Non Ruminant")
+                changeFragment(RbNonRuminant())
             }
 
             R.id.rationBalanceRuminant -> {
-            setToolbarTitle("Ration Balance Ruminant")
-            changeFragment(RbRuminant())
+                setToolbarTitle("Ration Balance Ruminant")
+                changeFragment(RbRuminant())
             }
 
             R.id.animalRegistration -> {
@@ -121,8 +128,8 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             }
 
             R.id.farmerRegistration -> {
-            setToolbarTitle("Farm Registration")
-            changeFragment(FarmRegistration())
+                setToolbarTitle("Farm Registration")
+                changeFragment(FarmRegistration())
             }
 
             R.id.animalHealth -> {
@@ -197,6 +204,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     }
 
     fun setToolbarTitle(title: String){
+
         supportActionBar?.title = title
     }
 
