@@ -17,9 +17,9 @@ class FarmListingViewModel(
 
     private val _farmListLiveData: MutableLiveData<Resource<FarmListGet>> = MutableLiveData()
     private val mutableFarmList = MutableLiveData<List<FarmListGet>>()
-    val farmList:
-    val farmList: LiveData<Resource<FarmListGet>>
-        get() = _farmListLiveData
+    val farmList: LiveData<List<FarmListGet>> = mutableFarmList
+/*    val farmList: LiveData<Resource<FarmListGet>>
+        get() = _farmListLiveData*/
 
     fun getFarmList()= viewModelScope.launch {
         _farmListLiveData.value = Resource.Loading

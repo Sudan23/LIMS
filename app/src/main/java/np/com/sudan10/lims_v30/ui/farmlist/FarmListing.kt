@@ -42,7 +42,7 @@ class FarmListing : Fragment() {
                 layoutManager = LinearLayoutManager(requireContext())
             }
 
-            viewModel._farmListLiveData.observe(requireActivity()) { farmList ->
+            viewModel.farmList.observe(requireActivity()) { farmList ->
                 farmListAdapter.submitList(farmList)
             }
         }
