@@ -35,7 +35,7 @@ class FarmListing : Fragment() {
         super.onResume()
         val farmListAdapter = FarmListAdapter()
 
-        binding.apply {
+        /*binding.apply {
 
             farmlistRecyclerview.apply {
                 adapter = farmListAdapter
@@ -43,9 +43,9 @@ class FarmListing : Fragment() {
             }
 
             viewModel.farmList.observe(requireActivity()) { farmList ->
-                farmListAdapter.submitList(farmList)
+               // farmListAdapter.submitList(farmList)
             }
-        }
+        }*/
     }
 
     override fun onDestroyView() {

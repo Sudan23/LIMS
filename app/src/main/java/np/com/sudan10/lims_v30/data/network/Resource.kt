@@ -1,6 +1,5 @@
 package np.com.sudan10.lims_v30.data.network
 
-import np.com.sudan10.lims_v30.data.responses.FarmListGet
 import okhttp3.ResponseBody
 
 sealed class Resource<out T> {

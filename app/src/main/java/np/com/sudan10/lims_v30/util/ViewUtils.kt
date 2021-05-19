@@ -45,11 +45,11 @@ fun View.enable(enabled: Boolean){
     alpha = if(enabled) 1f else 0.4f
 }
 
-fun Fragment.logout() = lifecycleScope.launch {
+/*fun Fragment.logout() = lifecycleScope.launch {
     if (activity is Home) {
         (activity as Home).performLogout()
     }
-}
+}*/
 fun Fragment.handleApiError(
     failure: Resource.Failure,
     retry: (() -> Unit)? = null
@@ -63,7 +63,7 @@ fun Fragment.handleApiError(
             if (this is Login) {
                 requireView().snackbar("You've entered incorrect email or password")
             } else {
-                logout()
+               // logout()
             }
         }
         else -> {

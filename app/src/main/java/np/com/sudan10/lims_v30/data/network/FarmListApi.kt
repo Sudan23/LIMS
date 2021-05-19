@@ -1,6 +1,6 @@
 package np.com.sudan10.lims_v30.data.network
 
-import np.com.sudan10.lims_v30.data.responses.FarmListGet
+import np.com.sudan10.lims_v30.data.responses.listing.FarmListGet
 import retrofit2.Response
 import retrofit2.http.GET
 

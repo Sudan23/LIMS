@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import np.com.sudan10.lims_v30.data.responses.FarmListGet
+import np.com.sudan10.lims_v30.data.responses.listing.FarmListGet
 import np.com.sudan10.lims_v30.databinding.FarmlistBinding
 
 class FarmListAdapter :
@@ -19,9 +19,9 @@ class FarmListAdapter :
                 /*Glide.with(itemView)
                     .load(listFarm.logo)
                     .into(imageViewLogo)*/
-                farmlistNameTv.text = listFarm.Name
-                farmlistAddressTv.text = listFarm.Address
-                animalIdTv.text = listFarm.Id
+                farmlistNameTv.text = listFarm.listModel.Address
+                farmlistAddressTv.text = listFarm.listModel.Address
+                animalIdTv.text = listFarm.listModel.Id
 
             }
         }
@@ -30,7 +30,7 @@ class FarmListAdapter :
 
     class FarmListComparator : DiffUtil.ItemCallback<FarmListGet>() {
         override fun areItemsTheSame(oldItem: FarmListGet, newItem: FarmListGet) =
-            oldItem.Name == newItem.Name
+            oldItem.listModel.Name == newItem.listModel.Name
 
         override fun areContentsTheSame(oldItem: FarmListGet, newItem: FarmListGet) =
             oldItem == newItem

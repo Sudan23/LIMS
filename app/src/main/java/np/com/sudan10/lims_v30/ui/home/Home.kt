@@ -45,8 +45,6 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     var defaultFragment = HomeMenu()
     private val viewModel by viewModels<HomeViewModel>()
 
-    val userPreferences = UserPreferences(this)
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +53,8 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             DataBindingUtil.setContentView(this, R.layout.activity_home)
 
         setSupportActionBar(binding.mainToolbar)
+
+        val userPreferences = UserPreferences(this)
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -233,7 +233,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         fragment.replace(R.id.fragment_container, frag).commit()
     }
 
-    fun performLogout() = lifecycleScope.launch {
+    /*fun performLogout() = lifecycleScope.launch {
         userPreferences.clear()
-    }
+    }*/
 }
