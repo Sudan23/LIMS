@@ -3,6 +3,7 @@ package np.com.sudan10.lims_v30.data
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.clear
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
@@ -28,6 +29,11 @@ class UserPreferences(
         dataStore.edit { preferences ->
             preferences[KEY_AUTH] = authToken
 
+        }
+    }
+    suspend fun clear() {
+        dataStore.edit { preferences ->
+            preferences.clear()
         }
     }
     companion object{

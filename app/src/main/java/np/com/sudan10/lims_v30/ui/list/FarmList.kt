@@ -1,57 +1,79 @@
 package np.com.sudan10.lims_v30.ui.list
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_farm_list.*
+import android.widget.LinearLayout
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
+import kotlinx.android.synthetic.main.farmlist.*
+import kotlinx.android.synthetic.main.fragment_farm_list.view.*
+import kotlinx.android.synthetic.main.fragment_home_menu_logged_in.view.*
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.adapter.FarmListAdapter
-import np.com.sudan10.lims_v30.data.network.FarmFarmerRegistrationApi
-import np.com.sudan10.lims_v30.data.repository.FarmFarmerRegisRepository
+import np.com.sudan10.lims_v30.data.network.FarmListApi
+import np.com.sudan10.lims_v30.data.network.Resource
+import np.com.sudan10.lims_v30.data.repository.FarmListRepository
 import np.com.sudan10.lims_v30.databinding.FragmentFarmListBinding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
+import np.com.sudan10.lims_v30.ui.farmlist.FarmListingViewModel
+import np.com.sudan10.lims_v30.util.handleApiError
+import np.com.sudan10.lims_v30.util.visible
 
 
-class FarmList : BaseFragment<FarmListViewModel, FragmentFarmListBinding,FarmFarmerRegisRepository>() {
+class FarmList : BaseFragment<FarmListingViewModel, FragmentFarmListBinding, FarmListRepository>() {
 
-    private var farmList = mutableListOf<String>()
-    private var addressList = mutableListOf<String>()
-    private var countList = mutableListOf<String>()
+
 
     override fun onResume() {
         super.onResume()
 
-        farmlist_recyclerview.layoutManager = LinearLayoutManager(requireContext())
-        farmlist_recyclerview.adapter = FarmListAdapter(farmList,addressList,countList)
-        postToList()
+
+        val adapter = FarmListAdapter()
+        val gridLayout = GridLayoutManager(requireContext(),1)
+
+        binding.root.farmlist_recyclerview.layoutManager = gridLayout
+        binding.root.farmlist_recyclerview.adapter = adapter
+
+        viewModel.getFarmList()
+        viewModel.farmList.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is Resource.Success -> {
+                    binding.progressbar.visible(false)
+                    updateUI(it.value.Name,it.value.Address,it.value.Id)
+                }
+                is Resource.Loading -> {
+                    binding.progressbar.visible(true)
+                }
+                is Resource.Failure -> {
+                    handleApiError(it)
+                }
+            }
+        })
+
+
+
+
+
 
     }
 
-    private fun addToList(farmTitle:String,farmAddress:String,animalCount:String){
-        farmList.add(farmTitle)
-        addressList.add(farmAddress)
-        countList.add(animalCount)
-    }
-
-    private fun postToList() {
-        for (i in 1..25){
-            addToList("Farm $i","Address $i", " $i")
+    private fun updateUI(Name: String, Address: String, Id: String) {
+        with(binding){
+            farmlist_name_tv.text = Name
+            farmlist_address_tv.text= Address
+            animal_id_tv.text=Id
         }
     }
 
-    override fun getViewModel() = FarmListViewModel::class.java
+
+    override fun getViewModel() = FarmListingViewModel::class.java
 
     override fun getFragmentBinding() = R.layout.fragment_farm_list
 
-    override fun getFragmentRepository(): FarmFarmerRegisRepository {
+    override fun getFragmentRepository(): FarmListRepository {
         val token = runBlocking { userPreferences.authToken.first() }
-        val api = remoteDataSource.buildApi(FarmFarmerRegistrationApi::class.java, token)
-        return FarmFarmerRegisRepository(api)
+        val api = remoteDataSource.buildApi(FarmListApi::class.java, token)
+        return FarmListRepository(api)
     }
 
 

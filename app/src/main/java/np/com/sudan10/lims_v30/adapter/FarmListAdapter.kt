@@ -1,54 +1,53 @@
 package np.com.sudan10.lims_v30.adapter
 
-import android.location.Address
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import np.com.sudan10.lims_v30.R
+import np.com.sudan10.lims_v30.data.responses.FarmListGet
+import np.com.sudan10.lims_v30.databinding.FarmlistBinding
 
-class FarmListAdapter(private var farmName:List<String>, private var farmAddress:List<String>, private var animalCount:List<String>):
-        RecyclerView.Adapter<FarmListAdapter.MyViewHolder>() {
-
-            inner class MyViewHolder(itemView: View,
-            ) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-
-                val farmTitle: TextView = itemView.findViewById(R.id.farmlist_title_tv)
-                val farmAddress: TextView = itemView.findViewById(R.id.farmlist_address_tv)
-                val animalCount: TextView = itemView.findViewById(R.id.count_tv)
+class FarmListAdapter :
+    ListAdapter<FarmListGet, FarmListAdapter.FarmListViewHolder>(FarmListComparator()) {
 
 
-                init {
-                    itemView.setOnClickListener {
-                        val position:Int = adapterPosition
-                        Toast.makeText(itemView.context, "You Clicked on item = ${position+1}", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                override fun onClick(v: View?) {
-                    Log.d("RecyclerView", "CLICK!")
-                }
+    class FarmListViewHolder(private val binding: FarmlistBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(listFarm: FarmListGet) {
+            binding.apply {
+                /*Glide.with(itemView)
+                    .load(listFarm.logo)
+                    .into(imageViewLogo)*/
+                farmlistNameTv.text = listFarm.Name
+                farmlistAddressTv.text = listFarm.Address
+                animalIdTv.text = listFarm.Id
 
             }
+        }
+
+    }
+
+    class FarmListComparator : DiffUtil.ItemCallback<FarmListGet>() {
+        override fun areItemsTheSame(oldItem: FarmListGet, newItem: FarmListGet) =
+            oldItem.Name == newItem.Name
+
+        override fun areContentsTheSame(oldItem: FarmListGet, newItem: FarmListGet) =
+            oldItem == newItem
 
 
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.farmlist, parent,false)
-                return MyViewHolder(v)
-            }
+    }
 
-            override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-                holder.farmTitle.text = farmName[position]
-                holder.farmAddress.text = farmAddress[position]
-                holder.animalCount.text = animalCount[position]
-                
-    
-            }
-        
-            override fun getItemCount(): Int {
-                return farmName.size
-            }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FarmListViewHolder {
+        val binding =
+            FarmlistBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return FarmListViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: FarmListViewHolder, position: Int) {
+        val currentItem = getItem(position)
+        if (currentItem != null) {
+            holder.bind(currentItem)
+        }
+    }
 }

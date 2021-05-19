@@ -14,6 +14,7 @@ import np.com.sudan10.lims_v30.ui.registration.AnimalRegistrationViewModel
 import np.com.sudan10.lims_v30.data.repository.CullingRepository
 import np.com.sudan10.lims_v30.ui.breeding.AbortionViewModel
 import np.com.sudan10.lims_v30.ui.breeding.PregnancyDiagnosisViewModel
+import np.com.sudan10.lims_v30.ui.farmlist.FarmListingViewModel
 import np.com.sudan10.lims_v30.ui.health.TreatmentViewModel
 import np.com.sudan10.lims_v30.ui.list.FarmListViewModel
 import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecordingViewModel
@@ -36,7 +37,7 @@ class ViewModelFactory (
 
             modelClass.isAssignableFrom(HomeMenuViewModel::class.java) -> HomeMenuViewModel(repository as HomeMenuRepository) as T
 
-            modelClass.isAssignableFrom(FarmListViewModel::class.java) -> FarmListViewModel(repository as FarmFarmerRegisRepository) as T
+            modelClass.isAssignableFrom(FarmListingViewModel::class.java) -> FarmListingViewModel(repository as FarmListRepository) as T
 
             modelClass.isAssignableFrom(VaccinationViewModel::class.java) -> VaccinationViewModel(repository as VaccinationRepository) as T
 

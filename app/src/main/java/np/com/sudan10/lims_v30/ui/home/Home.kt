@@ -2,22 +2,25 @@ package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.breeding.*
+import np.com.sudan10.lims_v30.ui.farmlist.FarmListing
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth
 import np.com.sudan10.lims_v30.ui.health.Sample
@@ -36,18 +39,30 @@ import np.com.sudan10.lims_v30.ui.registration.Calving
 import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
 
-
+@AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     var defaultFragment = HomeMenu()
+    private val viewModel by viewModels<HomeViewModel>()
+
+    val userPreferences = UserPreferences(this)
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+        val binding: ActivityHomeBinding =
+            DataBindingUtil.setContentView(this, R.layout.activity_home)
 
         setSupportActionBar(binding.mainToolbar)
 
-        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.mainToolbar, R.string.open, R.string.close)
+        val toggle = ActionBarDrawerToggle(
+            this,
+            binding.drawerLayout,
+            binding.mainToolbar,
+            R.string.open,
+            R.string.close
+        )
         //setSupportActionBar(binding.mainToolbar)
 
 
@@ -62,7 +77,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         //val defaultFragment = HomeMenu()
 
 
-        val userPreferences = UserPreferences(this)
+
 
         userPreferences.authToken.asLiveData().observe(this, Observer {
 
@@ -84,7 +99,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         drawerLayout.closeDrawer(GravityCompat.START, false)
 
-        when(item.itemId){
+        when (item.itemId) {
 
 
             R.id.home -> {
@@ -100,6 +115,11 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.dashboard -> {
                 setToolbarTitle("Dashboard")
                 changeFragment(Dashboard())
+            }
+
+            R.id.farmlisting -> {
+                setToolbarTitle("Farm Listing")
+                changeFragment(FarmListing())
             }
 
             R.id.farmlist -> {
@@ -203,7 +223,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         return true
     }
 
-    fun setToolbarTitle(title: String){
+    fun setToolbarTitle(title: String) {
 
         supportActionBar?.title = title
     }
@@ -211,5 +231,9 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
     fun changeFragment(frag: Fragment) {
         val fragment = supportFragmentManager.beginTransaction()
         fragment.replace(R.id.fragment_container, frag).commit()
+    }
+
+    fun performLogout() = lifecycleScope.launch {
+        userPreferences.clear()
     }
 }
