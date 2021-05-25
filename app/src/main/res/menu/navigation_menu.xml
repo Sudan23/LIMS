@@ -11,12 +11,10 @@
     <item
         android:id="@+id/dashboard"
         android:title="Dashboard" />
-    <item
-        android:id="@+id/farmlist"
-        android:title="Farm List" />
+
     <item
         android:id="@+id/farmlisting"
-        android:title="Farm Listing" />
+        android:title="Farm List" />
 
     <item
         android:id="@+id/rationBalance"

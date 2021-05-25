@@ -10,11 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
@@ -26,7 +24,6 @@ import np.com.sudan10.lims_v30.ui.health.AnimalHealth
 import np.com.sudan10.lims_v30.ui.health.Sample
 import np.com.sudan10.lims_v30.ui.health.Treatment
 import np.com.sudan10.lims_v30.ui.health.Vaccination
-import np.com.sudan10.lims_v30.ui.list.FarmList
 import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecording
 import np.com.sudan10.lims_v30.ui.performance_record.MeatRecording
 import np.com.sudan10.lims_v30.ui.performance_record.MilkRecording
@@ -122,10 +119,6 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 changeFragment(FarmListing())
             }
 
-            R.id.farmlist -> {
-                setToolbarTitle("Farm List")
-                changeFragment(FarmList())
-            }
 
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")

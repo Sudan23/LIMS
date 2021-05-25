@@ -1,14 +1,12 @@
 package np.com.sudan10.lims_v30.data.network
 
-import np.com.sudan10.lims_v30.data.responses.listing.FarmListGet
-import retrofit2.Response
+import np.com.sudan10.lims_v30.data.responses.listing.ListFarm
 import retrofit2.http.GET
 
 interface FarmListApi {
 
     @GET("Api/Common/GetFarm")
-    suspend fun getFarmList():Response<List<FarmListGet>>
+    suspend fun getFarmList():List<ListFarm>
 
-    @GET("/Api/Common/GetFarm")
-    suspend fun getFarmListing(): FarmListGet
+
 }
