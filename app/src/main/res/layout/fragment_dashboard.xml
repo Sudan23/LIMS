@@ -58,58 +58,46 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
                 android:foregroundGravity="center|center_horizontal">
 
-                <TextView
-                    android:id="@+id/dashboard_title_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Farm Status"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dashboard_no_of_farm_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="14dp"
                     android:text="No of my farm:"
                     android:textColor="@color/default_color"
-                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_title_tv" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dashboard_farm_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="254dp"
+                    android:layout_marginStart="80dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_no_of_farm_tv"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/dashboard_no_of_farm_tv"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_no_of_farm_tv" />
 
                 <Button
                     android:id="@+id/dashboard_add_farm_btn"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="ADD FARM"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_no_of_farm_tv"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_title_tv" />
+                    app:layout_constraintTop_toTopOf="@+id/dashboard_no_of_farm_tv" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -128,78 +116,45 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
                 android:foregroundGravity="center|center_horizontal">
 
                 <TextView
-                    android:id="@+id/dashboard_vaccine_title_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Vaccine Status"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
                     android:id="@+id/dashboard_vaccine_no_of_farm_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="14dp"
                     android:text="No of Vaccine"
                     android:textColor="@color/default_color"
-                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_vaccine_title_tv" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dashboard_vaccine_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="68dp"
+                    android:layout_marginStart="84dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_vaccine_no_of_farm_tv"
                     app:layout_constraintStart_toEndOf="@+id/dashboard_vaccine_no_of_farm_tv"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_vaccine_no_of_farm_tv" />
 
-                <TextView
-                    android:id="@+id/dashboard_vaccine_no_of_exit_farm_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Vaccine Near Deadline"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_vaccine_no_of_farm_tv" />
-
-                <TextView
-                    android:id="@+id/dashboard_vaccine_no_of_exit_farm__display_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="10"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_vaccine_no_of_exit_farm_tv"
-                    app:layout_constraintEnd_toEndOf="@+id/dashboard_vaccine_count"
-                    app:layout_constraintStart_toStartOf="@+id/dashboard_vaccine_count"
-                    app:layout_constraintTop_toTopOf="@+id/dashboard_vaccine_no_of_exit_farm_tv" />
-
                 <Button
                     android:id="@+id/dashboard_vaccine_add_vaccine_btn"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Vaccine"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_vaccine_no_of_farm_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dashboard_vaccine_no_of_farm_tv" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -218,75 +173,45 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
                 android:foregroundGravity="center|center_horizontal">
 
                 <TextView
-                    android:id="@+id/dashboard_ai_title_tv"
-                    android:layout_width="395dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="AI Status"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
                     android:id="@+id/dashboard_ai_no_of_farm_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="15dp"
                     android:text="No of AI"
                     android:textColor="@color/default_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_ai_title_tv" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dashboard_ai_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="89dp"
+                    android:layout_marginStart="125dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_ai_no_of_farm_tv"
                     app:layout_constraintStart_toEndOf="@+id/dashboard_ai_no_of_farm_tv"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_ai_no_of_farm_tv" />
 
-                <TextView
-                    android:id="@+id/dashboard_ai_no_of_exit_farm_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="6dp"
-                    android:text="AI need for follow up"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_ai_no_of_farm_tv" />
-
-                <TextView
-                    android:id="@+id/dashboard_ai_no_of_exit_farm__display_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="10"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_ai_no_of_exit_farm_tv"
-                    app:layout_constraintEnd_toEndOf="@+id/dashboard_ai_count"
-                    app:layout_constraintStart_toStartOf="@+id/dashboard_ai_count"
-                    app:layout_constraintTop_toTopOf="@+id/dashboard_ai_no_of_exit_farm_tv" />
-
                 <Button
                     android:id="@+id/dashboard_ai_add_vaccine_btn"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="AI"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_ai_no_of_farm_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dashboard_ai_no_of_farm_tv" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -304,75 +229,45 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
                 android:foregroundGravity="center|center_horizontal">
 
                 <TextView
-                    android:id="@+id/dashboard_health_title_tv"
-                    android:layout_width="395dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Health Status"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
                     android:id="@+id/dashboard_health_no_of_farm_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="16dp"
                     android:text="No of Health Check Up"
                     android:textColor="@color/default_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_health_title_tv" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/dashboard_healthcheckup_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
+                    android:layout_marginStart="34dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_health_no_of_farm_tv"
                     app:layout_constraintStart_toEndOf="@+id/dashboard_health_no_of_farm_tv"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_health_no_of_farm_tv" />
 
-                <TextView
-                    android:id="@+id/dashboard_health_no_of_exit_farm_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Health Check up Follow up"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dashboard_health_no_of_farm_tv" />
-
-                <TextView
-                    android:id="@+id/dashboard_health_no_of_exit_farm__display_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="10"
-                    android:textColor="@color/default_color"
-                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_health_no_of_exit_farm_tv"
-                    app:layout_constraintEnd_toEndOf="@+id/dashboard_healthcheckup_count"
-                    app:layout_constraintStart_toStartOf="@+id/dashboard_healthcheckup_count"
-                    app:layout_constraintTop_toTopOf="@+id/dashboard_health_no_of_exit_farm_tv" />
-
                 <Button
                     android:id="@+id/dashboard_health_add_vaccine_btn"
-                    android:layout_width="130dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="Check Health"
+                    android:text="Check Up"
                     android:textAllCaps="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="@+id/dashboard_health_no_of_farm_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dashboard_health_no_of_farm_tv" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

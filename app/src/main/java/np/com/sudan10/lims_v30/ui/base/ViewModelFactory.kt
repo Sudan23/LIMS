@@ -8,6 +8,7 @@ import np.com.sudan10.lims_v30.ui.auth.AuthViewModel
 import np.com.sudan10.lims_v30.ui.breeding.AbortionViewModel
 import np.com.sudan10.lims_v30.ui.breeding.AiViewModel
 import np.com.sudan10.lims_v30.ui.breeding.PregnancyDiagnosisViewModel
+import np.com.sudan10.lims_v30.ui.dashboard.DashboardViewModel
 import np.com.sudan10.lims_v30.ui.farmlist.FarmViewModel
 import np.com.sudan10.lims_v30.ui.feedback.FeedbackViewModel
 import np.com.sudan10.lims_v30.ui.health.TreatmentViewModel
@@ -39,6 +40,10 @@ class ViewModelFactory(
 
             modelClass.isAssignableFrom(HomeMenuViewModel::class.java) -> HomeMenuViewModel(
                 repository as HomeMenuRepository
+            ) as T
+
+            modelClass.isAssignableFrom(DashboardViewModel::class.java) -> DashboardViewModel(
+                repository as DashboardRepository
             ) as T
 
             modelClass.isAssignableFrom(FarmViewModel::class.java) -> FarmViewModel(

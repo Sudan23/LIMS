@@ -18,6 +18,7 @@ import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.breeding.*
+import np.com.sudan10.lims_v30.ui.dashboard.Dashboard
 import np.com.sudan10.lims_v30.ui.farmlist.FarmListing
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth

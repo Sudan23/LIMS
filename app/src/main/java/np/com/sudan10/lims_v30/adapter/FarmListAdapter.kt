@@ -20,7 +20,7 @@ class FarmListAdapter :
                 /*Glide.with(itemView)
                     .load(listFarm.logo)
                     .into(imageViewLogo)*/
-                farmlistNameTv.text = listFarm.Address
+                farmlistNameTv.text = listFarm.Name
                 farmlistAddressTv.text = listFarm.Address
                 animalIdTv.text = listFarm.Id
 
