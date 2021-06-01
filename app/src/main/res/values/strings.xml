@@ -9,6 +9,8 @@
     <string name="open">open</string>
 
     <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+
     <string name="animal_registration">Animal Registration</string>
     <string name="animal_vaccine">Vaccination</string>
     <string name="animal_treatment">Treatment</string>

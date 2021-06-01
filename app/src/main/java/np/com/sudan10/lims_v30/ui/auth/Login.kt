@@ -13,9 +13,11 @@ import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.data.repository.AuthRepository
 import np.com.sudan10.lims_v30.databinding.FragmentLoginBinding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
+import np.com.sudan10.lims_v30.ui.home.Home
 import np.com.sudan10.lims_v30.util.enable
 import np.com.sudan10.lims_v30.util.hide
 import np.com.sudan10.lims_v30.util.show
+import np.com.sudan10.lims_v30.util.startNewActivity
 
 
 class Login : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepository>() {
@@ -33,6 +35,10 @@ class Login : BaseFragment<AuthViewModel, FragmentLoginBinding, AuthRepository>(
                 is Resource.Success -> {
                     lifecycleScope.launch {
                         userPreferences.saveAuthToken(it.value.token)
+
+                        requireActivity().startNewActivity(Home::class.java)
+
+
 
                     }
                 }

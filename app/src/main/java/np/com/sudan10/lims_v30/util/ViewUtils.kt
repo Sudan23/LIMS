@@ -1,6 +1,8 @@
 package np.com.sudan10.lims_v30.util
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -12,6 +14,15 @@ import np.com.sudan10.lims_v30.data.network.Resource
 import np.com.sudan10.lims_v30.ui.auth.AuthViewModel
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.home.Home
+
+fun <A : Activity> Activity.startNewActivity(activity: Class<A>) {
+    Intent(this, activity).also {
+        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(it)
+    }
+}
+
+
 
 
 fun Context.toast(message: String){

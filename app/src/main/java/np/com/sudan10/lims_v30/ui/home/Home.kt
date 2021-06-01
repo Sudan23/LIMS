@@ -1,6 +1,8 @@
 package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -10,13 +12,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
+import np.com.sudan10.lims_v30.ui.auth.Logout
 import np.com.sudan10.lims_v30.ui.breeding.*
 import np.com.sudan10.lims_v30.ui.dashboard.Dashboard
 import np.com.sudan10.lims_v30.ui.farmlist.FarmListing
@@ -36,11 +41,11 @@ import np.com.sudan10.lims_v30.ui.registration.AnimalRegistration
 import np.com.sudan10.lims_v30.ui.registration.Calving
 import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
+import np.com.sudan10.lims_v30.util.startNewActivity
 
 @AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    var defaultFragment = HomeMenu()
     private val viewModel by viewModels<HomeViewModel>()
 
 
@@ -53,6 +58,12 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         setSupportActionBar(binding.mainToolbar)
 
         val userPreferences = UserPreferences(this)
+       /* fun performLogout() = lifecycleScope.launch {
+            //viewModel.logout()
+            userPreferences.clear()
+            startNewActivity(Home::class.java)
+        }*/
+
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -72,24 +83,31 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
-        //val defaultFragment = HomeMenu()
-
 
 
 
         userPreferences.authToken.asLiveData().observe(this, Observer {
 
-            val defaultFragment = if (it == null) HomeMenu() else HomeMenuLoggedIn()
+            if (it == null) {
+                val defaultFragment = HomeMenu()
+                binding.navMenu.inflateMenu(R.menu.navigation_menu_not_login)
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.fragment_container, defaultFragment)
+                    commit()
+                }
 
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fragment_container, defaultFragment)
-                commit()
+            } else {
+                val defaultFragment = HomeMenuLoggedIn()
+                binding.navMenu.inflateMenu(R.menu.navigation_menu_login)
+                supportFragmentManager.beginTransaction().apply {
+                    replace(R.id.fragment_container, defaultFragment)
+                    commit()
+                }
             }
+
+
         })
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container, defaultFragment)
-            commit()
-        }
+
 
 
     }
@@ -100,9 +118,8 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         when (item.itemId) {
 
 
-            R.id.home -> {
-                setToolbarTitle("Home")
-                changeFragment(defaultFragment)
+            R.id.logout -> {
+                changeFragment(Logout())
             }
 
             R.id.login -> {
@@ -110,109 +127,39 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
                 changeFragment(Login())
             }
 
-            R.id.dashboard -> {
-                setToolbarTitle("Dashboard")
-                changeFragment(Dashboard())
-            }
 
-            R.id.farmlisting -> {
-                setToolbarTitle("Farm Listing")
-                changeFragment(FarmListing())
+            R.id.Registration -> {
+                setToolbarTitle("Registration")
+                changeFragment(FarmRegistration())
             }
-
 
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")
-                changeFragment(RationBalance())
-            }
-
-            R.id.rationBalanceNonRuminant -> {
-                setToolbarTitle("Ration Balance Non Ruminant")
-                changeFragment(RbNonRuminant())
-            }
-
-            R.id.rationBalanceRuminant -> {
-                setToolbarTitle("Ration Balance Ruminant")
                 changeFragment(RbRuminant())
             }
 
-            R.id.animalRegistration -> {
-                setToolbarTitle("Animal Registration")
-                changeFragment(AnimalRegistration())
-            }
-
-            R.id.farmerRegistration -> {
-                setToolbarTitle("Farm Registration")
-                changeFragment(FarmRegistration())
-            }
 
             R.id.animalHealth -> {
                 setToolbarTitle("Animal Health")
                 changeFragment(AnimalHealth())
-            }
-            R.id.animalVaccine -> {
-                setToolbarTitle("Vaccination")
-                changeFragment(Vaccination())
-            }
-            R.id.animalTreatment -> {
-                setToolbarTitle("Treatment")
-                changeFragment(Treatment())
-            }
-            R.id.animalSample -> {
-                setToolbarTitle("Sample")
-                changeFragment(Sample())
             }
 
             R.id.animalBreeding -> {
                 setToolbarTitle("Animal Breeding")
                 changeFragment(AnimalBreeding())
             }
-            R.id.heatRecording -> {
-                setToolbarTitle("Heat Recording")
-                changeFragment(HeatRecording())
-            }
-            R.id.artificialInsemination -> {
-                setToolbarTitle("AI")
-                changeFragment(AI())
-            }
-            R.id.pregnancyDiagnosis -> {
-                setToolbarTitle("Pregnancy Diagnosis")
-                changeFragment(PregnancyDiagnosis())
-            }
-            R.id.abortion -> {
-                setToolbarTitle("Abortion")
-                changeFragment(Abortion())
-            }
 
             R.id.performanceRecord -> {
                 setToolbarTitle("Performance Record")
                 changeFragment(PerformanceRecord())
             }
-            R.id.milkRecording -> {
-                setToolbarTitle("Milk Recording")
-                changeFragment(MilkRecording())
-            }
-            R.id.growthRecording -> {
-                setToolbarTitle("Growth Recording")
-                changeFragment(GrowthRecording())
-            }
-            R.id.meatRecording -> {
-                setToolbarTitle("Meat Recording")
-                changeFragment(MeatRecording())
-            }
+
 
             R.id.feedback -> {
                 setToolbarTitle("Feedback")
                 changeFragment(Feedback())
             }
-            R.id.Calving -> {
-                setToolbarTitle("Calving")
-                changeFragment(Calving())
-            }
-            R.id.Culling -> {
-                setToolbarTitle("Culling")
-                changeFragment(Culling())
-            }
+
         }
         return true
     }
