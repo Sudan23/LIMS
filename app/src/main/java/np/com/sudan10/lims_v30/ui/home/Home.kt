@@ -1,8 +1,6 @@
 package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -12,42 +10,25 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.coroutines.launch
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.auth.Logout
-import np.com.sudan10.lims_v30.ui.breeding.*
-import np.com.sudan10.lims_v30.ui.dashboard.Dashboard
-import np.com.sudan10.lims_v30.ui.farmlist.FarmListing
+import np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth
-import np.com.sudan10.lims_v30.ui.health.Sample
-import np.com.sudan10.lims_v30.ui.health.Treatment
-import np.com.sudan10.lims_v30.ui.health.Vaccination
-import np.com.sudan10.lims_v30.ui.performance_record.GrowthRecording
-import np.com.sudan10.lims_v30.ui.performance_record.MeatRecording
-import np.com.sudan10.lims_v30.ui.performance_record.MilkRecording
 import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
-import np.com.sudan10.lims_v30.ui.ration_balance.RationBalance
-import np.com.sudan10.lims_v30.ui.ration_balance.RbNonRuminant
 import np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant
-import np.com.sudan10.lims_v30.ui.registration.AnimalRegistration
-import np.com.sudan10.lims_v30.ui.registration.Calving
-import np.com.sudan10.lims_v30.ui.registration.Culling
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
-import np.com.sudan10.lims_v30.util.startNewActivity
 
 @AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val viewModel by viewModels<HomeViewModel>()
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,12 +39,6 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         setSupportActionBar(binding.mainToolbar)
 
         val userPreferences = UserPreferences(this)
-       /* fun performLogout() = lifecycleScope.launch {
-            //viewModel.logout()
-            userPreferences.clear()
-            startNewActivity(Home::class.java)
-        }*/
-
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -82,6 +57,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding.navMenu.setNavigationItemSelectedListener(this)
+
 
 
 
@@ -107,7 +83,6 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
 
         })
-
 
 
     }
@@ -174,7 +149,25 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
         fragment.replace(R.id.fragment_container, frag).commit()
     }
 
-    /*fun performLogout() = lifecycleScope.launch {
-        userPreferences.clear()
+ /*   override fun onItemClick(position: Int) {
+        when(position){
+            0 -> {
+                setToolbarTitle("Feedback")
+                changeFragment(Feedback())
+            }
+            1 -> {
+                setToolbarTitle("Feedback")
+                changeFragment(Feedback())
+            }
+            2 -> {
+                setToolbarTitle("Feedback")
+                changeFragment(Feedback())
+            }
+        }
     }*/
+
+
+
+
+
 }

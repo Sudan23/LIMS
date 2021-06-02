@@ -1,5 +1,6 @@
 package np.com.sudan10.lims_v30.ui.home
 
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_home_menu_logged_in.view.*
 import np.com.sudan10.lims_v30.R
@@ -9,7 +10,7 @@ import np.com.sudan10.lims_v30.databinding.FragmentHomeMenuBinding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 
-class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenuRepository>() {
+class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenuRepository>(), LoggedInGridItemAdapter.OnItemClickListener {
 
     override fun onResume() {
         super.onResume()
@@ -18,12 +19,18 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
         val cardImages : Array<String> =  resources.getStringArray(R.array.cardImages)
 
 
-        val adapter = LoggedInGridItemAdapter(cardTitles,cardImages)
+        val adapter = LoggedInGridItemAdapter(cardTitles,cardImages,this)
         val gridLayout = GridLayoutManager(requireContext(),2)
 
 
         binding.root.gridItems.layoutManager = gridLayout
         binding.root.gridItems.adapter = adapter
+
+
+    }
+
+    override fun onItemClick(position: Int) {
+        Toast.makeText(requireContext(), "Item $position Clicked", Toast.LENGTH_SHORT).show()
     }
 
 
