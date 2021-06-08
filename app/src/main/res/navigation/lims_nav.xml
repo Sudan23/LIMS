@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lims_nav"
+    app:startDestination="@id/homeMenu">
+
+    <fragment
+        android:id="@+id/animalBreeding2"
+        android:name="np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding"
+        android:label="fragment_animal_breeding"
+        tools:layout="@layout/fragment_animal_breeding" >
+        <action
+            android:id="@+id/breeding_2_ai"
+            app:destination="@id/AI" />
+        <action
+            android:id="@+id/breeding_2_abortion"
+            app:destination="@id/abortion" />
+        <action
+            android:id="@+id/breeding_2_pd"
+            app:destination="@id/pregnancyDiagnosis" />
+        <action
+            android:id="@+id/breeding_2_hr"
+            app:destination="@id/heatRecording" />
+    </fragment>
+    <fragment
+        android:id="@+id/AI"
+        android:name="np.com.sudan10.lims_v30.ui.breeding.AI"
+        android:label="AI" >
+        <action
+            android:id="@+id/action_AI_to_animalBreeding2"
+            app:destination="@id/animalBreeding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/abortion"
+        android:name="np.com.sudan10.lims_v30.ui.breeding.Abortion"
+        android:label="Abortion" >
+        <action
+            android:id="@+id/action_abortion_to_animalBreeding2"
+            app:destination="@id/animalBreeding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/pregnancyDiagnosis"
+        android:name="np.com.sudan10.lims_v30.ui.breeding.PregnancyDiagnosis"
+        android:label="PregnancyDiagnosis" >
+        <action
+            android:id="@+id/action_pregnancyDiagnosis_to_animalBreeding2"
+            app:destination="@id/animalBreeding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/heatRecording"
+        android:name="np.com.sudan10.lims_v30.ui.breeding.HeatRecording"
+        android:label="HeatRecording" >
+        <action
+            android:id="@+id/action_heatRecording_to_animalBreeding2"
+            app:destination="@id/animalBreeding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/rbRuminant"
+        android:name="np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant"
+        android:label="fragment_rb_ruminant"
+        tools:layout="@layout/fragment_rb_ruminant" />
+    <fragment
+        android:id="@+id/feedback2"
+        android:name="np.com.sudan10.lims_v30.ui.feedback.Feedback"
+        android:label="Feedback" />
+    <fragment
+        android:id="@+id/homeMenu"
+        android:name="np.com.sudan10.lims_v30.ui.home.HomeMenu"
+        android:label="HomeMenu" >
+        <action
+            android:id="@+id/home2breeding"
+            app:destination="@id/animalBreeding2"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2feedback"
+            app:destination="@id/feedback2"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2rationabalance"
+            app:destination="@id/rbRuminant"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2performacerecord"
+            app:destination="@id/performanceRecord2"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2health"
+            app:destination="@id/animalHealth2"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2registration"
+            app:destination="@id/registration"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/performanceRecord2"
+        android:name="np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord"
+        android:label="PerformanceRecord" />
+    <fragment
+        android:id="@+id/animalHealth2"
+        android:name="np.com.sudan10.lims_v30.ui.health.AnimalHealth"
+        android:label="fragment_animal_health"
+        tools:layout="@layout/fragment_animal_health" />
+    <fragment
+        android:id="@+id/registration"
+        android:name="np.com.sudan10.lims_v30.ui.registration.Registration"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+</navigation>

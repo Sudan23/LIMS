@@ -1,239 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.breeding.AnimalBreeding">
-
-    <TextView
-        android:id="@+id/category_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Animal Breeding Statistics"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
-
-    <TextView
-        android:id="@+id/ai_stats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="No of AI :"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_tv" />
-
-    <TextView
-        android:id="@+id/ai_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginEnd="180dp"
-        android:text="20"
-        app:layout_constraintBottom_toBottomOf="@+id/ai_stats"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ai_stats"
-        app:layout_constraintTop_toTopOf="@+id/ai_stats" />
-
-    <TextView
-        android:id="@+id/abortion_stat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="No of Abortion :"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ai_stats" />
-
-    <TextView
-        android:id="@+id/abortion_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20"
-        app:layout_constraintBottom_toBottomOf="@+id/abortion_stat"
-        app:layout_constraintEnd_toEndOf="@+id/ai_count"
-        app:layout_constraintStart_toStartOf="@+id/ai_count"
-        app:layout_constraintTop_toTopOf="@+id/abortion_stat" />
-
-    <TextView
-        android:id="@+id/pregnancy_stat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="32dp"
-        android:text="Pregnancy Diagnosis :"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abortion_stat" />
-
-    <TextView
-        android:id="@+id/pregnancy_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20"
-        app:layout_constraintBottom_toBottomOf="@+id/pregnancy_stat"
-        app:layout_constraintEnd_toEndOf="@+id/abortion_count"
-        app:layout_constraintStart_toStartOf="@+id/abortion_count"
-        app:layout_constraintTop_toTopOf="@+id/pregnancy_stat" />
-
-    <TextView
-        android:id="@+id/heat_recording_stat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="32dp"
-        android:text="Heat Recording: "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pregnancy_stat" />
-
-    <TextView
-        android:id="@+id/heat_recording_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="20"
-        app:layout_constraintBottom_toBottomOf="@+id/heat_recording_stat"
-        app:layout_constraintEnd_toEndOf="@+id/pregnancy_count"
-        app:layout_constraintStart_toStartOf="@+id/pregnancy_count"
-        app:layout_constraintTop_toTopOf="@+id/heat_recording_stat" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_ai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        android:src="@drawable/sharp_add_circle_black_18"
-        app:borderWidth=".001dp"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/ai_count"
-        app:layout_constraintStart_toEndOf="@+id/ai_count"
-        app:layout_constraintTop_toTopOf="@+id/ai_count" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_abortion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        android:src="@drawable/sharp_add_circle_black_18"
-        app:borderWidth=".001dp"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/abortion_count"
-        app:layout_constraintStart_toEndOf="@+id/abortion_count"
-        app:layout_constraintTop_toTopOf="@+id/abortion_count" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_pregnancy_diagnosis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        android:src="@drawable/sharp_add_circle_black_18"
-        app:borderWidth=".001dp"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/pregnancy_count"
-        app:layout_constraintStart_toEndOf="@+id/pregnancy_count"
-        app:layout_constraintTop_toTopOf="@+id/pregnancy_count" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_heat_recording"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:clickable="true"
-        android:src="@drawable/sharp_add_circle_black_18"
-        app:borderWidth=".001dp"
-        app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/heat_recording_count"
-        app:layout_constraintStart_toEndOf="@+id/heat_recording_count"
-        app:layout_constraintTop_toTopOf="@+id/heat_recording_count" />
-
+<layout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/farm_layout"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_farm_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heat_recording_stat">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout2"
+        android:background="@color/white"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.breeding.AnimalBreeding">
 
         <TextView
-            android:id="@+id/tv_farm_list"
+            android:id="@+id/category_tv"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center|center_horizontal"
-            android:text="Select Farm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Spinner
-            android:id="@+id/farm_spinner"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="32dp"
-            android:background="@drawable/spinner_boarder"
-            android:gravity="center|center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Animal Breeding Statistics"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_farm_list"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/animal_layout"
-        android:layout_width="395dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/farm_layout"
-        app:layout_constraintStart_toStartOf="@+id/farm_layout"
-        app:layout_constraintTop_toBottomOf="@+id/farm_layout">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.039" />
 
         <TextView
-            android:id="@+id/tv_animal_list"
+            android:id="@+id/ai_stats"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center|center_horizontal"
-            android:text="Select Farm"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Spinner
-            android:id="@+id/animal_spinner"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:background="@drawable/spinner_boarder"
-            android:gravity="center|center_horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="24dp"
+            android:text="No of AI :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_tv" />
+
+        <TextView
+            android:id="@+id/ai_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginEnd="180dp"
+            android:text="20"
+            app:layout_constraintBottom_toBottomOf="@+id/ai_stats"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_animal_list"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/ai_stats"
+            app:layout_constraintTop_toTopOf="@+id/ai_stats" />
+
+        <TextView
+            android:id="@+id/abortion_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="No of Abortion :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ai_stats" />
+
+        <TextView
+            android:id="@+id/abortion_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            app:layout_constraintBottom_toBottomOf="@+id/abortion_stat"
+            app:layout_constraintEnd_toEndOf="@+id/ai_count"
+            app:layout_constraintStart_toStartOf="@+id/ai_count"
+            app:layout_constraintTop_toTopOf="@+id/abortion_stat" />
+
+        <TextView
+            android:id="@+id/pregnancy_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="32dp"
+            android:text="Pregnancy Diagnosis :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abortion_stat" />
+
+        <TextView
+            android:id="@+id/pregnancy_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            app:layout_constraintBottom_toBottomOf="@+id/pregnancy_stat"
+            app:layout_constraintEnd_toEndOf="@+id/abortion_count"
+            app:layout_constraintStart_toStartOf="@+id/abortion_count"
+            app:layout_constraintTop_toTopOf="@+id/pregnancy_stat" />
+
+        <TextView
+            android:id="@+id/heat_recording_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="32dp"
+            android:text="Heat Recording: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pregnancy_stat" />
+
+        <TextView
+            android:id="@+id/heat_recording_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            app:layout_constraintBottom_toBottomOf="@+id/heat_recording_stat"
+            app:layout_constraintEnd_toEndOf="@+id/pregnancy_count"
+            app:layout_constraintStart_toStartOf="@+id/pregnancy_count"
+            app:layout_constraintTop_toTopOf="@+id/heat_recording_stat" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_ai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:src="@drawable/sharp_add_circle_black_18"
+            app:borderWidth=".001dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/ai_count"
+            app:layout_constraintStart_toEndOf="@+id/ai_count"
+            app:layout_constraintTop_toTopOf="@+id/ai_count" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_abortion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:src="@drawable/sharp_add_circle_black_18"
+            app:borderWidth=".001dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/abortion_count"
+            app:layout_constraintStart_toEndOf="@+id/abortion_count"
+            app:layout_constraintTop_toTopOf="@+id/abortion_count" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_pregnancy_diagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:src="@drawable/sharp_add_circle_black_18"
+            app:borderWidth=".001dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/pregnancy_count"
+            app:layout_constraintStart_toEndOf="@+id/pregnancy_count"
+            app:layout_constraintTop_toTopOf="@+id/pregnancy_count" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_heat_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:src="@drawable/sharp_add_circle_black_18"
+            app:borderWidth=".001dp"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/heat_recording_count"
+            app:layout_constraintStart_toEndOf="@+id/heat_recording_count"
+            app:layout_constraintTop_toTopOf="@+id/heat_recording_count" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/farm_layout"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_heat_recording">
+
+            <TextView
+                android:id="@+id/tv_farm_list"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center|center_horizontal"
+                android:text="Select Farm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/farm_spinner"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/spinner_boarder"
+                android:gravity="center|center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_farm_list"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/animal_layout"
+            android:layout_width="395dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/farm_layout"
+            app:layout_constraintStart_toStartOf="@+id/farm_layout"
+            app:layout_constraintTop_toBottomOf="@+id/farm_layout">
+
+            <TextView
+                android:id="@+id/tv_animal_list"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center|center_horizontal"
+                android:text="Select Farm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/animal_spinner"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:background="@drawable/spinner_boarder"
+                android:gravity="center|center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_animal_list"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Go"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animal_layout" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Go"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animal_layout" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

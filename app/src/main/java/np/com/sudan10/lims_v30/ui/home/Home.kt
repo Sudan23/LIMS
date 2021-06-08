@@ -24,6 +24,7 @@ import np.com.sudan10.lims_v30.ui.health.AnimalHealth
 import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
 import np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant
 import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
+import np.com.sudan10.lims_v30.ui.registration.Registration
 
 @AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -47,38 +48,31 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.string.open,
             R.string.close
         )
-        //setSupportActionBar(binding.mainToolbar)
 
 
         toggle.isDrawerIndicatorEnabled = true
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding.navMenu.setNavigationItemSelectedListener(this)
 
 
 
 
-
         userPreferences.authToken.asLiveData().observe(this, Observer {
 
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fragment_container, HomeMenu())
+                commit()
+            }
+
             if (it == null) {
-                val defaultFragment = HomeMenu()
                 binding.navMenu.inflateMenu(R.menu.navigation_menu_not_login)
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.fragment_container, defaultFragment)
-                    commit()
-                }
 
             } else {
-                val defaultFragment = HomeMenuLoggedIn()
                 binding.navMenu.inflateMenu(R.menu.navigation_menu_login)
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.fragment_container, defaultFragment)
-                    commit()
-                }
+
             }
 
 
@@ -105,7 +99,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
             R.id.Registration -> {
                 setToolbarTitle("Registration")
-                changeFragment(FarmRegistration())
+                changeFragment(Registration())
             }
 
             R.id.rationBalance -> {

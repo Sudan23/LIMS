@@ -10,6 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:id="@+id/frameLayout5"
+        android:background="@color/white"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.performance_record.MilkRecording">
