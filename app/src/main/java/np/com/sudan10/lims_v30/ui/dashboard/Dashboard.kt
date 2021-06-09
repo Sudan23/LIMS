@@ -22,7 +22,6 @@ class Dashboard : BaseFragment< DashboardViewModel, FragmentDashboardBinding, Da
                 dashboardAiCount.text = dashboardValues.aicount.toString()
                 dashboardHealthcheckupCount.text = dashboardValues.healthCheckupcount.toString()
 
-
             }
         }
         binding.dashboardFarm.setOnClickListener {
@@ -38,10 +37,6 @@ class Dashboard : BaseFragment< DashboardViewModel, FragmentDashboardBinding, Da
             Navigation.findNavController(binding.root).navigate(R.id.dashboard2breeding)
 
         }
-        /*binding.dashboardAddBreedingBtn.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.dashboard2breeding)
-
-        }*/
 
     }
 
