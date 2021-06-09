@@ -19,6 +19,7 @@ import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.auth.Logout
 import np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding
+import np.com.sudan10.lims_v30.ui.dashboard.Dashboard
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.health.AnimalHealth
 import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
@@ -97,31 +98,23 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             }
 
 
-            R.id.Registration -> {
-                setToolbarTitle("Registration")
-                changeFragment(Registration())
+
+            R.id.dashboard -> {
+                setToolbarTitle("Dashboard")
+                changeFragment(Dashboard())
             }
+
 
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")
                 changeFragment(RbRuminant())
             }
 
-
-            R.id.animalHealth -> {
-                setToolbarTitle("Animal Health")
-                changeFragment(AnimalHealth())
+            R.id.home -> {
+                setToolbarTitle("Home")
+                changeFragment(HomeMenu())
             }
 
-            R.id.animalBreeding -> {
-                setToolbarTitle("Animal Breeding")
-                changeFragment(AnimalBreeding())
-            }
-
-            R.id.performanceRecord -> {
-                setToolbarTitle("Performance Record")
-                changeFragment(PerformanceRecord())
-            }
 
 
             R.id.feedback -> {

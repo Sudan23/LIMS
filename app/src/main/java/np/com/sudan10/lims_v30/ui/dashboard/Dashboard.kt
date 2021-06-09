@@ -1,5 +1,6 @@
 package np.com.sudan10.lims_v30.ui.dashboard
 
+import androidx.navigation.Navigation
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import np.com.sudan10.lims_v30.R
@@ -24,8 +25,26 @@ class Dashboard : BaseFragment< DashboardViewModel, FragmentDashboardBinding, Da
 
             }
         }
+        binding.dashboardFarm.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.dashboard2farmlist)
+
+        }
+        binding.dashboardAddFarmBtn.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.dashboard2farmregister)
+
+        }
+
+        binding.dashboardBreeding.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.dashboard2breeding)
+
+        }
+        /*binding.dashboardAddBreedingBtn.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.dashboard2breeding)
+
+        }*/
 
     }
+
 
 
 

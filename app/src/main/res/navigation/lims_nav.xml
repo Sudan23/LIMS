@@ -69,10 +69,6 @@
         android:name="np.com.sudan10.lims_v30.ui.home.HomeMenu"
         android:label="HomeMenu" >
         <action
-            android:id="@+id/home2breeding"
-            app:destination="@id/animalBreeding2"
-            app:enterAnim="@android:anim/slide_in_left" />
-        <action
             android:id="@+id/home2feedback"
             app:destination="@id/feedback2"
             app:enterAnim="@android:anim/slide_in_left" />
@@ -92,6 +88,9 @@
             android:id="@+id/home2registration"
             app:destination="@id/registration"
             app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/home2dashboard"
+            app:destination="@id/dashboard" />
     </fragment>
     <fragment
         android:id="@+id/performanceRecord2"
@@ -107,4 +106,30 @@
         android:name="np.com.sudan10.lims_v30.ui.registration.Registration"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="np.com.sudan10.lims_v30.ui.dashboard.Dashboard"
+        android:label="Dashboard" >
+        <action
+            android:id="@+id/dashboard2farmlist"
+            app:destination="@id/farmListing" />
+        <action
+            android:id="@+id/dashboard2farmregister"
+            app:destination="@id/farmRegistration" />
+        <action
+            android:id="@+id/dashboard2breeding"
+            app:destination="@id/animalBreeding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmListing"
+        android:name="np.com.sudan10.lims_v30.ui.farmlist.FarmListing"
+        android:label="FarmListing" >
+        <action
+            android:id="@+id/farmlist2farmregister"
+            app:destination="@id/farmRegistration" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmRegistration"
+        android:name="np.com.sudan10.lims_v30.ui.registration.FarmRegistration"
+        android:label="FarmRegistration" />
 </navigation>

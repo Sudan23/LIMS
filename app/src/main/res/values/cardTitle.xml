@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="cardTitlesLoggedIn">
+        <item>Dashboard</item>
+        <item>Ration Balance</item>
+        <item>Feedback</item>
+
+    </string-array><string-array name="cardTitlesLoggedInPast">
         <item>Ration Balance</item>
         <item>Animal Registration</item>
         <item>Animal Health</item>

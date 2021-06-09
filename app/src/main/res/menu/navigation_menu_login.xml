@@ -6,30 +6,21 @@
         android:id="@+id/logout"
         android:title="@string/log_out" />
 
+    <item
+        android:id="@+id/home"
+        android:title="Home"/>
+
        <item
         android:id="@+id/rationBalance"
         android:title="@string/ration_balance"/>
 
-        <item
-        android:id="@+id/Registration"
-        android:title="@string/Registration"/>
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"/>
 
 
-        <item
-            android:id="@+id/animalHealth"
-            android:title="@string/animal_health" />
-
-
-        <item
-            android:id="@+id/animalBreeding"
-            android:title="@string/animal_breeding" />
-
-        <item
-            android:id="@+id/performanceRecord"
-            android:title="@string/performance_record" />
-
-
-        <item
+    <item
             android:id="@+id/feedback"
             android:title="@string/feedback" />
 </menu>

@@ -60,6 +60,21 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
         when( position )
         {
             0 -> {
+                Navigation.findNavController(binding.root).navigate(R.id.home2dashboard)
+            }
+            1 -> {
+                Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
+
+            }
+
+            3 -> {
+                Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
+
+            }
+        }
+       /* when( position )
+        {
+            0 -> {
                 Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
 
             }
@@ -83,7 +98,7 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
                 Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
 
             }
-        }
+        }*/
     }
 
 

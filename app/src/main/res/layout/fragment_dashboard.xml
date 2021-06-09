@@ -58,10 +58,12 @@
             app:layout_constraintTop_toBottomOf="@+id/divider">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashboard_farm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
+                android:clickable="true"
                 android:foregroundGravity="center|center_horizontal">
 
 
@@ -116,10 +118,12 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashboard_breeding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:background="#F6F5F5"
+                android:clickable="true"
                 android:foregroundGravity="center|center_horizontal">
 
                 <TextView
@@ -129,7 +133,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="14dp"
-                    android:text="No of Vaccine"
+                    android:text="Breeding"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -147,11 +151,11 @@
                     app:layout_constraintTop_toTopOf="@+id/dashboard_vaccine_no_of_farm_tv" />
 
                 <Button
-                    android:id="@+id/dashboard_vaccine_add_vaccine_btn"
+                    android:id="@+id/dashboard_add_breeding_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="Vaccine"
+                    android:text="Breeding"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_vaccine_no_of_farm_tv"
                     app:layout_constraintEnd_toEndOf="parent"
