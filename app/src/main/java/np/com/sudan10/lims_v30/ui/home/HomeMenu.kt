@@ -1,6 +1,5 @@
 package np.com.sudan10.lims_v30.ui.home
 
-import android.widget.Toast
 import androidx.lifecycle.asLiveData
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -19,6 +18,7 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
         super.onResume()
 
         val userPreferences = UserPreferences(requireContext())
+
 
         userPreferences.authToken.asLiveData().observe(requireActivity(),{
             if (it == null){
@@ -61,6 +61,7 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
         {
             0 -> {
                 Navigation.findNavController(binding.root).navigate(R.id.home2dashboard)
+
             }
             1 -> {
                 Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
@@ -100,7 +101,6 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
             }
         }*/
     }
-
 
     override fun getViewModel() = HomeMenuViewModel::class.java
 

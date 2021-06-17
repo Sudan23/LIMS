@@ -1,19 +1,24 @@
 package np.com.sudan10.lims_v30.ui.dashboard
 
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.network.DashboardApi
 import np.com.sudan10.lims_v30.data.repository.DashboardRepository
-import np.com.sudan10.lims_v30.databinding.DashboardFragmentBinding
 import np.com.sudan10.lims_v30.databinding.FragmentDashboardBinding
 import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 class Dashboard : BaseFragment< DashboardViewModel, FragmentDashboardBinding, DashboardRepository>(){
 
+
+
     override fun onResume() {
         super.onResume()
+
+        
         binding.apply {
             viewModel.dashboardValues.observe(requireActivity()){ dashboardValues ->
 
@@ -38,7 +43,19 @@ class Dashboard : BaseFragment< DashboardViewModel, FragmentDashboardBinding, Da
 
         }
 
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object  : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.dashboard2home)
+            }
+
+        })
+
+
+
     }
+
+
+
 
 
 

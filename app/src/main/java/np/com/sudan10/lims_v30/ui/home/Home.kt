@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
+import androidx.navigation.Navigation
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
@@ -18,24 +19,21 @@ import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
 import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.auth.Logout
-import np.com.sudan10.lims_v30.ui.breeding.AnimalBreeding
-import np.com.sudan10.lims_v30.ui.dashboard.Dashboard
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
-import np.com.sudan10.lims_v30.ui.health.AnimalHealth
-import np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord
 import np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant
-import np.com.sudan10.lims_v30.ui.registration.FarmRegistration
-import np.com.sudan10.lims_v30.ui.registration.Registration
 
 @AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val viewModel by viewModels<HomeViewModel>()
 
+    private lateinit var binding: ActivityHomeBinding
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityHomeBinding =
+        binding =
             DataBindingUtil.setContentView(this, R.layout.activity_home)
 
         setSupportActionBar(binding.mainToolbar)
@@ -101,13 +99,14 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
             R.id.dashboard -> {
                 setToolbarTitle("Dashboard")
-                changeFragment(Dashboard())
+                Navigation.findNavController(this,R.id.fragment_container).navigate(R.id.home2dashboard)
+                //Navigation.findNavController(binding.drawerLayout.).navigate(R.id.dashboard2breeding)
             }
 
 
             R.id.rationBalance -> {
                 setToolbarTitle("Ration Balance")
-                changeFragment(RbRuminant())
+                Navigation.findNavController(this,R.id.fragment_container).navigate(R.id.home2rationabalance)
             }
 
             R.id.home -> {
@@ -119,7 +118,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
 
             R.id.feedback -> {
                 setToolbarTitle("Feedback")
-                changeFragment(Feedback())
+                Navigation.findNavController(this,R.id.fragment_container).navigate(R.id.home2feedback)
             }
 
         }

@@ -119,6 +119,9 @@
         <action
             android:id="@+id/dashboard2breeding"
             app:destination="@id/animalBreeding2" />
+        <action
+            android:id="@+id/dashboard2home"
+            app:destination="@id/homeMenu" />
     </fragment>
     <fragment
         android:id="@+id/farmListing"
