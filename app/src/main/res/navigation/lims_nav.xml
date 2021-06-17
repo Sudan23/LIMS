@@ -59,11 +59,19 @@
         android:id="@+id/rbRuminant"
         android:name="np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant"
         android:label="fragment_rb_ruminant"
-        tools:layout="@layout/fragment_rb_ruminant" />
+        tools:layout="@layout/fragment_rb_ruminant" >
+        <action
+            android:id="@+id/ruminant2home"
+            app:destination="@id/homeMenu" />
+    </fragment>
     <fragment
         android:id="@+id/feedback2"
         android:name="np.com.sudan10.lims_v30.ui.feedback.Feedback"
-        android:label="Feedback" />
+        android:label="Feedback" >
+        <action
+            android:id="@+id/feedback2home"
+            app:destination="@id/homeMenu" />
+    </fragment>
     <fragment
         android:id="@+id/homeMenu"
         android:name="np.com.sudan10.lims_v30.ui.home.HomeMenu"
@@ -95,17 +103,29 @@
     <fragment
         android:id="@+id/performanceRecord2"
         android:name="np.com.sudan10.lims_v30.ui.performance_record.PerformanceRecord"
-        android:label="PerformanceRecord" />
+        android:label="PerformanceRecord" >
+        <action
+            android:id="@+id/performancerecord2home"
+            app:destination="@id/homeMenu" />
+    </fragment>
     <fragment
         android:id="@+id/animalHealth2"
         android:name="np.com.sudan10.lims_v30.ui.health.AnimalHealth"
         android:label="fragment_animal_health"
-        tools:layout="@layout/fragment_animal_health" />
+        tools:layout="@layout/fragment_animal_health" >
+        <action
+            android:id="@+id/health2home"
+            app:destination="@id/homeMenu" />
+    </fragment>
     <fragment
         android:id="@+id/registration"
         android:name="np.com.sudan10.lims_v30.ui.registration.Registration"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/registration2home"
+            app:destination="@id/homeMenu" />
+    </fragment>
     <fragment
         android:id="@+id/dashboard"
         android:name="np.com.sudan10.lims_v30.ui.dashboard.Dashboard"

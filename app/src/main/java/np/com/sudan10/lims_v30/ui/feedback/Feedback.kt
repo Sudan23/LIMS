@@ -5,7 +5,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_feedback.*
 import np.com.sudan10.lims_v21.repository.FeedbackRepository
 import np.com.sudan10.lims_v30.R
@@ -20,6 +22,12 @@ class Feedback : BaseFragment<FeedbackViewModel, FragmentFeedbackBinding, Feedba
 
     override fun onResume() {
         super.onResume()
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object  : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.feedback2home)
+            }
+
+        })
 
         var feedbackCategory:String? = null
 

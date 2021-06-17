@@ -14,6 +14,7 @@ import np.com.sudan10.lims_v30.ui.base.BaseFragment
 
 class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenuRepository>(), LoggedInGridItemAdapter.OnItemClickListener {
 
+    var checkloggedin = false
     override fun onResume() {
         super.onResume()
 
@@ -22,6 +23,7 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
 
         userPreferences.authToken.asLiveData().observe(requireActivity(),{
             if (it == null){
+                checkloggedin = false
                 val cardTitles : Array<String> = resources.getStringArray(R.array.cardTitles)
                 val cardImages : Array<String> =  resources.getStringArray(R.array.cardImages)
 
@@ -35,6 +37,8 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
 
 
             } else {
+                checkloggedin = true
+
                 val cardTitles: Array<String> = resources.getStringArray(R.array.cardTitlesLoggedIn)
                 val cardImages: Array<String> = resources.getStringArray(R.array.cardImagesLoggedIn)
 
@@ -50,56 +54,42 @@ class HomeMenu : BaseFragment<HomeMenuViewModel,FragmentHomeMenuBinding,HomeMenu
         })
 
 
-
-
-
     }
 
     override fun onItemClick(position: Int) {
 
-        when( position )
-        {
-            0 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2dashboard)
+        if (checkloggedin) {
+
+            when (position) {
+                0 -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.home2dashboard)
+
+                }
+                1 -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
+
+                }
+
+                2 -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
+
+                }
+            }
+        } else {
+            when (position) {
+                0 -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
+
+                }
+                1 -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
+
+                }
 
             }
-            1 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
 
-            }
 
-            3 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
-
-            }
         }
-       /* when( position )
-        {
-            0 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2rationabalance)
-
-            }
-            1 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2registration)
-
-            }
-            2 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2health)
-
-            }
-            3 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2breeding)
-
-            }
-            4 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2performacerecord)
-
-            }
-            5 -> {
-                Navigation.findNavController(binding.root).navigate(R.id.home2feedback)
-
-            }
-        }*/
     }
 
     override fun getViewModel() = HomeMenuViewModel::class.java
