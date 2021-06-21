@@ -2,6 +2,7 @@ package np.com.sudan10.lims_v30.ui.home
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import androidx.navigation.Navigation
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.navigation_header.*
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.data.UserPreferences
 import np.com.sudan10.lims_v30.databinding.ActivityHomeBinding
@@ -21,6 +23,7 @@ import np.com.sudan10.lims_v30.ui.auth.Login
 import np.com.sudan10.lims_v30.ui.auth.Logout
 import np.com.sudan10.lims_v30.ui.feedback.Feedback
 import np.com.sudan10.lims_v30.ui.ration_balance.RbRuminant
+import np.com.sudan10.lims_v30.util.toast
 
 @AndroidEntryPoint
 class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -47,6 +50,7 @@ class Home : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.string.open,
             R.string.close
         )
+
 
 
         toggle.isDrawerIndicatorEnabled = true

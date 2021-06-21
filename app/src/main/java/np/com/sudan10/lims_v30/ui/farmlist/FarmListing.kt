@@ -1,5 +1,8 @@
 package np.com.sudan10.lims_v30.ui.farmlist
 
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import np.com.sudan10.lims_v30.R
 import np.com.sudan10.lims_v30.adapter.FarmListAdapter
@@ -28,6 +31,20 @@ class FarmListing :BaseFragment<FarmViewModel, FragmentFarmListingBinding,FarmLi
                 farmListAdapter.submitList(farmList)
             }
         }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object  : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                findNavController().navigate(R.id.farmlist2dashboard)
+            }
+
+        })
+        binding.flaotingactionbuttonAddFarm.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.farmlist2farmregister)
+
+        }
+
+
+
     }
 
 

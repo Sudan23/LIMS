@@ -84,16 +84,16 @@
                     android:id="@+id/dashboard_farm_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
+                    android:layout_marginEnd="32dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_no_of_farm_tv"
-                    app:layout_constraintStart_toEndOf="@+id/dashboard_no_of_farm_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/dashboard_add_farm_btn"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_no_of_farm_tv" />
 
                 <Button
                     android:id="@+id/dashboard_add_farm_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="ADD FARM"
@@ -143,16 +143,16 @@
                     android:id="@+id/dashboard_vaccine_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="84dp"
+                    android:layout_marginEnd="32dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_vaccine_no_of_farm_tv"
-                    app:layout_constraintStart_toEndOf="@+id/dashboard_vaccine_no_of_farm_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/dashboard_add_breeding_btn"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_vaccine_no_of_farm_tv" />
 
                 <Button
                     android:id="@+id/dashboard_add_breeding_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Breeding"
@@ -200,16 +200,16 @@
                     android:id="@+id/dashboard_ai_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="125dp"
+                    android:layout_marginEnd="32dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_ai_no_of_farm_tv"
-                    app:layout_constraintStart_toEndOf="@+id/dashboard_ai_no_of_farm_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/dashboard_ai_add_vaccine_btn"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_ai_no_of_farm_tv" />
 
                 <Button
                     android:id="@+id/dashboard_ai_add_vaccine_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="AI"
@@ -256,16 +256,16 @@
                     android:id="@+id/dashboard_healthcheckup_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="34dp"
+                    android:layout_marginEnd="32dp"
                     android:hint="50"
                     android:textColor="@color/default_color"
                     app:layout_constraintBottom_toBottomOf="@+id/dashboard_health_no_of_farm_tv"
-                    app:layout_constraintStart_toEndOf="@+id/dashboard_health_no_of_farm_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/dashboard_health_add_vaccine_btn"
                     app:layout_constraintTop_toTopOf="@+id/dashboard_health_no_of_farm_tv" />
 
                 <Button
                     android:id="@+id/dashboard_health_add_vaccine_btn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="105dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:text="Check Up"

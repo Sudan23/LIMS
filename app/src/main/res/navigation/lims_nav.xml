@@ -150,6 +150,9 @@
         <action
             android:id="@+id/farmlist2farmregister"
             app:destination="@id/farmRegistration" />
+        <action
+            android:id="@+id/farmlist2dashboard"
+            app:destination="@id/dashboard" />
     </fragment>
     <fragment
         android:id="@+id/farmRegistration"
